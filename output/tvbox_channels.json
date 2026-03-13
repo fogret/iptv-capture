@@ -1,1 +1,35 @@
-
+[
+  {
+    "name": "CCTV",
+    "channels": [
+      {
+        "name": "CCTV-1 综合",
+        "url": "http://example.com/cctv1.m3u8",
+        "logo": "https://raw.githubusercontent.com/yourname/iptv-capture/main/output/logos/cctv1.png",
+        "tvg_id": "cctv1"
+      },
+      {
+        "name": "CCTV-2 财经",
+        "url": "http://example.com/cctv2.m3u8",
+        "logo": "https://raw.githubusercontent.com/yourname/iptv-capture/main/output/logos/cctv2.png",
+        "tvg_id": "cctv2"
+      }
+    ]
+  },
+  {
+    "name": "地方",
+    "channels": [
+      {
+        "name": "贵州",
+        "channels": [
+          {
+            "name": "贵州-1",
+            "url": "http://example.com/gz1.m3u8",
+            "logo": null,
+            "tvg_id": null
+          }
+        ]
+      }
+    ]
+  }
+]
