@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "name": "guizhou",
+    "channels": [
+      {
+        "name": "guizhou-1",
+        "url": "https://live.zbds.top/tv/iptv4.m3u",
+        "logo": "https://live.fanmingming.com/tv/default.png",
+        "tvg_id": null
+      },
+      {
+        "name": "guizhou-2",
+        "url": "https://iptv-org.github.io/iptv/index.m3u",
+        "logo": "https://live.fanmingming.com/tv/default.png",
+        "tvg_id": null
+      },
+      {
+        "name": "guizhou-3",
+        "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
+        "logo": "https://live.fanmingming.com/tv/default.png",
+        "tvg_id": null
+      }
+    ]
+  }
+]
