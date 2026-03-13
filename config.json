@@ -1,0 +1,9 @@
+{
+  "quality_filter": {},
+
+  "export": {
+    "m3u_path": "output/channels.m3u",
+    "tvbox_json_path": "output/tvbox.json",
+    "tvbox_name": "IPTV直播"
+  }
+}
