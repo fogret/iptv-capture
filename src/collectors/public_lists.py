@@ -1,62 +1,44 @@
-import requests
-from typing import List, Dict
-from utils.logger import logger
-from src.utils.config_loader import load_config
+import os
 
-def parse_m3u(content: str) -> List[Dict]:
-    lines = content.splitlines()
+def collect():
+    """
+    自动扫描 public_lists/ 目录下所有 .txt 文件
+    并逐行解析成频道列表
+    """
+    base = "public_lists"
     channels = []
-    name, tvg_id, group = None, None, None
 
-    for line in lines:
-        line = line.strip()
-        if line.startswith("#EXTINF"):
-            # 解析 EXTINF
-            attrs = {}
-            if "tvg-id" in line:
-                try:
-                    tvg_id = line.split('tvg-id="')[1].split('"')[0]
-                except:
-                    tvg_id = None
-            if "group-title" in line:
-                try:
-                    group = line.split('group-title="')[1].split('"')[0]
-                except:
-                    group = None
-            # 频道名
-            name = line.split(",")[-1].strip()
-        elif line and not line.startswith("#"):
-            # URL 行
-            url = line
-            channels.append({
-                "name": name,
-                "url": url,
-                "group": group,
-                "tvg_id": tvg_id,
-                "source": "public",
-                "protocol": url.split("://")[0],
-            })
-            name, tvg_id, group = None, None, None
+    if not os.path.exists(base):
+        return channels
+
+    for filename in os.listdir(base):
+        if filename.endswith(".txt"):
+            file_path = os.path.join(base, filename)
+            channels.extend(parse_file(file_path))
 
     return channels
 
 
-def collect() -> List[Dict]:
-    cfg = load_config()
+def parse_file(path):
+    """
+    解析单个 txt 文件
+    格式：频道名,播放地址
+    """
     result = []
 
-    for item in cfg.get("public_lists", []):
-        url = item["url"]
-        name = item["name"]
-        logger.info(f"[public_lists] Fetching {name}: {url}")
+    if not os.path.exists(path):
+        return result
 
-        try:
-            resp = requests.get(url, timeout=8)
-            resp.raise_for_status()
-            channels = parse_m3u(resp.text)
-            logger.info(f"[public_lists] Parsed {len(channels)} channels from {name}")
-            result.extend(channels)
-        except Exception as e:
-            logger.error(f"[public_lists] Failed to fetch {name}: {e}")
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line or "," not in line:
+                continue
+
+            name, url = line.split(",", 1)
+            result.append({
+                "name": name.strip(),
+                "url": url.strip()
+            })
 
     return result
