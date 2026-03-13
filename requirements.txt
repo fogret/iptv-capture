@@ -1,1 +1,6 @@
-
+requests
+pyyaml
+aiohttp  
+beautifulsoup4  
+lxml  
+pillow  
