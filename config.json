@@ -5,10 +5,6 @@
     {
       "name": "iptv-org 全球源",
       "url": "https://iptv-org.github.io/iptv/index.m3u"
-    },
-    {
-      "name": "iptv-org 中国源",
-      "url": "https://iptv-org.github.io/iptv/countries/cn.m3u"
     }
   ],
 
