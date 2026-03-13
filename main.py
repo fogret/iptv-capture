@@ -53,14 +53,20 @@ def main():
     # 9. Web UI export
     export_web_data(channels)
     export_web_pages()
-    
-    # 10. Deduplicate
+
+    # 10. API export
+    export_channels(channels)
+    export_groups(channels)
+    export_status(channels)
+    export_search_api()
+
+    # 11. Deduplicate
     channels = dedup(channels)
 
-    # 11. Classify
+    # 12. Classify
     channels = classify(channels)
 
-    # 12. Export
+    # 13. Export
     cfg = load_config()
     export_m3u(channels, cfg["export"]["m3u_path"])
     export_tvbox(channels, cfg["export"]["tvbox_json_path"])
