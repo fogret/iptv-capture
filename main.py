@@ -21,8 +21,10 @@ def main():
     # 2. Normalize
     channels = normalize(channels)
 
-    # 3. Validate
+    # 3. Validate (HTTP + UDP + Speed)
     channels = check_http(channels)
+    channels = check_udp(channels)
+    channels = speed_test(channels)
 
     # 4. Deduplicate
     channels = dedup(channels)
