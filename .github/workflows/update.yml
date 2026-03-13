@@ -24,7 +24,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run main
-        run: python main.py
+        run: python SRC/main.py
 
       - name: Commit and push
         run: |
