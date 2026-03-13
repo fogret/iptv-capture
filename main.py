@@ -1,4 +1,7 @@
 import os
+print(">>> 当前运行目录：", os.getcwd())
+
+import os
 import sys
 
 # 把 src 加入 Python 模块路径
