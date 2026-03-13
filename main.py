@@ -1,3 +1,4 @@
+from exporters.web_exporter import export_web_data, export_web_pages
 from exporters.tvbox_category_exporter import export_tvbox_categories
 from epg.epg_fetcher import fetch_epg
 from epg.epg_generator import generate_epg
