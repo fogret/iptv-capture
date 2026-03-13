@@ -1,25 +1,33 @@
 import os
 
-def load_custom_sources(path):
+def collect():
+    """
+    自动扫描 sources/ 目录下所有 .txt 文件
+    并逐行解析成频道列表
+    """
+    base = "sources"
     channels = []
 
-    # 如果 path 是目录 → 自动扫描所有 txt 文件
-    if os.path.isdir(path):
-        for filename in os.listdir(path):
-            if filename.endswith(".txt"):
-                file_path = os.path.join(path, filename)
-                channels.extend(parse_source_file(file_path))
-    else:
-        # 如果 path 是文件 → 兼容旧写法
-        channels.extend(parse_source_file(path))
+    if not os.path.exists(base):
+        return channels
+
+    for filename in os.listdir(base):
+        if filename.endswith(".txt"):
+            file_path = os.path.join(base, filename)
+            channels.extend(parse_source_file(file_path))
 
     return channels
 
 
 def parse_source_file(file_path):
-    channels = []
+    """
+    解析单个 txt 文件
+    格式：频道名,播放地址
+    """
+    result = []
+
     if not os.path.exists(file_path):
-        return channels
+        return result
 
     with open(file_path, "r", encoding="utf-8") as f:
         for line in f:
@@ -28,9 +36,9 @@ def parse_source_file(file_path):
                 continue
 
             name, url = line.split(",", 1)
-            channels.append({
+            result.append({
                 "name": name.strip(),
                 "url": url.strip()
             })
 
-    return channels
+    return result
