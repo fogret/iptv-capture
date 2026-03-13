@@ -27,13 +27,20 @@ def main():
     channels = check_udp(channels)
     channels = speed_test(channels)
 
-    # 4. Deduplicate
+    # 4. EPG mapping
+    channels = epg_map(channels)
+
+    # 5. Quality filter
+    cfg = load_config()
+    channels = filter_quality(channels, cfg.get("quality_filter"))
+
+    # 6. Deduplicate
     channels = dedup(channels)
 
-    # 5. Classify
+    # 7. Classify
     channels = classify(channels)
 
-    # 6. Export
+    # 8. Export
     cfg = load_config()
     export_m3u(channels, cfg["export"]["m3u_path"])
     export_tvbox(channels, cfg["export"]["tvbox_json_path"])
