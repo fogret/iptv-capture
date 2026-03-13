@@ -1,3 +1,4 @@
+from exporters.tvbox_category_exporter import export_tvbox_categories
 from epg.epg_fetcher import fetch_epg
 from epg.epg_generator import generate_epg
 from processors.logo_mapper import run as map_logo
