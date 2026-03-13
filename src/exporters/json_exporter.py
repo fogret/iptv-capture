@@ -5,11 +5,11 @@ def export_tvbox(channels, path):
     cfg = load_config()
 
     data = {
-        "name": cfg["export"]["tvbox_name"],
+        "name": cfg["export"].get("tvbox_name", "IPTV直播"),
         "type": 0,
         "url": cfg["export"]["m3u_path"],
         "epg": "https://raw.githubusercontent.com/yourname/iptv-capture/main/output/epg.xml",
-        "logo": cfg["export"]["tvbox_logo"],
+        "logo": cfg["export"].get("tvbox_logo", "")
     }
 
     with open(path, "w", encoding="utf-8") as f:
