@@ -72,7 +72,10 @@ def main():
     export_m3u(channels, cfg["export"]["m3u_path"])
     export_tvbox(channels, cfg["export"]["tvbox_json_path"])
 
-    logger.info("=== IPTV Capture Done ===")
+    # 14. Monitor Dashboard
+    export_monitor_ui()  
+
+logger.info("=== IPTV Capture Done ===")
 
 if __name__ == "__main__":
     main()
