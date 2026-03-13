@@ -1,3 +1,5 @@
+from epg.epg_fetcher import fetch_epg
+from epg.epg_generator import generate_epg
 from processors.logo_mapper import run as map_logo
 from processors.filter_quality import run as filter_quality
 from collectors.public_lists import collect as collect_public
