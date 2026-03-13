@@ -1,6 +1,6 @@
 import requests
-from src.typing import List, Dict
-from src.utils.logger import logger
+from typing import List, Dict
+from utils.logger import logger
 from src.utils.config_loader import load_config
 
 def parse_m3u(content: str) -> List[Dict]:
