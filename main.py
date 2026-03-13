@@ -47,15 +47,19 @@ def main():
     generate_epg(xml_data, channels)
 
     # 8. TVBox category JSON
-export_tvbox_categories(channels)
+    export_tvbox_categories(channels)
+
+    # 9. Web UI export
+    export_web_data(channels)
+    export_web_pages()
     
-    # 9. Deduplicate
+    # 10. Deduplicate
     channels = dedup(channels)
 
-    # 10. Classify
+    # 11. Classify
     channels = classify(channels)
 
-    # 11. Export
+    # 12. Export
     cfg = load_config()
     export_m3u(channels, cfg["export"]["m3u_path"])
     export_tvbox(channels, cfg["export"]["tvbox_json_path"])
