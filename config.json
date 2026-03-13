@@ -1,21 +1,23 @@
 {
-  "quality_filter": {},
-
-  "public_lists": [
-    {
-      "name": "国内镜像 1",
-      "url": "https://iptv-org.github.io/iptv/countries/cn.m3u"
-    },
-    {
-      "name": "国内镜像 2",
-      "url": "https://iptv-org.github.io/iptv/index.m3u"
-    }
-  ],
-
-  "export": {
-    "m3u_path": "output/channels.m3u",
-    "tvbox_json_path": "output/tvbox.json",
-    "tvbox_name": "IPTV直播",
-    "tvbox_logo": ""
+  "custom_sources": ["sources"],
+  "output": {
+    "m3u": true,
+    "tvbox": true,
+    "epg": true,
+    "web": false,
+    "api": false,
+    "monitor": false
+  },
+  "epg": {
+    "enabled": true,
+    "source": "https://epg.112114.xyz/pp.xml"
+  },
+  "validation": {
+    "check_http": false,
+    "check_udp": false
+  },
+  "processing": {
+    "merge_sources": true,
+    "sort_priority": true
   }
 }
