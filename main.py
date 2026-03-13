@@ -40,8 +40,9 @@ from utils.logger import logger
 
 
 def main():
-    logger.info("=== IPTV Capture Start ===")
-
+    cfg = load_config()
+    logger.info(f">>> config.json 内容: {cfg}")
+    
     # 1. Collect
     channels = []
     channels += collect_public()
