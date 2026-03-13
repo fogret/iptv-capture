@@ -3,28 +3,12 @@
 
   "public_lists": [
     {
-      "name": "ChinaIPTV 国内全量",
-      "url": "https://raw.githubusercontent.com/hujingguang/ChinaIPTV/main/cnTV1_ALL.m3u8"
+      "name": "国内镜像 RAW",
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/countries/cn.m3u"
     },
     {
-      "name": "ChinaIPTV 国内精选",
-      "url": "https://raw.githubusercontent.com/hujingguang/ChinaIPTV/main/cnTV2_GuoNei.m3u8"
-    },
-    {
-      "name": "peterhchina IPv4 全量",
-      "url": "https://peterhchina.github.io/iptv/IPTV-V4.m3u"
-    },
-    {
-      "name": "peterhchina IPv6 全量",
-      "url": "https://peterhchina.github.io/iptv/IPTV-V6.m3u"
-    },
-    {
-      "name": "best-fan 国内全量",
-      "url": "https://raw.githubusercontent.com/best-fan/iptv-sources/main/cn_all.m3u8"
-    },
-    {
-      "name": "best-fan 央视",
-      "url": "https://raw.githubusercontent.com/best-fan/iptv-sources/main/cn_cctv.m3u8"
+      "name": "国内镜像 Pages",
+      "url": "https://iptv-org.github.io/iptv/countries/cn.m3u"
     }
   ],
 
