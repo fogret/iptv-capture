@@ -1,1 +1,5 @@
-
+quality_filter:
+  min_width: 1280
+  min_height: 720
+  min_bitrate: 1500000
+  max_latency: 1500
