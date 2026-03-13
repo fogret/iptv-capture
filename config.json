@@ -1,17 +1,6 @@
 {
   "quality_filter": {},
 
-  "public_lists": [
-    {
-      "name": "国内镜像 RAW",
-      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/countries/cn.m3u"
-    },
-    {
-      "name": "国内镜像 Pages",
-      "url": "https://iptv-org.github.io/iptv/countries/cn.m3u"
-    }
-  ],
-
   "export": {
     "m3u_path": "output/channels.m3u",
     "tvbox_json_path": "output/tvbox.json",
