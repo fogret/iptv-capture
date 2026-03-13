@@ -1,1 +1,25 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>播放</title>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+<video id="video" controls autoplay style="width:100%;max-width:800px;"></video>
+
+<script>
+const url = new URLSearchParams(location.search).get("url");
+const video = document.getElementById("video");
+
+if (Hls.isSupported()) {
+  const hls = new Hls();
+  hls.loadSource(url);
+  hls.attachMedia(video);
+} else {
+  video.src = url;
+}
+</script>
+</body>
+</html>

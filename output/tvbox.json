@@ -1,0 +1,7 @@
+{
+  "name": "IPTV直播",
+  "type": 0,
+  "url": "output/channels.m3u",
+  "epg": "https://raw.githubusercontent.com/yourname/iptv-capture/main/output/epg.xml",
+  "logo": ""
+}
