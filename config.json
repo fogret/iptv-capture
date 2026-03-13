@@ -1,23 +1,14 @@
 {
   "custom_sources": ["sources"],
-  "output": {
-    "m3u": true,
-    "tvbox": true,
-    "epg": true,
-    "web": false,
-    "api": false,
-    "monitor": false
+  "public_sources": ["public_lists"],
+
+  "export": {
+    "m3u_path": "output/channels.m3u",
+    "tvbox_json_path": "output/tvbox.json"
   },
+
   "epg": {
     "enabled": true,
     "source": "https://epg.112114.xyz/pp.xml"
-  },
-  "validation": {
-    "check_http": false,
-    "check_udp": false
-  },
-  "processing": {
-    "merge_sources": true,
-    "sort_priority": true
   }
 }
