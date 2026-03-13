@@ -8,7 +8,7 @@ def export_tvbox(channels, path):
         "name": cfg["export"]["tvbox_name"],
         "type": 0,
         "url": cfg["export"]["m3u_path"],
-        "epg": cfg["export"]["tvbox_epg"],
+        "epg": "https://raw.githubusercontent.com/yourname/iptv-capture/main/output/epg.xml",
         "logo": cfg["export"]["tvbox_logo"],
     }
 
