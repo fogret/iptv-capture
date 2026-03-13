@@ -1,7 +1,7 @@
 import requests
 from typing import List, Dict
 from utils.logger import logger
-from utils.config_loader import load_config
+from src.utils.config_loader import load_config
 
 def parse_m3u(content: str) -> List[Dict]:
     lines = content.splitlines()
