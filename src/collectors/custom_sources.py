@@ -3,7 +3,7 @@ import os
 def collect():
     """
     自动扫描 sources/ 目录下所有 .txt 文件
-    并逐行解析成频道列表
+    每行只写 URL，频道名自动生成
     """
     base = "sources"
     channels = []
@@ -14,31 +14,36 @@ def collect():
     for filename in os.listdir(base):
         if filename.endswith(".txt"):
             file_path = os.path.join(base, filename)
-            channels.extend(parse_source_file(file_path))
+            channels.extend(parse_file(file_path))
 
     return channels
 
 
-def parse_source_file(file_path):
+def parse_file(path):
     """
-    解析单个 txt 文件
-    格式：频道名,播放地址
+    每行只写 URL，频道名自动生成：
+    - 文件名作为分组
+    - 行号作为频道序号
     """
     result = []
 
-    if not os.path.exists(file_path):
+    if not os.path.exists(path):
         return result
 
-    with open(file_path, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line or "," not in line:
+    group_name = os.path.splitext(os.path.basename(path))[0]
+
+    with open(path, "r", encoding="utf-8") as f:
+        for idx, line in enumerate(f, start=1):
+            url = line.strip()
+            if not url:
                 continue
 
-            name, url = line.split(",", 1)
+            # 自动生成频道名
+            name = f"{group_name}-{idx}"
+
             result.append({
-                "name": name.strip(),
-                "url": url.strip()
+                "name": name,
+                "url": url
             })
 
     return result
