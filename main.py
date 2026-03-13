@@ -37,12 +37,12 @@ def main():
     cfg = load_config()
     channels = filter_quality(channels, cfg.get("quality_filter"))
 
-    # 6. EPG generation
+    # 6. Logo mapping
+    channels = map_logo(channels)
+    
+    # 7. EPG generation
     xml_data = fetch_epg()
     generate_epg(xml_data, channels)
-    
-    # 7. Logo mapping
-    channels = map_logo(channels)
     
     # 8. Deduplicate
     channels = dedup(channels)
