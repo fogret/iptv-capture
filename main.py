@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 from exporters.monitor_exporter import export_monitor_ui
 from exporters.api_exporter import export_channels, export_groups, export_status, export_search_api
 from exporters.web_exporter import export_web_data, export_web_pages
