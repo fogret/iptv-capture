@@ -11,8 +11,6 @@ from utils.logger import logger   # ← 必须先导入 logger
 logger.info(f">>> 当前工作目录: {os.getcwd()}")
 logger.info(">>> 正在运行最新 main.py <<<")
 
-for src in config["custom_sources"]:
-    channels += load_custom_sources(src)
 from exporters.monitor_exporter import export_monitor_ui
 from exporters.api_exporter import export_channels, export_groups, export_status, export_search_api
 from exporters.web_exporter import export_web_data, export_web_pages
