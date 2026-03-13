@@ -4,11 +4,11 @@
   "public_lists": [
     {
       "name": "国内镜像 1",
-      "url": "https://ghproxy.net/https://raw.githubusercontent.com/iptv-org/iptv/master/countries/cn.m3u"
+      "url": "https://cdn.jsdelivr.net/gh/iptv-org/iptv@master/countries/cn.m3u"
     },
     {
       "name": "国内镜像 2",
-      "url": "https://ghproxy.net/https://raw.githubusercontent.com/iptv-org/iptv/master/index.m3u"
+      "url": "https://cdn.jsdelivr.net/gh/iptv-org/iptv@master/index.m3u"
     }
   ],
 
