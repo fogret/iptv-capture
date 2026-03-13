@@ -1,3 +1,4 @@
+from processors.filter_quality import run as filter_quality
 from collectors.public_lists import collect as collect_public
 from collectors.custom_sources import collect as collect_custom
 from validators.http_checker import check as check_http
