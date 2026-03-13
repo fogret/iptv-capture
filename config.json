@@ -1,6 +1,17 @@
 {
   "quality_filter": {},
 
+  "public_lists": [
+    {
+      "name": "iptv-org 全球源",
+      "url": "https://iptv-org.github.io/iptv/index.m3u"
+    },
+    {
+      "name": "iptv-org 中国源",
+      "url": "https://iptv-org.github.io/iptv/countries/cn.m3u"
+    }
+  ],
+
   "export": {
     "m3u_path": "output/channels.m3u",
     "tvbox_json_path": "output/tvbox.json",
