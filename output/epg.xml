@@ -1,1 +1,5 @@
-
+sources:
+  - name: "fanmingming"
+    url: "https://live.fanmingming.com/e.xml"
+  - name: "epg.pw"
+    url: "https://epg.pw/xmltv/epg.xml"
