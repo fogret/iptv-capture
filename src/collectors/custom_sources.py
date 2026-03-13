@@ -34,7 +34,7 @@ def parse_file(path):
             result.append({
                 "name": name,
                 "url": url,
-                "组": group_name   # ★ 自动加上组
+                "组": group_name   # ★★★ 必须加上这个字段 ★★★
             })
 
     return result
