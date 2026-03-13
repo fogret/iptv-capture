@@ -8,6 +8,7 @@ from exporters.m3u_exporter import export_m3u
 from exporters.json_exporter import export_tvbox
 from utils.config_loader import load_config
 from utils.logger import logger
+from validators.speed_tester import check as speed_test
 
 def main():
     logger.info("=== IPTV Capture Start ===")
