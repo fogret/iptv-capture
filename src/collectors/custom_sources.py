@@ -1,10 +1,6 @@
 import os
 
 def collect():
-    """
-    自动扫描 sources/ 目录下所有 .txt 文件
-    每行只写 URL，频道名自动生成
-    """
     base = "sources"
     channels = []
 
@@ -20,11 +16,6 @@ def collect():
 
 
 def parse_file(path):
-    """
-    每行只写 URL，频道名自动生成：
-    - 文件名作为分组
-    - 行号作为频道序号
-    """
     result = []
 
     if not os.path.exists(path):
@@ -38,12 +29,12 @@ def parse_file(path):
             if not url:
                 continue
 
-            # 自动生成频道名
             name = f"{group_name}-{idx}"
 
             result.append({
                 "name": name,
-                "url": url
+                "url": url,
+                "组": group_name   # ★ 自动加上组
             })
 
     return result
