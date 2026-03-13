@@ -1,16 +1,17 @@
 name: Update IPTV
 
 on:
-  schedule:
-    - cron: "0 */6 * * *"
   workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"   # 每 6 小时自动运行一次
 
 jobs:
   update:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Install ffmpeg
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
@@ -23,13 +24,13 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run main
-        run: python SRC/main.py
+      - name: Run main script
+        run: python main.py
 
-      - name: Commit and push
+      - name: Commit and push results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/* README.md
+          git add output/* || true
           git commit -m "Auto update IPTV" || echo "No changes"
           git push
