@@ -35,13 +35,16 @@ def main():
     cfg = load_config()
     channels = filter_quality(channels, cfg.get("quality_filter"))
 
-    # 6. Deduplicate
+    # 6. Logo mapping
+    channels = map_logo(channels)
+    
+    # 7. Deduplicate
     channels = dedup(channels)
 
-    # 7. Classify
+    # 8. Classify
     channels = classify(channels)
 
-    # 8. Export
+    # 9. Export
     cfg = load_config()
     export_m3u(channels, cfg["export"]["m3u_path"])
     export_tvbox(channels, cfg["export"]["tvbox_json_path"])
