@@ -1,3 +1,5 @@
+logger.info(f">>> 当前工作目录: {os.getcwd()}")
+logger.info(">>> 正在运行最新 main.py <<<")
 import os
 import sys
 
