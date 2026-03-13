@@ -1,5 +1,3 @@
-logger.info(f">>> 当前工作目录: {os.getcwd()}")
-logger.info(">>> 正在运行最新 main.py <<<")
 import os
 import sys
 
@@ -7,6 +5,11 @@ import sys
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SRC_DIR = os.path.join(BASE_DIR, "src")
 sys.path.append(SRC_DIR)
+
+from utils.logger import logger   # ← 必须先导入 logger
+
+logger.info(f">>> 当前工作目录: {os.getcwd()}")
+logger.info(">>> 正在运行最新 main.py <<<")
 
 from exporters.monitor_exporter import export_monitor_ui
 from exporters.api_exporter import export_channels, export_groups, export_status, export_search_api
