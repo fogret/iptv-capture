@@ -1,5 +1,23 @@
 [
   {
+    "name": "未知",
+    "score": 21,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "CCTV-1",
+    "score": 21,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": false,
+    "protected": true
+  },
+  {
     "name": "CCTV-2",
     "score": 21,
     "alive": true,
@@ -36,24 +54,6 @@
     "protected": true
   },
   {
-    "name": "CCTV-6",
-    "score": 21,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
-    "name": "CCTV-7",
-    "score": 21,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
     "name": "CCTV-8",
     "score": 21,
     "alive": true,
@@ -64,51 +64,6 @@
   },
   {
     "name": "CCTV-10",
-    "score": 21,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
-    "name": "CCTV-11",
-    "score": 21,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
-    "name": "CCTV-12",
-    "score": 21,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
-    "name": "CCTV-13",
-    "score": 21,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
-    "name": "CCTV-14",
-    "score": 21,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
-    "name": "CCTV-15",
     "score": 21,
     "alive": true,
     "speed_ok": false,
@@ -261,15 +216,6 @@
     "protected": false
   },
   {
-    "name": "安徽卫视",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
     "name": "北京卫视",
     "score": 16,
     "alive": true,
@@ -297,33 +243,6 @@
     "protected": true
   },
   {
-    "name": "东南卫视",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
-    "name": "甘肃卫视",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
-    "name": "广东卫视",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
     "name": "广西卫视",
     "score": 16,
     "alive": true,
@@ -333,7 +252,7 @@
     "protected": true
   },
   {
-    "name": "贵州卫视",
+    "name": "海南卫视",
     "score": 16,
     "alive": true,
     "speed_ok": false,
@@ -343,24 +262,6 @@
   },
   {
     "name": "海峡卫视",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
-    "name": "河北卫视",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
-    "name": "河南卫视",
     "score": 16,
     "alive": true,
     "speed_ok": false,
@@ -379,24 +280,6 @@
   },
   {
     "name": "吉林卫视",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
-    "name": "江苏卫视",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
-    "name": "江西卫视",
     "score": 16,
     "alive": true,
     "speed_ok": false,
@@ -432,24 +315,6 @@
     "protected": true
   },
   {
-    "name": "青海卫视",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
-    "name": "厦门卫视",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
     "name": "山东卫视",
     "score": 16,
     "alive": true,
@@ -470,24 +335,6 @@
   {
     "name": "陕西卫视",
     "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
-    "name": "深圳卫视",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
-    "name": "四川卫视",
-    "score": 16,
     "alive": true,
     "speed_ok": false,
     "fail_count": 4,
@@ -523,15 +370,6 @@
   },
   {
     "name": "延边卫视",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
-    "name": "云南卫视",
     "score": 16,
     "alive": true,
     "speed_ok": false,
@@ -583,24 +421,6 @@
     "fail_count": 4,
     "disabled": true,
     "protected": false
-  },
-  {
-    "name": "东方卫视4K",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
-  },
-  {
-    "name": "北京卫视4K超",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": false,
-    "protected": true
   },
   {
     "name": "四川卫视4K",
@@ -666,24 +486,6 @@
     "protected": false
   },
   {
-    "name": "倩女幽魂人间道",
-    "score": 45,
-    "alive": true,
-    "speed_ok": true,
-    "fail_count": 0,
-    "disabled": false,
-    "protected": false
-  },
-  {
-    "name": "倩女幽魂妖魔道",
-    "score": 40,
-    "alive": true,
-    "speed_ok": true,
-    "fail_count": 0,
-    "disabled": false,
-    "protected": false
-  },
-  {
     "name": "倩女幽魂道道道",
     "score": 45,
     "alive": true,
@@ -693,34 +495,7 @@
     "protected": false
   },
   {
-    "name": "哈尔滨影视",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "天映经典",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "浙江教科影视",
-    "score": 21,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "让子弹飞",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -747,16 +522,16 @@
     "protected": false
   },
   {
-    "name": "北京纪实科教8K",
-    "score": 11,
+    "name": "龙门飞甲",
+    "score": 45,
     "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "disabled": false,
     "protected": false
   },
   {
-    "name": "南国都市",
+    "name": "北京纪实科教8K",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -810,15 +585,6 @@
     "protected": false
   },
   {
-    "name": "广东少儿",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "浙江少儿",
     "score": 21,
     "alive": true,
@@ -829,11 +595,11 @@
   },
   {
     "name": "中华小当家",
-    "score": 40,
+    "score": 11,
     "alive": true,
-    "speed_ok": true,
-    "fail_count": 0,
-    "disabled": false,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
     "protected": false
   },
   {
@@ -873,24 +639,6 @@
     "protected": false
   },
   {
-    "name": "七台河新闻综合",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "七台河民生社教",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "万州三峡移民",
     "score": 11,
     "alive": true,
@@ -910,24 +658,6 @@
   },
   {
     "name": "上虞文化影院",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "上虞新商都",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "上虞新闻综合",
     "score": 16,
     "alive": true,
     "speed_ok": false,
@@ -956,15 +686,6 @@
   {
     "name": "中国蓝新闻",
     "score": 21,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "临夏州综合",
-    "score": 11,
     "alive": true,
     "speed_ok": false,
     "fail_count": 4,
@@ -1017,15 +738,6 @@
     "protected": false
   },
   {
-    "name": "云和新闻综合",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "什邡新闻",
     "score": 11,
     "alive": true,
@@ -1036,15 +748,6 @@
   },
   {
     "name": "伊犁哈萨克",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "伊犁经济法制",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -1071,24 +774,6 @@
     "protected": false
   },
   {
-    "name": "余杭未来E",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "余杭综合",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "偃师新闻",
     "score": 11,
     "alive": true,
@@ -1099,24 +784,6 @@
   },
   {
     "name": "光山综合",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "六安公共",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "六安新闻综合",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -1161,33 +828,6 @@
     "protected": false
   },
   {
-    "name": "北京新闻",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "北京科教",
-    "score": 6,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "北京青年",
-    "score": 40,
-    "alive": true,
-    "speed_ok": true,
-    "fail_count": 0,
-    "disabled": false,
-    "protected": false
-  },
-  {
     "name": "南京教科",
     "score": 11,
     "alive": true,
@@ -1224,15 +864,6 @@
     "protected": false
   },
   {
-    "name": "叙州新闻综合",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "叶县",
     "score": 11,
     "alive": true,
@@ -1251,34 +882,7 @@
     "protected": false
   },
   {
-    "name": "吉林乡村",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "周口扶沟",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "哈尔滨新闻综合",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "哈尔滨生活",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -1323,24 +927,6 @@
     "protected": false
   },
   {
-    "name": "奎屯哈萨克语",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "安徽导视",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "安徽综艺体育",
     "score": 11,
     "alive": true,
@@ -1377,25 +963,7 @@
     "protected": false
   },
   {
-    "name": "山东生活",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "嵊州新闻综合",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "嵊泗综合",
     "score": 16,
     "alive": true,
     "speed_ok": false,
@@ -1458,15 +1026,6 @@
     "protected": false
   },
   {
-    "name": "广州综合",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "庆元新闻综合",
     "score": 16,
     "alive": true,
@@ -1521,15 +1080,6 @@
     "protected": false
   },
   {
-    "name": "成县综合",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "扶沟综合",
     "score": 11,
     "alive": true,
@@ -1549,15 +1099,6 @@
   },
   {
     "name": "文成新闻综合",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "文成综合",
     "score": 16,
     "alive": true,
     "speed_ok": false,
@@ -1586,15 +1127,6 @@
   {
     "name": "新安新闻综合",
     "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "新昌新闻综合",
-    "score": 16,
     "alive": true,
     "speed_ok": false,
     "fail_count": 4,
@@ -1638,7 +1170,16 @@
     "protected": false
   },
   {
-    "name": "景泰综合",
+    "name": "普陀电视",
+    "score": 16,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "朝天综合",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -1649,15 +1190,6 @@
   {
     "name": "朝阳新闻综合",
     "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "松阳综合",
-    "score": 16,
     "alive": true,
     "speed_ok": false,
     "fail_count": 4,
@@ -1692,15 +1224,6 @@
     "protected": false
   },
   {
-    "name": "武威新闻",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "永嘉新闻综合",
     "score": 16,
     "alive": true,
@@ -1728,26 +1251,8 @@
     "protected": false
   },
   {
-    "name": "江夏新闻综合",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "沁阳新闻综合",
     "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "河北农民",
-    "score": 6,
     "alive": true,
     "speed_ok": false,
     "fail_count": 4,
@@ -1792,15 +1297,6 @@
   },
   {
     "name": "浙江公共新闻",
-    "score": 21,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "浙江国际",
     "score": 21,
     "alive": true,
     "speed_ok": false,
@@ -1854,15 +1350,6 @@
     "protected": false
   },
   {
-    "name": "浙江经视",
-    "score": 21,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "浙江遂昌",
     "score": 16,
     "alive": true,
@@ -1881,16 +1368,7 @@
     "protected": false
   },
   {
-    "name": "浙江钱江都市",
-    "score": 21,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "海南新闻",
+    "name": "淅川电视",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -1899,7 +1377,7 @@
     "protected": false
   },
   {
-    "name": "淅川电视",
+    "name": "淮安新闻综合",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -1926,6 +1404,15 @@
     "protected": false
   },
   {
+    "name": "溧水新闻综合",
+    "score": 11,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
     "name": "滑县新闻",
     "score": 11,
     "alive": true,
@@ -1937,15 +1424,6 @@
   {
     "name": "潢川综合",
     "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "灌阳新闻综合",
-    "score": 6,
     "alive": true,
     "speed_ok": false,
     "fail_count": 4,
@@ -1971,6 +1449,15 @@
     "protected": false
   },
   {
+    "name": "璧山综合",
+    "score": 11,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
     "name": "甘南县综合",
     "score": 11,
     "alive": true,
@@ -1981,15 +1468,6 @@
   },
   {
     "name": "甘肃经济",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "甘肃都市",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -2070,8 +1548,8 @@
     "protected": false
   },
   {
-    "name": "舒兰新闻综合",
-    "score": 11,
+    "name": "苍南新闻综合",
+    "score": 16,
     "alive": true,
     "speed_ok": false,
     "fail_count": 4,
@@ -2097,7 +1575,7 @@
     "protected": false
   },
   {
-    "name": "萧山综合",
+    "name": "萧山新闻综合",
     "score": 16,
     "alive": true,
     "speed_ok": false,
@@ -2106,8 +1584,8 @@
     "protected": false
   },
   {
-    "name": "衡水公共",
-    "score": 11,
+    "name": "萧山综合",
+    "score": 16,
     "alive": true,
     "speed_ok": false,
     "fail_count": 4,
@@ -2125,6 +1603,15 @@
   },
   {
     "name": "西华综合",
+    "score": 11,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "西宁新闻综合",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -2178,25 +1665,7 @@
     "protected": false
   },
   {
-    "name": "象山综合",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "车迷",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "辉南新闻综合",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -2313,15 +1782,6 @@
     "protected": false
   },
   {
-    "name": "都市剧场",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "鄢陵综合",
     "score": 11,
     "alive": true,
@@ -2358,33 +1818,6 @@
     "protected": false
   },
   {
-    "name": "铜陵新闻综合",
-    "score": 6,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "长沙新闻综合",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "长白山电视",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "长白朝语",
     "score": 11,
     "alive": true,
@@ -2394,7 +1827,7 @@
     "protected": false
   },
   {
-    "name": "陕西公共",
+    "name": "陕西体育休闲",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -2404,6 +1837,15 @@
   },
   {
     "name": "陕西新闻咨询",
+    "score": 11,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "陕西新闻资讯",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -2448,15 +1890,6 @@
     "protected": false
   },
   {
-    "name": "靖宇综合",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "靖远综合",
     "score": 11,
     "alive": true,
@@ -2476,15 +1909,6 @@
   },
   {
     "name": "黎城综合",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "龙井综合",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -2520,43 +1944,7 @@
     "protected": false
   },
   {
-    "name": "东丰",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "九",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "双辽",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "敦化一套",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "柳河",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -2583,15 +1971,6 @@
     "protected": false
   },
   {
-    "name": "汪清",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "玛纳斯",
     "score": 11,
     "alive": true,
@@ -2601,34 +1980,7 @@
     "protected": false
   },
   {
-    "name": "珲春新闻",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "白山公共",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "磐石",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "舒兰新闻",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -2655,15 +2007,6 @@
     "protected": false
   },
   {
-    "name": "龙井",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "音乐现场",
     "score": 11,
     "alive": true,
@@ -2673,260 +2016,8 @@
     "protected": false
   },
   {
-    "name": "广西桂林漓江景区",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "张掖七彩丹霞",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "新疆天山",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "普陀山",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "月牙泉",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "江苏南京牛首山",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "泰山主峰",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "泰山大观峰",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "泰山太平岭",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "泰山望人松",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "泰山白云亭悬崖",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "浙江舟山东极岛",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "湖南张家界宝峰湖",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "湖南张家界御笔峰",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "狮子山鸟瞰丽江古城",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "福建漳州醉美沙滩翡翠湾",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "贵州省兴义市万峰林",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "陕西洋县国宝朱鹮02",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "鸣沙山",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "黄山始信新道",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "黄山排云亭",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "黄花城水长城01",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "黄龙",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "2026-03-1412:28:37",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Shop",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "General",
     "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Entertainment;General;News",
-    "score": 6,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Undefined",
-    "score": 35,
-    "alive": true,
-    "speed_ok": true,
-    "fail_count": 2,
-    "disabled": false,
-    "protected": false
-  },
-  {
-    "name": "News",
-    "score": 6,
     "alive": true,
     "speed_ok": false,
     "fail_count": 4,
@@ -2952,142 +2043,7 @@
     "protected": false
   },
   {
-    "name": "Religious",
-    "score": 6,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Animation;Kids;Religious",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Music;Religious",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Public;Weather",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Comedy;Public",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "News;Public",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Classic;Comedy;Public;Series",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Kids",
-    "score": 35,
-    "alive": true,
-    "speed_ok": true,
-    "fail_count": 2,
-    "disabled": false,
-    "protected": false
-  },
-  {
-    "name": "Music",
-    "score": 6,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Series",
-    "score": 21,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Family",
-    "score": 6,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Entertainment;Kids",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Lifestyle",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Lifestyle;Relax",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Comedy",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Movies",
+    "name": "Undefined",
     "score": 21,
     "alive": true,
     "speed_ok": false,
@@ -3105,7 +2061,43 @@
     "protected": false
   },
   {
-    "name": "Outdoor",
+    "name": "Business;News",
+    "score": 11,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "Documentary",
+    "score": 11,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "Movies",
+    "score": 50,
+    "alive": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "disabled": false,
+    "protected": false
+  },
+  {
+    "name": "Science",
+    "score": 45,
+    "alive": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "disabled": false,
+    "protected": false
+  },
+  {
+    "name": "Religious",
     "score": 6,
     "alive": true,
     "speed_ok": false,
@@ -3114,8 +2106,8 @@
     "protected": false
   },
   {
-    "name": "Entertainment;News",
-    "score": 11,
+    "name": "News",
+    "score": 6,
     "alive": true,
     "speed_ok": false,
     "fail_count": 4,
@@ -3132,43 +2124,25 @@
     "protected": false
   },
   {
-    "name": "Business",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Documentary;News",
-    "score": 21,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Auto",
-    "score": 45,
+    "name": "Kids",
+    "score": 35,
     "alive": true,
     "speed_ok": true,
-    "fail_count": 0,
+    "fail_count": 2,
     "disabled": false,
     "protected": false
   },
   {
-    "name": "Business;News",
-    "score": 21,
+    "name": "Music",
+    "score": 35,
     "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
+    "speed_ok": true,
+    "fail_count": 2,
+    "disabled": false,
     "protected": false
   },
   {
-    "name": "Documentary",
+    "name": "Series",
     "score": 6,
     "alive": true,
     "speed_ok": false,
@@ -3177,12 +2151,12 @@
     "protected": false
   },
   {
-    "name": "Science",
-    "score": 40,
+    "name": "Outdoor",
+    "score": 6,
     "alive": true,
-    "speed_ok": true,
-    "fail_count": 0,
-    "disabled": false,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
     "protected": false
   },
   {
@@ -3195,7 +2169,7 @@
     "protected": false
   },
   {
-    "name": "General;Public",
+    "name": "Business",
     "score": 6,
     "alive": true,
     "speed_ok": false,
@@ -3204,66 +2178,12 @@
     "protected": false
   },
   {
-    "name": "News;Weather",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Education;Kids",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Movies;Religious",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Legislative",
-    "score": 6,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Weather",
-    "score": 40,
+    "name": "Documentary;News",
+    "score": 50,
     "alive": true,
     "speed_ok": true,
     "fail_count": 0,
     "disabled": false,
-    "protected": false
-  },
-  {
-    "name": "Animation",
-    "score": 21,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Kids;Sports",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
     "protected": false
   },
   {
@@ -3273,6 +2193,15 @@
     "speed_ok": false,
     "fail_count": 4,
     "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "Comedy",
+    "score": 45,
+    "alive": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "disabled": false,
     "protected": false
   },
   {
@@ -3303,8 +2232,26 @@
     "protected": false
   },
   {
+    "name": "Entertainment;General;News",
+    "score": 6,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "Family",
+    "score": 11,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
     "name": "Comedy;Series",
-    "score": 40,
+    "score": 45,
     "alive": true,
     "speed_ok": true,
     "fail_count": 0,
@@ -3312,8 +2259,35 @@
     "protected": false
   },
   {
+    "name": "Animation",
+    "score": 21,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "Lifestyle",
+    "score": 6,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
     "name": "Business;Culture;Lifestyle",
     "score": 11,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "Legislative",
+    "score": 6,
     "alive": true,
     "speed_ok": false,
     "fail_count": 4,
@@ -3330,25 +2304,25 @@
     "protected": false
   },
   {
-    "name": "General;News",
-    "score": 6,
+    "name": "General;Public",
+    "score": 11,
     "alive": true,
     "speed_ok": false,
     "fail_count": 4,
     "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "General;News",
+    "score": 45,
+    "alive": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "disabled": false,
     "protected": false
   },
   {
     "name": "Classic;Movies",
-    "score": 6,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Travel",
     "score": 6,
     "alive": true,
     "speed_ok": false,
@@ -3366,7 +2340,7 @@
     "protected": false
   },
   {
-    "name": "General;Legislative",
+    "name": "Auto",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -3375,35 +2349,8 @@
     "protected": false
   },
   {
-    "name": "Culture;General",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Classic;Series",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Culture;Education;News",
-    "score": 6,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Culture;Documentary",
-    "score": 6,
+    "name": "Shop",
+    "score": 16,
     "alive": true,
     "speed_ok": false,
     "fail_count": 4,
@@ -3430,16 +2377,16 @@
   },
   {
     "name": "Entertainment;Music",
-    "score": 11,
+    "score": 40,
     "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "disabled": false,
     "protected": false
   },
   {
-    "name": "Relax",
-    "score": 11,
+    "name": "Travel",
+    "score": 6,
     "alive": true,
     "speed_ok": false,
     "fail_count": 4,
@@ -3456,43 +2403,7 @@
     "protected": false
   },
   {
-    "name": "News;Science",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Business;Documentary",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "Classic;Music",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Education;Science",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Culture;Entertainment",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -3519,88 +2430,7 @@
     "protected": false
   },
   {
-    "name": "Entertainment;Travel",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Culture;Documentary;Travel",
-    "score": 21,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Animation;Kids",
-    "score": 6,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Auto;Series",
-    "score": 16,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Kids;Religious",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Kids;Public",
-    "score": 21,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Business;Series",
-    "score": 21,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Culture;Travel",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "Family;General",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Education;News",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -3620,6 +2450,33 @@
   {
     "name": "Education;General",
     "score": 11,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "Kids;Religious",
+    "score": 11,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "Culture;Documentary",
+    "score": 50,
+    "alive": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "disabled": false,
+    "protected": false
+  },
+  {
+    "name": "Animation;Kids",
+    "score": 6,
     "alive": true,
     "speed_ok": false,
     "fail_count": 4,
@@ -3655,6 +2512,15 @@
   },
   {
     "name": "Culture;Public",
+    "score": 11,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "Entertainment;News",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -3717,6 +2583,15 @@
     "protected": false
   },
   {
+    "name": "Cooking;Lifestyle",
+    "score": 11,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
     "name": "Auto;Travel",
     "score": 16,
     "alive": true,
@@ -3744,30 +2619,30 @@
     "protected": false
   },
   {
-    "name": "Movies;News",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Auto;Outdoor;Sports",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "Outdoor;Shop",
     "score": 11,
     "alive": true,
     "speed_ok": false,
     "fail_count": 4,
     "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "Culture;Education;News",
+    "score": 6,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "Culture;Entertainment",
+    "score": 40,
+    "alive": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "disabled": false,
     "protected": false
   },
   {
@@ -3807,6 +2682,15 @@
     "protected": false
   },
   {
+    "name": "Education;Kids",
+    "score": 11,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
     "name": "Culture;Sports",
     "score": 11,
     "alive": true,
@@ -3816,7 +2700,7 @@
     "protected": false
   },
   {
-    "name": "Family;General;Movies",
+    "name": "Music;Religious",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -3825,17 +2709,8 @@
     "protected": false
   },
   {
-    "name": "Animation;Kids;Music",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Comedy;Kids",
-    "score": 40,
+    "name": "Relax",
+    "score": 45,
     "alive": true,
     "speed_ok": true,
     "fail_count": 0,
@@ -3845,6 +2720,24 @@
   {
     "name": "Movies;Music",
     "score": 6,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "Weather",
+    "score": 11,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "Comedy;Kids",
+    "score": 11,
     "alive": true,
     "speed_ok": false,
     "fail_count": 4,
@@ -3879,15 +2772,6 @@
     "protected": false
   },
   {
-    "name": "Outdoor;Travel",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "Entertainment;Lifestyle;Music",
     "score": 11,
     "alive": true,
@@ -3897,25 +2781,7 @@
     "protected": false
   },
   {
-    "name": "Family;Movies",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "Animation;Classic",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Family;Kids",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -3934,15 +2800,6 @@
   },
   {
     "name": "Music;Sports",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "Culture;Lifestyle",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -3978,7 +2835,7 @@
     "protected": false
   },
   {
-    "name": "Education;Religious",
+    "name": "Animation;Kids;Public",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -3987,7 +2844,7 @@
     "protected": false
   },
   {
-    "name": "Documentary;Entertainment",
+    "name": "Education;Religious",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -4014,15 +2871,6 @@
     "protected": false
   },
   {
-    "name": "Family;Religious",
-    "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
     "name": "General;Sports",
     "score": 11,
     "alive": true,
@@ -4041,6 +2889,15 @@
     "protected": false
   },
   {
+    "name": "Entertainment;Kids",
+    "score": 11,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
     "name": "Comedy;Movies;Series;Sports",
     "score": 6,
     "alive": true,
@@ -4051,6 +2908,15 @@
   },
   {
     "name": "Culture;Entertainment;Music;News",
+    "score": 11,
+    "alive": true,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
+    "protected": false
+  },
+  {
+    "name": "News;Weather",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -4086,7 +2952,7 @@
     "protected": false
   },
   {
-    "name": "Classic;News",
+    "name": "Culture;General",
     "score": 11,
     "alive": true,
     "speed_ok": false,
@@ -4097,15 +2963,6 @@
   {
     "name": "Education;Lifestyle",
     "score": 11,
-    "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
-    "protected": false
-  },
-  {
-    "name": "未知",
-    "score": 6,
     "alive": true,
     "speed_ok": false,
     "fail_count": 4,

@@ -1,3200 +1,2311 @@
 {
+  "CCTV-1": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 578,
+    "bitrate": null,
+    "resolution": null
+  },
   "CCTV-2": {
     "ok": null,
     "udp_ok": null,
-    "latency": 517,
+    "latency": 1427,
     "bitrate": null,
     "resolution": null
   },
   "CCTV-3": {
     "ok": null,
     "udp_ok": null,
-    "latency": 567,
+    "latency": 546,
     "bitrate": null,
     "resolution": null
   },
   "CCTV-4": {
     "ok": null,
     "udp_ok": null,
-    "latency": 540,
+    "latency": 544,
     "bitrate": null,
     "resolution": null
   },
   "CCTV-5": {
     "ok": null,
     "udp_ok": null,
-    "latency": 1258,
-    "bitrate": null,
-    "resolution": null
-  },
-  "CCTV-6": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 489,
-    "bitrate": null,
-    "resolution": null
-  },
-  "CCTV-7": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 505,
+    "latency": 1338,
     "bitrate": null,
     "resolution": null
   },
   "CCTV-8": {
     "ok": null,
     "udp_ok": null,
-    "latency": 546,
+    "latency": 566,
     "bitrate": null,
     "resolution": null
   },
   "CCTV-10": {
     "ok": null,
     "udp_ok": null,
-    "latency": 544,
-    "bitrate": null,
-    "resolution": null
-  },
-  "CCTV-11": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 490,
-    "bitrate": null,
-    "resolution": null
-  },
-  "CCTV-12": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 491,
-    "bitrate": null,
-    "resolution": null
-  },
-  "CCTV-13": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 498,
-    "bitrate": null,
-    "resolution": null
-  },
-  "CCTV-14": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1275,
-    "bitrate": null,
-    "resolution": null
-  },
-  "CCTV-15": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 517,
+    "latency": 1272,
     "bitrate": null,
     "resolution": null
   },
   "CCTV-16": {
     "ok": null,
     "udp_ok": null,
-    "latency": 89,
+    "latency": 78,
     "bitrate": null,
     "resolution": null
   },
   "CCTV-17": {
     "ok": null,
     "udp_ok": null,
-    "latency": 562,
-    "bitrate": null,
-    "resolution": null
-  },
-  "东南卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 514,
+    "latency": 582,
     "bitrate": null,
     "resolution": null
   },
   "东方卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 246,
-    "bitrate": null,
-    "resolution": null
-  },
-  "东方卫视4K": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 609,
-    "bitrate": null,
-    "resolution": null
-  },
-  "云南卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 518,
+    "latency": 510,
     "bitrate": null,
     "resolution": null
   },
   "兵团卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 525,
+    "latency": 543,
     "bitrate": null,
     "resolution": null
   },
   "内蒙古卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 519,
+    "latency": 645,
     "bitrate": null,
     "resolution": null
   },
   "农林卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 619,
+    "latency": 546,
     "bitrate": null,
     "resolution": null
   },
   "北京卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 1341,
-    "bitrate": null,
-    "resolution": null
-  },
-  "北京卫视4K超": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 534,
-    "bitrate": null,
-    "resolution": null
-  },
-  "厦门卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1150,
+    "latency": 529,
     "bitrate": null,
     "resolution": null
   },
   "吉林卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 1287,
-    "bitrate": null,
-    "resolution": null
-  },
-  "四川卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 561,
+    "latency": 582,
     "bitrate": null,
     "resolution": null
   },
   "四川卫视4K": {
     "ok": null,
     "udp_ok": null,
-    "latency": 1457,
+    "latency": 523,
     "bitrate": null,
     "resolution": null
   },
   "大湾区卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 497,
+    "latency": 522,
     "bitrate": null,
     "resolution": null
   },
   "天津卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 507,
+    "latency": 530,
     "bitrate": null,
     "resolution": null
   },
   "宁夏卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 519,
-    "bitrate": null,
-    "resolution": null
-  },
-  "安徽卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 491,
+    "latency": 562,
     "bitrate": null,
     "resolution": null
   },
   "山东卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 609,
+    "latency": 547,
     "bitrate": null,
     "resolution": null
   },
   "山西卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 478,
-    "bitrate": null,
-    "resolution": null
-  },
-  "广东卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 504,
+    "latency": 495,
     "bitrate": null,
     "resolution": null
   },
   "广西卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 1340,
+    "latency": 533,
     "bitrate": null,
     "resolution": null
   },
   "延边卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 617,
+    "latency": 658,
     "bitrate": null,
     "resolution": null
   },
   "新疆卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 514,
-    "bitrate": null,
-    "resolution": null
-  },
-  "江苏卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 519,
-    "bitrate": null,
-    "resolution": null
-  },
-  "江西卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 530,
-    "bitrate": null,
-    "resolution": null
-  },
-  "河北卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 496,
-    "bitrate": null,
-    "resolution": null
-  },
-  "河南卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 496,
+    "latency": 579,
     "bitrate": null,
     "resolution": null
   },
   "浙江卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 245,
-    "bitrate": null,
-    "resolution": null
-  },
-  "海峡卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 454,
-    "bitrate": null,
-    "resolution": null
-  },
-  "深圳卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 519,
-    "bitrate": null,
-    "resolution": null
-  },
-  "湖南卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 516,
-    "bitrate": null,
-    "resolution": null
-  },
-  "甘肃卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 562,
-    "bitrate": null,
-    "resolution": null
-  },
-  "西藏卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 911,
-    "bitrate": null,
-    "resolution": null
-  },
-  "贵州卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 539,
-    "bitrate": null,
-    "resolution": null
-  },
-  "辽宁卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 549,
-    "bitrate": null,
-    "resolution": null
-  },
-  "重庆卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 903,
-    "bitrate": null,
-    "resolution": null
-  },
-  "陕西卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 77,
-    "bitrate": null,
-    "resolution": null
-  },
-  "青海卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 488,
-    "bitrate": null,
-    "resolution": null
-  },
-  "黑龙江卫视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 246,
-    "bitrate": null,
-    "resolution": null
-  },
-  "2026-03-1412:28:37": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 18,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Animation": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 356,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Animation;Classic": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 392,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Animation;Entertainment": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 123,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Animation;Family;Kids": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 237,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Animation;General;Kids": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 226,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Animation;Kids": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 122,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Animation;Kids;Music": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 175,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Animation;Kids;Religious": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 216,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Animation;Movies": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 205,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Auto": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 114,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Auto;Entertainment": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 103,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Auto;Series": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 75,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Auto;Travel": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 491,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Business": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 373,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Business;Culture;Lifestyle": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 122,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Business;Documentary": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 138,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Business;News": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 206,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Business;Series": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 653,
-    "bitrate": null,
-    "resolution": null
-  },
-  "CCTV": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 138,
-    "bitrate": null,
-    "resolution": null
-  },
-  "CGTN": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 127,
-    "bitrate": null,
-    "resolution": null
-  },
-  "CGTN俄语": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 128,
-    "bitrate": null,
-    "resolution": null
-  },
-  "CGTN法语": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 112,
-    "bitrate": null,
-    "resolution": null
-  },
-  "CGTN西语": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 117,
-    "bitrate": null,
-    "resolution": null
-  },
-  "CGTN阿语": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 117,
-    "bitrate": null,
-    "resolution": null
-  },
-  "CHC家庭影院": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 488,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Classic": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 145,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Classic;Comedy;Public;Series": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 354,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Classic;Kids": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 425,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Classic;Movies": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 109,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Classic;Music": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 337,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Classic;News": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 781,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Classic;Series": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 132,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Comedy": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 485,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Comedy;Family;Movies": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 169,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Comedy;Kids": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 201,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Comedy;Movies": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 508,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Comedy;Public": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 462,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Comedy;Series": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 182,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Cooking": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 210,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Cooking;Shop": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 45,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Culture": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1095,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Culture;Documentary": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 5,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Culture;Documentary;Entertainment;General;Movies;Music": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 743,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Culture;Documentary;Travel": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 144,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Culture;Education;News": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 113,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Culture;Entertainment": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 284,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Culture;Entertainment;Music;News": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 902,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Culture;Family": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 60,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Culture;General": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 291,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Culture;General;Music;News": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 220,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Culture;Kids": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 470,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Culture;Lifestyle": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 981,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Culture;Music": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 130,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Culture;News": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 143,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Culture;Public": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 164,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Culture;Religious": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 792,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Culture;Travel": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 28,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Documentary": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 306,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Documentary;Education": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 206,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Documentary;Education;Outdoor;Relax": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 110,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Documentary;Education;Science": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 26,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Documentary;Entertainment": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 51,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Documentary;News": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 219,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Documentary;Series": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 281,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Education": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 105,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Education;Entertainment;News": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 26,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Education;General": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 332,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Education;Kids": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 678,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Education;Lifestyle": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 201,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Education;News": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 452,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Education;Outdoor": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 213,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Education;Religious": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 323,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Education;Science": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1061,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Entertainment": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 505,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Entertainment;Family": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 157,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Entertainment;Family;General": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 270,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Entertainment;General;News": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 830,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Entertainment;Interactive": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 242,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Entertainment;Kids": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 32,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Entertainment;Lifestyle;Music": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 124,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Entertainment;Movies": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 210,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Entertainment;Music": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 181,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Entertainment;News": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 124,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Entertainment;Series": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 24,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Entertainment;Travel": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 122,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Family": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 175,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Family;General": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 20,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Family;General;Movies": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 156,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Family;Kids": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 682,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Family;Movies": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 365,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Family;Religious": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 876,
-    "bitrate": null,
-    "resolution": null
-  },
-  "General": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 508,
-    "bitrate": null,
-    "resolution": null
-  },
-  "General;Legislative": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 395,
-    "bitrate": null,
-    "resolution": null
-  },
-  "General;Lifestyle;Music;News": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 104,
-    "bitrate": null,
-    "resolution": null
-  },
-  "General;Music;Public": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 398,
-    "bitrate": null,
-    "resolution": null
-  },
-  "General;News": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1430,
-    "bitrate": null,
-    "resolution": null
-  },
-  "General;Public": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 148,
-    "bitrate": null,
-    "resolution": null
-  },
-  "General;Religious": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 161,
-    "bitrate": null,
-    "resolution": null
-  },
-  "General;Series": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 111,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Kids": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 232,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Kids;Movies": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 84,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Kids;Public": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 354,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Kids;Religious": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 149,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Legislative": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 391,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Lifestyle": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 103,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Lifestyle;Relax": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 350,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Lifestyle;Shop": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 31,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Movies": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1141,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Movies;Music": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 132,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Movies;News": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 443,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Movies;Religious": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 98,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Movies;Series": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 414,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Music": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 379,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Music;News": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 550,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Music;Religious": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 493,
-    "bitrate": null,
-    "resolution": null
-  },
-  "News": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 888,
-    "bitrate": null,
-    "resolution": null
-  },
-  "News;Public": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 679,
-    "bitrate": null,
-    "resolution": null
-  },
-  "News;Science": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 427,
-    "bitrate": null,
-    "resolution": null
-  },
-  "News;Weather": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 206,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Outdoor": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 282,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Outdoor;Shop": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 402,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Outdoor;Travel": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 549,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Public;Weather": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 201,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Relax": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 421,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Relax;Travel": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 335,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Religious": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 894,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Science": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 160,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Series": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 333,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Shop": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 460,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Travel": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 205,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Undefined": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 130,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Weather": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 229,
-    "bitrate": null,
-    "resolution": null
-  },
-  "七台河新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1148,
-    "bitrate": null,
-    "resolution": null
-  },
-  "七台河民生社教": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1138,
-    "bitrate": null,
-    "resolution": null
-  },
-  "万州三峡移民": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 487,
-    "bitrate": null,
-    "resolution": null
-  },
-  "万荣综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 515,
-    "bitrate": null,
-    "resolution": null
-  },
-  "上虞文化影院": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 712,
-    "bitrate": null,
-    "resolution": null
-  },
-  "上虞新商都": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 723,
-    "bitrate": null,
-    "resolution": null
-  },
-  "上虞新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 681,
-    "bitrate": null,
-    "resolution": null
-  },
-  "东丰": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 546,
-    "bitrate": null,
-    "resolution": null
-  },
-  "东丰综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 979,
-    "bitrate": null,
-    "resolution": null
-  },
-  "中华小当家": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 36,
-    "bitrate": null,
-    "resolution": null
-  },
-  "中华特产": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 256,
-    "bitrate": null,
-    "resolution": null
-  },
-  "中国交通": {
-    "ok": null,
-    "udp_ok": false,
-    "latency": 546,
-    "bitrate": null,
-    "resolution": null
-  },
-  "中国蓝新闻": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 854,
-    "bitrate": null,
-    "resolution": null
-  },
-  "临夏州综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 739,
-    "bitrate": null,
-    "resolution": null
-  },
-  "临颍综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 948,
-    "bitrate": null,
-    "resolution": null
-  },
-  "义马新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 751,
-    "bitrate": null,
-    "resolution": null
-  },
-  "乐至综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 501,
-    "bitrate": null,
-    "resolution": null
-  },
-  "九": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 310,
-    "bitrate": null,
-    "resolution": null
-  },
-  "九台综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 800,
-    "bitrate": null,
-    "resolution": null
-  },
-  "云和新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 540,
-    "bitrate": null,
-    "resolution": null
-  },
-  "什邡新闻": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 723,
-    "bitrate": null,
-    "resolution": null
-  },
-  "伊犁哈萨克": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 679,
-    "bitrate": null,
-    "resolution": null
-  },
-  "伊犁经济法制": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 663,
-    "bitrate": null,
-    "resolution": null
-  },
-  "伊犁维吾尔": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 640,
-    "bitrate": null,
-    "resolution": null
-  },
-  "优优宝贝": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 359,
-    "bitrate": null,
-    "resolution": null
-  },
-  "余杭未来E": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 536,
-    "bitrate": null,
-    "resolution": null
-  },
-  "余杭综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 523,
-    "bitrate": null,
-    "resolution": null
-  },
-  "倩女幽魂人间道": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 940,
-    "bitrate": null,
-    "resolution": null
-  },
-  "倩女幽魂妖魔道": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 875,
-    "bitrate": null,
-    "resolution": null
-  },
-  "倩女幽魂道道道": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 926,
-    "bitrate": null,
-    "resolution": null
-  },
-  "偃师新闻": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 357,
-    "bitrate": null,
-    "resolution": null
-  },
-  "光山综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 232,
-    "bitrate": null,
-    "resolution": null
-  },
-  "六安公共": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1300,
-    "bitrate": null,
-    "resolution": null
-  },
-  "六安新闻综合": {
-    "ok": null,
-    "udp_ok": null,
     "latency": 568,
     "bitrate": null,
     "resolution": null
   },
-  "兰溪新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 972,
-    "bitrate": null,
-    "resolution": null
-  },
-  "兰考新闻": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 198,
-    "bitrate": null,
-    "resolution": null
-  },
-  "兵器科技": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 139,
-    "bitrate": null,
-    "resolution": null
-  },
-  "内乡综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 175,
-    "bitrate": null,
-    "resolution": null
-  },
-  "内黄综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 158,
-    "bitrate": null,
-    "resolution": null
-  },
-  "北京新闻": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1011,
-    "bitrate": null,
-    "resolution": null
-  },
-  "北京科教": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 436,
-    "bitrate": null,
-    "resolution": null
-  },
-  "北京纪实科教8K": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 501,
-    "bitrate": null,
-    "resolution": null
-  },
-  "北京青年": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 369,
-    "bitrate": null,
-    "resolution": null
-  },
-  "南京教科": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 422,
-    "bitrate": null,
-    "resolution": null
-  },
-  "南京新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 349,
-    "bitrate": null,
-    "resolution": null
-  },
-  "南国都市": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 955,
-    "bitrate": null,
-    "resolution": null
-  },
-  "卫辉综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 39,
-    "bitrate": null,
-    "resolution": null
-  },
-  "双辽": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1183,
-    "bitrate": null,
-    "resolution": null
-  },
-  "双辽综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 580,
-    "bitrate": null,
-    "resolution": null
-  },
-  "叙州新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 491,
-    "bitrate": null,
-    "resolution": null
-  },
-  "叶县": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 5,
-    "bitrate": null,
-    "resolution": null
-  },
-  "合肥新闻": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1395,
-    "bitrate": null,
-    "resolution": null
-  },
-  "吉林乡村": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1011,
-    "bitrate": null,
-    "resolution": null
-  },
-  "周口扶沟": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 489,
-    "bitrate": null,
-    "resolution": null
-  },
-  "哈尔滨影视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 512,
-    "bitrate": null,
-    "resolution": null
-  },
-  "哈尔滨新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 256,
-    "bitrate": null,
-    "resolution": null
-  },
-  "哈尔滨生活": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 453,
-    "bitrate": null,
-    "resolution": null
-  },
-  "唐河一套": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "嘉峪关综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 203,
-    "bitrate": null,
-    "resolution": null
-  },
-  "四川科教": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 570,
-    "bitrate": null,
-    "resolution": null
-  },
-  "四海钓鱼": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 256,
-    "bitrate": null,
-    "resolution": null
-  },
-  "固始综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "天映经典": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 343,
-    "bitrate": null,
-    "resolution": null
-  },
-  "奎屯哈萨克语": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 692,
-    "bitrate": null,
-    "resolution": null
-  },
-  "安徽导视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 509,
-    "bitrate": null,
-    "resolution": null
-  },
-  "宜阳综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "宝丰综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "山东教育": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1223,
-    "bitrate": null,
-    "resolution": null
-  },
-  "山东文旅": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 249,
-    "bitrate": null,
-    "resolution": null
-  },
-  "山东生活": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 570,
-    "bitrate": null,
-    "resolution": null
-  },
-  "嵊州新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 238,
-    "bitrate": null,
-    "resolution": null
-  },
-  "嵊泗综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 316,
-    "bitrate": null,
-    "resolution": null
-  },
-  "嵩县综合新闻": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "巩义新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "平湖民生休闲": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 305,
-    "bitrate": null,
-    "resolution": null
-  },
-  "广东民生": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 263,
-    "bitrate": null,
-    "resolution": null
-  },
-  "广元综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1421,
-    "bitrate": null,
-    "resolution": null
-  },
-  "广州新闻": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 583,
-    "bitrate": null,
-    "resolution": null
-  },
-  "广州综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 596,
-    "bitrate": null,
-    "resolution": null
-  },
-  "广西桂林漓江景区": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1028,
-    "bitrate": null,
-    "resolution": null
-  },
-  "庆元新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 283,
-    "bitrate": null,
-    "resolution": null
-  },
-  "庆元综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 283,
-    "bitrate": null,
-    "resolution": null
-  },
-  "开化国家公园": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 537,
-    "bitrate": null,
-    "resolution": null
-  },
-  "开化新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 503,
-    "bitrate": null,
-    "resolution": null
-  },
-  "开封文化旅游": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "开封新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "张掖七彩丹霞": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1068,
-    "bitrate": null,
-    "resolution": null
-  },
-  "快乐垂钓": {
-    "ok": null,
-    "udp_ok": true,
-    "latency": 477,
-    "bitrate": null,
-    "resolution": null
-  },
-  "成县综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 593,
-    "bitrate": null,
-    "resolution": null
-  },
-  "扶沟综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "支持作者": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 521,
-    "bitrate": null,
-    "resolution": null
-  },
-  "敦化一套": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 533,
-    "bitrate": null,
-    "resolution": null
-  },
-  "数码时代": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 295,
-    "bitrate": null,
-    "resolution": null
-  },
-  "文成新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 251,
-    "bitrate": null,
-    "resolution": null
-  },
-  "文成综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 476,
-    "bitrate": null,
-    "resolution": null
-  },
-  "新乡县电视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "新县综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "新安新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "新昌新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 833,
-    "bitrate": null,
-    "resolution": null
-  },
-  "新疆天山": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 831,
-    "bitrate": null,
-    "resolution": null
-  },
-  "新蔡综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "新视觉": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 503,
-    "bitrate": null,
-    "resolution": null
-  },
-  "新野综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "方城一套": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "普陀山": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1029,
-    "bitrate": null,
-    "resolution": null
-  },
-  "普陀新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 538,
-    "bitrate": null,
-    "resolution": null
-  },
-  "景泰综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 651,
-    "bitrate": null,
-    "resolution": null
-  },
-  "月牙泉": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1017,
-    "bitrate": null,
-    "resolution": null
-  },
-  "朝阳新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 375,
-    "bitrate": null,
-    "resolution": null
-  },
-  "未知": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1019,
-    "bitrate": null,
-    "resolution": null
-  },
-  "松阳综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 268,
-    "bitrate": null,
-    "resolution": null
-  },
-  "柳河": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 572,
-    "bitrate": null,
-    "resolution": null
-  },
-  "柳河综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 333,
-    "bitrate": null,
-    "resolution": null
-  },
-  "桦甸": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 562,
-    "bitrate": null,
-    "resolution": null
-  },
-  "梅河口综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 594,
-    "bitrate": null,
-    "resolution": null
-  },
-  "武义新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1141,
-    "bitrate": null,
-    "resolution": null
-  },
-  "武威新闻": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 610,
-    "bitrate": null,
-    "resolution": null
-  },
-  "永嘉新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 579,
-    "bitrate": null,
-    "resolution": null
-  },
-  "永城综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "永昌综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 203,
-    "bitrate": null,
-    "resolution": null
-  },
-  "江夏新闻综合": {
+  "海南卫视": {
     "ok": null,
     "udp_ok": null,
     "latency": 528,
     "bitrate": null,
     "resolution": null
   },
-  "江津新闻": {
+  "海峡卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 558,
+    "latency": 488,
     "bitrate": null,
     "resolution": null
   },
-  "江苏南京牛首山": {
+  "湖南卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 1232,
+    "latency": 556,
     "bitrate": null,
     "resolution": null
   },
-  "汪清": {
+  "西藏卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 512,
+    "latency": 907,
     "bitrate": null,
     "resolution": null
   },
-  "沁阳新闻综合": {
+  "辽宁卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 2,
+    "latency": 529,
     "bitrate": null,
     "resolution": null
   },
-  "河北农民": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 650,
-    "bitrate": null,
-    "resolution": null
-  },
-  "泌阳新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 3,
-    "bitrate": null,
-    "resolution": null
-  },
-  "泰山主峰": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 955,
-    "bitrate": null,
-    "resolution": null
-  },
-  "泰山大观峰": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 988,
-    "bitrate": null,
-    "resolution": null
-  },
-  "泰山太平岭": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 923,
-    "bitrate": null,
-    "resolution": null
-  },
-  "泰山望人松": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1277,
-    "bitrate": null,
-    "resolution": null
-  },
-  "泰山白云亭悬崖": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 771,
-    "bitrate": null,
-    "resolution": null
-  },
-  "洞头综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 285,
-    "bitrate": null,
-    "resolution": null
-  },
-  "济源电视一套": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "浙江休闲": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 474,
-    "bitrate": null,
-    "resolution": null
-  },
-  "浙江公共新闻": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 207,
-    "bitrate": null,
-    "resolution": null
-  },
-  "浙江国际": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 207,
-    "bitrate": null,
-    "resolution": null
-  },
-  "浙江教科": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 224,
-    "bitrate": null,
-    "resolution": null
-  },
-  "浙江教科影视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 817,
-    "bitrate": null,
-    "resolution": null
-  },
-  "浙江教育": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 510,
-    "bitrate": null,
-    "resolution": null
-  },
-  "浙江数码时代": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 414,
-    "bitrate": null,
-    "resolution": null
-  },
-  "浙江民生": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 525,
-    "bitrate": null,
-    "resolution": null
-  },
-  "浙江经济": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 544,
-    "bitrate": null,
-    "resolution": null
-  },
-  "浙江经视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 207,
-    "bitrate": null,
-    "resolution": null
-  },
-  "浙江舟山东极岛": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1053,
-    "bitrate": null,
-    "resolution": null
-  },
-  "浙江遂昌": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 297,
-    "bitrate": null,
-    "resolution": null
-  },
-  "浙江钱江": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 502,
-    "bitrate": null,
-    "resolution": null
-  },
-  "浙江钱江都市": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 700,
-    "bitrate": null,
-    "resolution": null
-  },
-  "海南新闻": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 507,
-    "bitrate": null,
-    "resolution": null
-  },
-  "淅川电视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 241,
-    "bitrate": null,
-    "resolution": null
-  },
-  "渑池新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "温县综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "湖南张家界宝峰湖": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 866,
-    "bitrate": null,
-    "resolution": null
-  },
-  "湖南张家界御笔峰": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 754,
-    "bitrate": null,
-    "resolution": null
-  },
-  "滑县新闻": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "潢川综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "灌阳新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 635,
-    "bitrate": null,
-    "resolution": null
-  },
-  "灵宝新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "狮子山鸟瞰丽江古城": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 798,
-    "bitrate": null,
-    "resolution": null
-  },
-  "玛纳斯": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 628,
-    "bitrate": null,
-    "resolution": null
-  },
-  "环球旅游": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 366,
-    "bitrate": null,
-    "resolution": null
-  },
-  "珲春新闻": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 339,
-    "bitrate": null,
-    "resolution": null
-  },
-  "甘南县综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1069,
-    "bitrate": null,
-    "resolution": null
-  },
-  "甘肃经济": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 996,
-    "bitrate": null,
-    "resolution": null
-  },
-  "甘肃都市": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1000,
-    "bitrate": null,
-    "resolution": null
-  },
-  "生态环境": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 354,
-    "bitrate": null,
-    "resolution": null
-  },
-  "电视指南": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 139,
-    "bitrate": null,
-    "resolution": null
-  },
-  "登封综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "白山公共": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 561,
-    "bitrate": null,
-    "resolution": null
-  },
-  "白银综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 204,
-    "bitrate": null,
-    "resolution": null
-  },
-  "磐石": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 525,
-    "bitrate": null,
-    "resolution": null
-  },
-  "磐石综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 383,
-    "bitrate": null,
-    "resolution": null
-  },
-  "福建漳州醉美沙滩翡翠湾": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 803,
-    "bitrate": null,
-    "resolution": null
-  },
-  "禹州综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "秦安综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 195,
-    "bitrate": null,
-    "resolution": null
-  },
-  "纪实科教": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 514,
-    "bitrate": null,
-    "resolution": null
-  },
-  "缙云新闻综合": {
+  "重庆卫视": {
     "ok": null,
     "udp_ok": null,
     "latency": 902,
     "bitrate": null,
     "resolution": null
   },
-  "缙云综合": {
+  "陕西卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 274,
+    "latency": 93,
     "bitrate": null,
     "resolution": null
   },
-  "舒兰新闻": {
+  "黑龙江卫视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 529,
+    "latency": 586,
     "bitrate": null,
     "resolution": null
   },
-  "舒兰新闻综合": {
+  "Animation": {
     "ok": null,
     "udp_ok": null,
-    "latency": 669,
+    "latency": 308,
     "bitrate": null,
     "resolution": null
   },
-  "茶": {
+  "Animation;Classic": {
     "ok": null,
-    "udp_ok": false,
-    "latency": 497,
-    "bitrate": null,
-    "resolution": null
-  },
-  "荥阳综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "萧山综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 274,
-    "bitrate": null,
-    "resolution": null
-  },
-  "衡水公共": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 508,
-    "bitrate": null,
-    "resolution": null
-  },
-  "衢江新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 279,
-    "bitrate": null,
-    "resolution": null
-  },
-  "西华综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "西安新闻": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1003,
-    "bitrate": null,
-    "resolution": null
-  },
-  "西安都市": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 420,
-    "bitrate": null,
-    "resolution": null
-  },
-  "西峰综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 215,
-    "bitrate": null,
-    "resolution": null
-  },
-  "让子弹飞": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1479,
-    "bitrate": null,
-    "resolution": null
-  },
-  "诸暨新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 303,
-    "bitrate": null,
-    "resolution": null
-  },
-  "象山新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 290,
-    "bitrate": null,
-    "resolution": null
-  },
-  "象山综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 926,
-    "bitrate": null,
-    "resolution": null
-  },
-  "贵州省兴义市万峰林": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 814,
-    "bitrate": null,
-    "resolution": null
-  },
-  "车迷": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 371,
-    "bitrate": null,
-    "resolution": null
-  },
-  "辉南新闻": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1292,
-    "bitrate": null,
-    "resolution": null
-  },
-  "辉南新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 689,
-    "bitrate": null,
-    "resolution": null
-  },
-  "辽宁公共": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 371,
-    "bitrate": null,
-    "resolution": null
-  },
-  "辽宁北方": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 371,
-    "bitrate": null,
-    "resolution": null
-  },
-  "辽宁影视剧": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 513,
-    "bitrate": null,
-    "resolution": null
-  },
-  "辽宁教育青少": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 358,
-    "bitrate": null,
-    "resolution": null
-  },
-  "辽宁生活": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 260,
-    "bitrate": null,
-    "resolution": null
-  },
-  "辽宁经济": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 357,
-    "bitrate": null,
-    "resolution": null
-  },
-  "辽宁都市": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 252,
-    "bitrate": null,
-    "resolution": null
-  },
-  "通化县": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 529,
-    "bitrate": null,
-    "resolution": null
-  },
-  "通化县综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 348,
-    "bitrate": null,
-    "resolution": null
-  },
-  "通渭综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 202,
-    "bitrate": null,
-    "resolution": null
-  },
-  "遂昌综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 238,
-    "bitrate": null,
-    "resolution": null
-  },
-  "邓州新闻": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "郏县综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 3,
-    "bitrate": null,
-    "resolution": null
-  },
-  "郸城新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "都市剧场": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 501,
-    "bitrate": null,
-    "resolution": null
-  },
-  "鄢陵综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "重庆新闻": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 51,
-    "bitrate": null,
-    "resolution": null
-  },
-  "重庆汽摩": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 514,
-    "bitrate": null,
-    "resolution": null
-  },
-  "铜梁综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 563,
-    "bitrate": null,
-    "resolution": null
-  },
-  "铜陵新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 287,
-    "bitrate": null,
-    "resolution": null
-  },
-  "长沙新闻综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 523,
-    "bitrate": null,
-    "resolution": null
-  },
-  "长白山电视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 576,
-    "bitrate": null,
-    "resolution": null
-  },
-  "长白朝语": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 487,
-    "bitrate": null,
-    "resolution": null
-  },
-  "陕西公共": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1164,
-    "bitrate": null,
-    "resolution": null
-  },
-  "陕西新闻咨询": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 418,
-    "bitrate": null,
-    "resolution": null
-  },
-  "陕西洋县国宝朱鹮02": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 850,
-    "bitrate": null,
-    "resolution": null
-  },
-  "陕西秦腔": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 461,
-    "bitrate": null,
-    "resolution": null
-  },
-  "陕西都市青春": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 413,
-    "bitrate": null,
-    "resolution": null
-  },
-  "陕西银龄": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 415,
-    "bitrate": null,
-    "resolution": null
-  },
-  "青田电视": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 257,
-    "bitrate": null,
-    "resolution": null
-  },
-  "靖天戏剧": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 127,
-    "bitrate": null,
-    "resolution": null
-  },
-  "靖天映画": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 56,
-    "bitrate": null,
-    "resolution": null
-  },
-  "靖宇综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1003,
-    "bitrate": null,
-    "resolution": null
-  },
-  "靖远综合": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 203,
-    "bitrate": null,
-    "resolution": null
-  },
-  "音乐现场": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 3,
-    "bitrate": null,
-    "resolution": null
-  },
-  "项城新闻": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 2,
-    "bitrate": null,
-    "resolution": null
-  },
-  "风云剧场": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 138,
-    "bitrate": null,
-    "resolution": null
-  },
-  "风云音乐": {
-    "ok": null,
     "udp_ok": null,
-    "latency": 139,
+    "latency": 400,
     "bitrate": null,
     "resolution": null
   },
-  "高尔夫网球": {
+  "Animation;Entertainment": {
     "ok": null,
     "udp_ok": null,
-    "latency": 138,
+    "latency": 115,
     "bitrate": null,
     "resolution": null
   },
-  "鸣沙山": {
+  "Animation;Family;Kids": {
     "ok": null,
     "udp_ok": null,
-    "latency": 798,
+    "latency": 213,
     "bitrate": null,
     "resolution": null
   },
-  "黄山始信新道": {
+  "Animation;General;Kids": {
     "ok": null,
     "udp_ok": null,
-    "latency": 798,
+    "latency": 216,
     "bitrate": null,
     "resolution": null
   },
-  "黄山排云亭": {
+  "Animation;Kids": {
     "ok": null,
     "udp_ok": null,
-    "latency": 1071,
+    "latency": 43,
     "bitrate": null,
     "resolution": null
   },
-  "黄花城水长城01": {
+  "Animation;Kids;Public": {
     "ok": null,
     "udp_ok": null,
-    "latency": 800,
+    "latency": 163,
     "bitrate": null,
     "resolution": null
   },
-  "黄龙": {
+  "Animation;Movies": {
     "ok": null,
     "udp_ok": null,
-    "latency": 745,
+    "latency": 186,
     "bitrate": null,
     "resolution": null
   },
-  "黎城综合": {
+  "Auto": {
     "ok": null,
     "udp_ok": null,
-    "latency": 434,
+    "latency": 47,
     "bitrate": null,
     "resolution": null
   },
-  "龙井": {
+  "Auto;Entertainment": {
     "ok": null,
     "udp_ok": null,
-    "latency": 790,
+    "latency": 219,
     "bitrate": null,
     "resolution": null
   },
-  "龙井综合": {
+  "Auto;Travel": {
     "ok": null,
     "udp_ok": null,
-    "latency": 946,
+    "latency": 862,
     "bitrate": null,
     "resolution": null
   },
-  "龙泉新闻综合": {
+  "Business": {
     "ok": null,
     "udp_ok": null,
-    "latency": 319,
+    "latency": 103,
     "bitrate": null,
     "resolution": null
   },
-  "龙游新闻综合": {
+  "Business;Culture;Lifestyle": {
     "ok": null,
     "udp_ok": null,
-    "latency": 989,
+    "latency": 110,
     "bitrate": null,
     "resolution": null
   },
-  "龙游生活娱乐": {
+  "Business;News": {
     "ok": null,
     "udp_ok": null,
-    "latency": 759,
+    "latency": 269,
     "bitrate": null,
     "resolution": null
   },
-  "Auto;Outdoor;Sports": {
+  "CCTV": {
     "ok": null,
     "udp_ok": null,
-    "latency": 320,
+    "latency": 194,
     "bitrate": null,
     "resolution": null
   },
-  "Comedy;Movies;Series;Sports": {
+  "CGTN": {
     "ok": null,
     "udp_ok": null,
-    "latency": 549,
+    "latency": 111,
     "bitrate": null,
     "resolution": null
   },
-  "Culture;Sports": {
+  "CGTN俄语": {
     "ok": null,
     "udp_ok": null,
-    "latency": 263,
+    "latency": 89,
     "bitrate": null,
     "resolution": null
   },
-  "Entertainment;Sports": {
+  "CGTN法语": {
     "ok": null,
     "udp_ok": null,
     "latency": 95,
     "bitrate": null,
     "resolution": null
   },
-  "General;Sports": {
+  "CGTN西语": {
     "ok": null,
     "udp_ok": null,
-    "latency": 75,
+    "latency": 87,
     "bitrate": null,
     "resolution": null
   },
-  "Kids;Sports": {
+  "CGTN阿语": {
     "ok": null,
     "udp_ok": null,
-    "latency": 322,
+    "latency": 95,
     "bitrate": null,
     "resolution": null
   },
-  "Music;Sports": {
+  "CHC家庭影院": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 513,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Classic": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 418,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Classic;Kids": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 415,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Classic;Movies": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 42,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Classic;Music": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 192,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Comedy": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 182,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Comedy;Family;Movies": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 626,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Comedy;Kids": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 208,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Comedy;Movies": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 596,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Comedy;Series": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 391,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Cooking": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 186,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Cooking;Lifestyle": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 175,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Cooking;Shop": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 42,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Culture": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 175,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Culture;Documentary": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 367,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Culture;Documentary;Entertainment;General;Movies;Music": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 991,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Culture;Education;News": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 155,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Culture;Entertainment": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 234,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Culture;Entertainment;Music;News": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 946,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Culture;Family": {
     "ok": null,
     "udp_ok": null,
     "latency": 15,
     "bitrate": null,
     "resolution": null
   },
+  "Culture;General": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 370,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Culture;General;Music;News": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 240,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Culture;Kids": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 740,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Culture;Music": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 178,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Culture;News": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 219,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Culture;Public": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 428,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Culture;Religious": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 710,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Documentary": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 499,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Documentary;Education": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 302,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Documentary;Education;Outdoor;Relax": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 165,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Documentary;Education;Science": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 35,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Documentary;News": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 248,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Documentary;Series": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 277,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Education": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 149,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Education;Entertainment;News": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 36,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Education;General": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 381,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Education;Kids": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 273,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Education;Lifestyle": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 186,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Education;Outdoor": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 646,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Education;Religious": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 239,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Entertainment": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 370,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Entertainment;Family": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 333,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Entertainment;Family;General": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 264,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Entertainment;General;News": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 550,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Entertainment;Interactive": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 217,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Entertainment;Kids": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 893,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Entertainment;Lifestyle;Music": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 115,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Entertainment;Movies": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 203,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Entertainment;Music": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 229,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Entertainment;News": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 258,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Entertainment;Series": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 14,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Family": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 308,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Family;General": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 7,
+    "bitrate": null,
+    "resolution": null
+  },
+  "General": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 386,
+    "bitrate": null,
+    "resolution": null
+  },
+  "General;Lifestyle;Music;News": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 438,
+    "bitrate": null,
+    "resolution": null
+  },
+  "General;Music;Public": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 555,
+    "bitrate": null,
+    "resolution": null
+  },
+  "General;News": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 410,
+    "bitrate": null,
+    "resolution": null
+  },
+  "General;Public": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 121,
+    "bitrate": null,
+    "resolution": null
+  },
+  "General;Religious": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 142,
+    "bitrate": null,
+    "resolution": null
+  },
+  "General;Series": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 87,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Kids": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 213,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Kids;Movies": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 76,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Kids;Religious": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 151,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Legislative": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 668,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Lifestyle": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 192,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Lifestyle;Shop": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 64,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Movies": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 264,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Movies;Music": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 231,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Movies;Series": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 186,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Music": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 36,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Music;News": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 663,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Music;Religious": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 491,
+    "bitrate": null,
+    "resolution": null
+  },
+  "News": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 516,
+    "bitrate": null,
+    "resolution": null
+  },
+  "News;Weather": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 373,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Outdoor": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 323,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Outdoor;Shop": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 439,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Relax": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 383,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Relax;Travel": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 304,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Religious": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 122,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Science": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 425,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Series": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 681,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Shop": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 205,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Travel": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 193,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Undefined": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 166,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Weather": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 196,
+    "bitrate": null,
+    "resolution": null
+  },
+  "万州三峡移民": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 521,
+    "bitrate": null,
+    "resolution": null
+  },
+  "万荣综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 554,
+    "bitrate": null,
+    "resolution": null
+  },
+  "上虞文化影院": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 553,
+    "bitrate": null,
+    "resolution": null
+  },
+  "东丰综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1162,
+    "bitrate": null,
+    "resolution": null
+  },
+  "中华小当家": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 27,
+    "bitrate": null,
+    "resolution": null
+  },
+  "中华特产": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 274,
+    "bitrate": null,
+    "resolution": null
+  },
+  "中国交通": {
+    "ok": null,
+    "udp_ok": true,
+    "latency": 584,
+    "bitrate": null,
+    "resolution": null
+  },
+  "中国蓝新闻": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 693,
+    "bitrate": null,
+    "resolution": null
+  },
+  "临颍综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 784,
+    "bitrate": null,
+    "resolution": null
+  },
+  "义马新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 738,
+    "bitrate": null,
+    "resolution": null
+  },
+  "乐至综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 544,
+    "bitrate": null,
+    "resolution": null
+  },
+  "九": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 329,
+    "bitrate": null,
+    "resolution": null
+  },
+  "九台综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 941,
+    "bitrate": null,
+    "resolution": null
+  },
+  "什邡新闻": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 677,
+    "bitrate": null,
+    "resolution": null
+  },
+  "伊犁哈萨克": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 667,
+    "bitrate": null,
+    "resolution": null
+  },
+  "伊犁维吾尔": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 696,
+    "bitrate": null,
+    "resolution": null
+  },
+  "优优宝贝": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 383,
+    "bitrate": null,
+    "resolution": null
+  },
+  "倩女幽魂道道道": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1107,
+    "bitrate": null,
+    "resolution": null
+  },
+  "偃师新闻": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 334,
+    "bitrate": null,
+    "resolution": null
+  },
+  "光山综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 318,
+    "bitrate": null,
+    "resolution": null
+  },
+  "兰溪新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 543,
+    "bitrate": null,
+    "resolution": null
+  },
+  "兰考新闻": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 306,
+    "bitrate": null,
+    "resolution": null
+  },
+  "兵器科技": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 195,
+    "bitrate": null,
+    "resolution": null
+  },
+  "内乡综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 306,
+    "bitrate": null,
+    "resolution": null
+  },
+  "内黄综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 295,
+    "bitrate": null,
+    "resolution": null
+  },
+  "北京纪实科教8K": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 494,
+    "bitrate": null,
+    "resolution": null
+  },
+  "南京教科": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1285,
+    "bitrate": null,
+    "resolution": null
+  },
+  "南京新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 12,
+    "bitrate": null,
+    "resolution": null
+  },
+  "卫辉综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 175,
+    "bitrate": null,
+    "resolution": null
+  },
+  "双辽综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 599,
+    "bitrate": null,
+    "resolution": null
+  },
+  "叶县": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 155,
+    "bitrate": null,
+    "resolution": null
+  },
+  "合肥新闻": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 423,
+    "bitrate": null,
+    "resolution": null
+  },
+  "周口扶沟": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 502,
+    "bitrate": null,
+    "resolution": null
+  },
+  "唐河一套": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 32,
+    "bitrate": null,
+    "resolution": null
+  },
+  "嘉峪关综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 750,
+    "bitrate": null,
+    "resolution": null
+  },
+  "四川科教": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 590,
+    "bitrate": null,
+    "resolution": null
+  },
+  "四海钓鱼": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 273,
+    "bitrate": null,
+    "resolution": null
+  },
+  "固始综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 11,
+    "bitrate": null,
+    "resolution": null
+  },
+  "天映经典": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 433,
+    "bitrate": null,
+    "resolution": null
+  },
+  "宜阳综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 11,
+    "bitrate": null,
+    "resolution": null
+  },
+  "宝丰综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 11,
+    "bitrate": null,
+    "resolution": null
+  },
+  "山东教育": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1235,
+    "bitrate": null,
+    "resolution": null
+  },
+  "山东文旅": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 268,
+    "bitrate": null,
+    "resolution": null
+  },
+  "嵊州新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 322,
+    "bitrate": null,
+    "resolution": null
+  },
+  "嵩县综合新闻": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 12,
+    "bitrate": null,
+    "resolution": null
+  },
+  "巩义新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 12,
+    "bitrate": null,
+    "resolution": null
+  },
+  "平湖民生休闲": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 534,
+    "bitrate": null,
+    "resolution": null
+  },
+  "广东民生": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 272,
+    "bitrate": null,
+    "resolution": null
+  },
+  "广元综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1447,
+    "bitrate": null,
+    "resolution": null
+  },
+  "广州新闻": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 994,
+    "bitrate": null,
+    "resolution": null
+  },
+  "庆元新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 524,
+    "bitrate": null,
+    "resolution": null
+  },
+  "庆元综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 527,
+    "bitrate": null,
+    "resolution": null
+  },
+  "开化国家公园": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 613,
+    "bitrate": null,
+    "resolution": null
+  },
+  "开化新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 557,
+    "bitrate": null,
+    "resolution": null
+  },
+  "开封文化旅游": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 12,
+    "bitrate": null,
+    "resolution": null
+  },
+  "开封新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 12,
+    "bitrate": null,
+    "resolution": null
+  },
+  "快乐垂钓": {
+    "ok": null,
+    "udp_ok": true,
+    "latency": 516,
+    "bitrate": null,
+    "resolution": null
+  },
+  "扶沟综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 11,
+    "bitrate": null,
+    "resolution": null
+  },
+  "支持作者": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 890,
+    "bitrate": null,
+    "resolution": null
+  },
+  "数码时代": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 228,
+    "bitrate": null,
+    "resolution": null
+  },
+  "文成新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 520,
+    "bitrate": null,
+    "resolution": null
+  },
+  "新乡县电视": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 15,
+    "bitrate": null,
+    "resolution": null
+  },
+  "新县综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 12,
+    "bitrate": null,
+    "resolution": null
+  },
+  "新安新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 11,
+    "bitrate": null,
+    "resolution": null
+  },
+  "新蔡综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 11,
+    "bitrate": null,
+    "resolution": null
+  },
+  "新视觉": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 273,
+    "bitrate": null,
+    "resolution": null
+  },
+  "新野综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 12,
+    "bitrate": null,
+    "resolution": null
+  },
+  "方城一套": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 11,
+    "bitrate": null,
+    "resolution": null
+  },
+  "普陀新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 552,
+    "bitrate": null,
+    "resolution": null
+  },
+  "普陀电视": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1475,
+    "bitrate": null,
+    "resolution": null
+  },
+  "朝天综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1244,
+    "bitrate": null,
+    "resolution": null
+  },
+  "朝阳新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 384,
+    "bitrate": null,
+    "resolution": null
+  },
+  "未知": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 225,
+    "bitrate": null,
+    "resolution": null
+  },
+  "柳河综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 590,
+    "bitrate": null,
+    "resolution": null
+  },
+  "桦甸": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 604,
+    "bitrate": null,
+    "resolution": null
+  },
+  "梅河口综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 842,
+    "bitrate": null,
+    "resolution": null
+  },
+  "武义新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1072,
+    "bitrate": null,
+    "resolution": null
+  },
+  "永嘉新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 625,
+    "bitrate": null,
+    "resolution": null
+  },
+  "永城综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 12,
+    "bitrate": null,
+    "resolution": null
+  },
+  "永昌综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 440,
+    "bitrate": null,
+    "resolution": null
+  },
+  "江津新闻": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1409,
+    "bitrate": null,
+    "resolution": null
+  },
+  "沁阳新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 12,
+    "bitrate": null,
+    "resolution": null
+  },
+  "泌阳新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 11,
+    "bitrate": null,
+    "resolution": null
+  },
+  "洞头综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 557,
+    "bitrate": null,
+    "resolution": null
+  },
+  "济源电视一套": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 12,
+    "bitrate": null,
+    "resolution": null
+  },
+  "浙江休闲": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 274,
+    "bitrate": null,
+    "resolution": null
+  },
+  "浙江公共新闻": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 226,
+    "bitrate": null,
+    "resolution": null
+  },
+  "浙江教科": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 451,
+    "bitrate": null,
+    "resolution": null
+  },
+  "浙江教育": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 542,
+    "bitrate": null,
+    "resolution": null
+  },
+  "浙江数码时代": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 446,
+    "bitrate": null,
+    "resolution": null
+  },
+  "浙江民生": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 571,
+    "bitrate": null,
+    "resolution": null
+  },
+  "浙江经济": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 564,
+    "bitrate": null,
+    "resolution": null
+  },
+  "浙江遂昌": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 284,
+    "bitrate": null,
+    "resolution": null
+  },
+  "浙江钱江": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 530,
+    "bitrate": null,
+    "resolution": null
+  },
+  "淅川电视": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 252,
+    "bitrate": null,
+    "resolution": null
+  },
+  "淮安新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 739,
+    "bitrate": null,
+    "resolution": null
+  },
+  "渑池新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 12,
+    "bitrate": null,
+    "resolution": null
+  },
+  "温县综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 11,
+    "bitrate": null,
+    "resolution": null
+  },
+  "溧水新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 721,
+    "bitrate": null,
+    "resolution": null
+  },
+  "滑县新闻": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 11,
+    "bitrate": null,
+    "resolution": null
+  },
+  "潢川综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 11,
+    "bitrate": null,
+    "resolution": null
+  },
+  "灵宝新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 12,
+    "bitrate": null,
+    "resolution": null
+  },
+  "玛纳斯": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 700,
+    "bitrate": null,
+    "resolution": null
+  },
+  "环球旅游": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 370,
+    "bitrate": null,
+    "resolution": null
+  },
+  "璧山综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 595,
+    "bitrate": null,
+    "resolution": null
+  },
+  "甘南县综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1318,
+    "bitrate": null,
+    "resolution": null
+  },
+  "甘肃经济": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1039,
+    "bitrate": null,
+    "resolution": null
+  },
+  "生态环境": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 377,
+    "bitrate": null,
+    "resolution": null
+  },
+  "电视指南": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 193,
+    "bitrate": null,
+    "resolution": null
+  },
+  "登封综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 12,
+    "bitrate": null,
+    "resolution": null
+  },
+  "白银综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 251,
+    "bitrate": null,
+    "resolution": null
+  },
+  "磐石": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 708,
+    "bitrate": null,
+    "resolution": null
+  },
+  "磐石综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 344,
+    "bitrate": null,
+    "resolution": null
+  },
+  "禹州综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 12,
+    "bitrate": null,
+    "resolution": null
+  },
+  "秦安综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 997,
+    "bitrate": null,
+    "resolution": null
+  },
+  "纪实科教": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 375,
+    "bitrate": null,
+    "resolution": null
+  },
+  "缙云新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 283,
+    "bitrate": null,
+    "resolution": null
+  },
+  "缙云综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 272,
+    "bitrate": null,
+    "resolution": null
+  },
+  "苍南新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 858,
+    "bitrate": null,
+    "resolution": null
+  },
+  "茶": {
+    "ok": null,
+    "udp_ok": true,
+    "latency": 515,
+    "bitrate": null,
+    "resolution": null
+  },
+  "荥阳综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 11,
+    "bitrate": null,
+    "resolution": null
+  },
+  "萧山新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 755,
+    "bitrate": null,
+    "resolution": null
+  },
+  "萧山综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 253,
+    "bitrate": null,
+    "resolution": null
+  },
+  "衢江新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 320,
+    "bitrate": null,
+    "resolution": null
+  },
+  "西华综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 12,
+    "bitrate": null,
+    "resolution": null
+  },
+  "西宁新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1161,
+    "bitrate": null,
+    "resolution": null
+  },
+  "西安新闻": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 449,
+    "bitrate": null,
+    "resolution": null
+  },
+  "西安都市": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 448,
+    "bitrate": null,
+    "resolution": null
+  },
+  "西峰综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 672,
+    "bitrate": null,
+    "resolution": null
+  },
+  "诸暨新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 880,
+    "bitrate": null,
+    "resolution": null
+  },
+  "象山新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 294,
+    "bitrate": null,
+    "resolution": null
+  },
+  "车迷": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 386,
+    "bitrate": null,
+    "resolution": null
+  },
+  "辉南新闻": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1333,
+    "bitrate": null,
+    "resolution": null
+  },
+  "辽宁公共": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 372,
+    "bitrate": null,
+    "resolution": null
+  },
+  "辽宁北方": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 274,
+    "bitrate": null,
+    "resolution": null
+  },
+  "辽宁影视剧": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 543,
+    "bitrate": null,
+    "resolution": null
+  },
+  "辽宁教育青少": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 272,
+    "bitrate": null,
+    "resolution": null
+  },
+  "辽宁生活": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 389,
+    "bitrate": null,
+    "resolution": null
+  },
+  "辽宁经济": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 547,
+    "bitrate": null,
+    "resolution": null
+  },
+  "辽宁都市": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 543,
+    "bitrate": null,
+    "resolution": null
+  },
+  "通化县": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 649,
+    "bitrate": null,
+    "resolution": null
+  },
+  "通化县综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1012,
+    "bitrate": null,
+    "resolution": null
+  },
+  "通渭综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 639,
+    "bitrate": null,
+    "resolution": null
+  },
+  "遂昌综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 251,
+    "bitrate": null,
+    "resolution": null
+  },
+  "邓州新闻": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 12,
+    "bitrate": null,
+    "resolution": null
+  },
+  "郏县综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 11,
+    "bitrate": null,
+    "resolution": null
+  },
+  "郸城新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 11,
+    "bitrate": null,
+    "resolution": null
+  },
+  "鄢陵综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 12,
+    "bitrate": null,
+    "resolution": null
+  },
+  "重庆新闻": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 59,
+    "bitrate": null,
+    "resolution": null
+  },
+  "重庆汽摩": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 664,
+    "bitrate": null,
+    "resolution": null
+  },
+  "铜梁综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 624,
+    "bitrate": null,
+    "resolution": null
+  },
+  "长白朝语": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 530,
+    "bitrate": null,
+    "resolution": null
+  },
+  "陕西新闻咨询": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 986,
+    "bitrate": null,
+    "resolution": null
+  },
+  "陕西新闻资讯": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 302,
+    "bitrate": null,
+    "resolution": null
+  },
+  "陕西秦腔": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 449,
+    "bitrate": null,
+    "resolution": null
+  },
+  "陕西都市青春": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 225,
+    "bitrate": null,
+    "resolution": null
+  },
+  "陕西银龄": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 451,
+    "bitrate": null,
+    "resolution": null
+  },
+  "青田电视": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 284,
+    "bitrate": null,
+    "resolution": null
+  },
+  "靖天戏剧": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 34,
+    "bitrate": null,
+    "resolution": null
+  },
+  "靖天映画": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 50,
+    "bitrate": null,
+    "resolution": null
+  },
+  "靖远综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 221,
+    "bitrate": null,
+    "resolution": null
+  },
+  "音乐现场": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1017,
+    "bitrate": null,
+    "resolution": null
+  },
+  "项城新闻": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 12,
+    "bitrate": null,
+    "resolution": null
+  },
+  "风云剧场": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 194,
+    "bitrate": null,
+    "resolution": null
+  },
+  "风云音乐": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 195,
+    "bitrate": null,
+    "resolution": null
+  },
+  "高尔夫网球": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 193,
+    "bitrate": null,
+    "resolution": null
+  },
+  "黎城综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 468,
+    "bitrate": null,
+    "resolution": null
+  },
+  "龙泉新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 328,
+    "bitrate": null,
+    "resolution": null
+  },
+  "龙游新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 289,
+    "bitrate": null,
+    "resolution": null
+  },
+  "龙游生活娱乐": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 279,
+    "bitrate": null,
+    "resolution": null
+  },
+  "龙门飞甲": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1015,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Comedy;Movies;Series;Sports": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 761,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Culture;Sports": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 452,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Entertainment;Sports": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 164,
+    "bitrate": null,
+    "resolution": null
+  },
+  "General;Sports": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 46,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Music;Sports": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 31,
+    "bitrate": null,
+    "resolution": null
+  },
   "News;Sports": {
     "ok": null,
     "udp_ok": null,
-    "latency": 246,
+    "latency": 261,
     "bitrate": null,
     "resolution": null
   },
   "Public;Sports": {
     "ok": null,
     "udp_ok": null,
-    "latency": 144,
+    "latency": 108,
     "bitrate": null,
     "resolution": null
   },
   "Sports": {
     "ok": null,
     "udp_ok": null,
-    "latency": 938,
+    "latency": 936,
     "bitrate": null,
     "resolution": null
   },
   "安徽综艺体育": {
     "ok": null,
     "udp_ok": null,
-    "latency": 387,
+    "latency": 419,
+    "bitrate": null,
+    "resolution": null
+  },
+  "陕西体育休闲": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 286,
     "bitrate": null,
     "resolution": null
   },
   "AMC电影": {
     "ok": null,
     "udp_ok": null,
-    "latency": 361,
+    "latency": 484,
     "bitrate": null,
     "resolution": null
   },
   "CHC动作电影": {
     "ok": null,
     "udp_ok": null,
-    "latency": 77,
+    "latency": 130,
     "bitrate": null,
     "resolution": null
   },
   "韩国电影2": {
     "ok": null,
     "udp_ok": null,
-    "latency": 81,
+    "latency": 36,
     "bitrate": null,
     "resolution": null
   },
   "龙华电影": {
     "ok": null,
     "udp_ok": null,
-    "latency": 255,
+    "latency": 261,
     "bitrate": null,
     "resolution": null
   },
   "CGTN纪录": {
     "ok": null,
     "udp_ok": null,
-    "latency": 128,
+    "latency": 96,
     "bitrate": null,
     "resolution": null
   },
   "之江纪录": {
     "ok": null,
     "udp_ok": null,
-    "latency": 623,
+    "latency": 681,
     "bitrate": null,
     "resolution": null
   },
   "南京少儿": {
     "ok": null,
     "udp_ok": null,
-    "latency": 589,
+    "latency": 729,
     "bitrate": null,
     "resolution": null
   },
   "卡酷少儿": {
     "ok": null,
     "udp_ok": null,
-    "latency": 246,
-    "bitrate": null,
-    "resolution": null
-  },
-  "广东少儿": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": 1269,
+    "latency": 266,
     "bitrate": null,
     "resolution": null
   },
   "浙江少儿": {
     "ok": null,
     "udp_ok": null,
-    "latency": 763,
+    "latency": 949,
     "bitrate": null,
     "resolution": null
   },
   "金鹰卡通": {
     "ok": null,
     "udp_ok": null,
-    "latency": 969,
+    "latency": 266,
     "bitrate": null,
     "resolution": null
   },
   "韩国EBS少儿": {
     "ok": null,
     "udp_ok": null,
-    "latency": 1053,
+    "latency": 1257,
     "bitrate": null,
     "resolution": null
   }
