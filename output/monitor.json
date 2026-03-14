@@ -1,19 +1,59 @@
 [
   {
     "name": "未知",
-    "url": "https://www.hunantv.com",
+    "url": "https://www.hntv.tv/wt/page/1/48",
     "score": 45,
-    "latency": 1283,
+    "latency": 1166,
     "alive": true,
     "speed_ok": true,
     "fail_count": 0,
     "group": "地方"
   },
   {
-    "name": "芒果TV-天生青春",
-    "url": "https://1vimg.hitv.com/100/2507/0315/3430/XDrtHkZx/442348372160991232.jpg",
-    "score": 35,
-    "latency": 192,
+    "name": "CCTV",
+    "url": "https://tv.cctv.com/common/pc_nav/index.js",
+    "score": 55,
+    "latency": 87,
+    "alive": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "group": "地方"
+  },
+  {
+    "name": "央视频-有品质的视频社交媒体",
+    "url": "https://s.yangshipin.cn/CCTVVideo/cctvh5-openapi/cctvh5-openapi.min.js?ver=24722",
+    "score": 50,
+    "latency": 274,
+    "alive": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "group": "地方"
+  },
+  {
+    "name": "荔枝网",
+    "url": "https://m.jstv.com/common/lz.pmd.min.js",
+    "score": 40,
+    "latency": 306,
+    "alive": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "group": "地方"
+  },
+  {
+    "name": "长江云-湖北网络广播电视台官方网站",
+    "url": "https://res.cjyun.org/t/site/10008/1e4162f81029a8a503d73704a7950403/assets//zwfw/images/zwfw.png",
+    "score": 40,
+    "latency": 1111,
+    "alive": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "group": "地方"
+  },
+  {
+    "name": "贵州网络广播电视",
+    "url": "https://www.gzstv.com/\\u002F\\u002Fmovement.gzstv.com\\u002Fswp\\u002Fcolumn\\u002Fdetail?id=1974",
+    "score": 45,
+    "latency": 1004,
     "alive": true,
     "speed_ok": true,
     "fail_count": 0,

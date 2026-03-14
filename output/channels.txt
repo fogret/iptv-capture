@@ -1,4 +1,8 @@
 ========== 地方 ==========
-1. 未知,https://www.hunantv.com
-2. 芒果TV-天生青春,https://1vimg.hitv.com/100/2507/0315/3430/XDrtHkZx/442348372160991232.jpg
+1. CCTV,https://tv.cctv.com/common/pc_nav/index.js
+2. 央视频-有品质的视频社交媒体,https://s.yangshipin.cn/CCTVVideo/cctvh5-openapi/cctvh5-openapi.min.js?ver=24722
+3. 未知,https://www.hntv.tv/wt/page/1/48
+4. 荔枝网,https://m.jstv.com/common/lz.pmd.min.js
+5. 贵州网络广播电视,https://www.gzstv.com/\u002F\u002Fmovement.gzstv.com\u002Fswp\u002Fcolumn\u002Fdetail?id=1974
+6. 长江云-湖北网络广播电视台官方网站,https://res.cjyun.org/t/site/10008/1e4162f81029a8a503d73704a7950403/assets//zwfw/images/zwfw.png
 

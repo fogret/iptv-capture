@@ -9,11 +9,47 @@
     "protected": false
   },
   {
-    "name": "芒果TV-天生青春",
-    "score": 35,
+    "name": "CCTV",
+    "score": 55,
     "alive": true,
     "speed_ok": true,
-    "fail_count": 2,
+    "fail_count": 0,
+    "disabled": false,
+    "protected": true
+  },
+  {
+    "name": "央视频-有品质的视频社交媒体",
+    "score": 50,
+    "alive": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "disabled": false,
+    "protected": true
+  },
+  {
+    "name": "荔枝网",
+    "score": 40,
+    "alive": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "disabled": false,
+    "protected": false
+  },
+  {
+    "name": "长江云-湖北网络广播电视台官方网站",
+    "score": 40,
+    "alive": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "disabled": false,
+    "protected": false
+  },
+  {
+    "name": "贵州网络广播电视",
+    "score": 45,
+    "alive": true,
+    "speed_ok": true,
+    "fail_count": 0,
     "disabled": false,
     "protected": false
   }

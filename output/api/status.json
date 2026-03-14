@@ -1,15 +1,43 @@
 {
-  "未知": {
+  "CCTV": {
     "ok": null,
     "udp_ok": null,
-    "latency": 1283,
+    "latency": 87,
     "bitrate": null,
     "resolution": null
   },
-  "芒果TV-天生青春": {
+  "央视频-有品质的视频社交媒体": {
     "ok": null,
     "udp_ok": null,
-    "latency": 192,
+    "latency": 274,
+    "bitrate": null,
+    "resolution": null
+  },
+  "未知": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1166,
+    "bitrate": null,
+    "resolution": null
+  },
+  "荔枝网": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 306,
+    "bitrate": null,
+    "resolution": null
+  },
+  "贵州网络广播电视": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1004,
+    "bitrate": null,
+    "resolution": null
+  },
+  "长江云-湖北网络广播电视台官方网站": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 1111,
     "bitrate": null,
     "resolution": null
   }
