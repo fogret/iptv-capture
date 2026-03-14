@@ -1,7 +1,1 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="" group-title="其他",guizhou-1
-https://live.zbds.top/tv/iptv4.m3u
-#EXTINF:-1 tvg-id="" group-title="其他",guizhou-2
-https://iptv-org.github.io/iptv/index.m3u
-#EXTINF:-1 tvg-id="" group-title="其他",guizhou-3
-https://iptv-org.github.io/iptv/countries/cn.m3u
