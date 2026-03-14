@@ -11,7 +11,7 @@ logger.info(f">>> 当前工作目录: {os.getcwd()}")
 logger.info(">>> 正在运行最新 main.py <<<")
 
 # ============================
-# Exporters（全部保留）
+# Exporters
 # ============================
 from exporters.monitor_exporter import export_monitor_ui
 from exporters.api_exporter import export_channels, export_groups, export_status, export_search_api
@@ -21,19 +21,20 @@ from exporters.m3u_exporter import export_m3u
 from exporters.json_exporter import export_tvbox
 
 # ============================
-# Collectors（只保留万能采集器）
+# Collectors（万能采集器）
 # ============================
 from collectors.universal_sources import collect as collect_sources
 
 # ============================
-# Validators（异步增强版）
+# Validators
 # ============================
 from validators.http_checker import check as check_http
 from validators.udp_checker import check as check_udp
 from validators.speed_tester import check as speed_test
+from validators.playable_checker import check as check_playable
 
 # ============================
-# Processors（增强版）
+# Processors
 # ============================
 from processors.normalize_name import run as normalize
 from processors.quality_detector import run as detect_quality
@@ -65,13 +66,13 @@ def main():
     cfg = load_config()
     logger.info(f">>> config.json 内容: {cfg}")
     
-    # 1. Collect（只调用万能采集器）
+    # 1. Collect（sources/ 下所有 txt）
     channels = collect_sources()
 
-    # 2. Normalize（名称规范化 + 自动分组）
+    # 2. Normalize（名称规范化 + 基础分组）
     channels = normalize(channels)
 
-    # 3. 自动识别清晰度 / 类型 / 地区
+    # 3. 自动识别：清晰度 / 类型 / 地区
     channels = detect_quality(channels)
     channels = detect_type(channels)
     channels = detect_region(channels)
@@ -80,6 +81,9 @@ def main():
     channels = check_http(channels)
     channels = check_udp(channels)
     channels = speed_test(channels)
+
+    # 4.5 真实播放测试（只保留能真正播放的频道）
+    channels = check_playable(channels)
 
     # 5. EPG mapping
     channels = epg_map(channels)
