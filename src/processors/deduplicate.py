@@ -47,18 +47,15 @@ def is_same_channel(a, b):
 
 
 # -----------------------------------
-# 选择最优源
+# 选择最优源（增强版）
 # -----------------------------------
 def choose_best(a, b):
     """
     选择更好的频道源：
-    1. HTTP > HLS > UDP
-    2. 分辨率高优先
-    3. 速度快优先（speed 字段）
+    1. HTTP > RTMP > UDP
+    2. 清晰度优先（4K > 1080P > 720P > SD）
+    3. 速度优先（speed 字段）
     """
-
-    url_a = a["url"]
-    url_b = b["url"]
 
     # 1. 协议优先级
     def protocol_score(url):
@@ -70,30 +67,22 @@ def choose_best(a, b):
             return 1
         return 0
 
-    pa = protocol_score(url_a)
-    pb = protocol_score(url_b)
-
+    pa = protocol_score(a["url"])
+    pb = protocol_score(b["url"])
     if pa != pb:
         return a if pa > pb else b
 
-    # 2. 分辨率优先
-    def resolution_score(url):
-        if "1080" in url:
-            return 3
-        if "720" in url:
-            return 2
-        return 1
+    # 2. 清晰度优先（使用 quality_detector 的结果）
+    quality_rank = {"4K": 4, "1080P": 3, "720P": 2, "SD": 1}
 
-    ra = resolution_score(url_a)
-    rb = resolution_score(url_b)
+    qa = quality_rank.get(a.get("quality", "SD"), 1)
+    qb = quality_rank.get(b.get("quality", "SD"), 1)
+    if qa != qb:
+        return a if qa > qb else b
 
-    if ra != rb:
-        return a if ra > rb else b
-
-    # 3. 速度优先（speed 字段）
+    # 3. 速度优先
     sa = a.get("speed", 0)
     sb = b.get("speed", 0)
-
     if sa != sb:
         return a if sa > sb else b
 
@@ -102,12 +91,13 @@ def choose_best(a, b):
 
 
 # -----------------------------------
-# 主入口：智能去重
+# 主入口：智能去重（增强版）
 # -----------------------------------
 def run(channels):
     result = []
 
     for ch in channels:
+        # URL 归一化
         ch["url"] = normalize_url(ch["url"])
 
         merged = False
