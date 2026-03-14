@@ -9,30 +9,39 @@
     "disabled": false
   },
   {
-    "name": "中国维吾尔语广播网",
-    "score": 11,
+    "name": "学习时刻-习近平活动报道集-芒果TV",
+    "score": 40,
     "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
+    "speed_ok": true,
+    "fail_count": 0,
     "protected": false,
-    "disabled": true
+    "disabled": false
   },
   {
-    "name": "中国哈萨克语广播网",
-    "score": 11,
+    "name": "纪念抗战胜利80周年-芒果TV",
+    "score": 40,
     "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
+    "speed_ok": true,
+    "fail_count": 0,
     "protected": false,
-    "disabled": true
+    "disabled": false
   },
   {
-    "name": "中国朝鲜语广播网",
-    "score": 11,
+    "name": "听，这是π在唱歌",
+    "score": 40,
     "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
+    "speed_ok": true,
+    "fail_count": 0,
     "protected": false,
-    "disabled": true
+    "disabled": false
+  },
+  {
+    "name": "GZSTV",
+    "score": 40,
+    "alive": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "protected": false,
+    "disabled": false
   }
 ]

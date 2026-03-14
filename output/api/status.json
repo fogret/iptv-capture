@@ -1,29 +1,36 @@
 {
-  "中国哈萨克语广播网": {
+  "GZSTV": {
     "ok": null,
     "udp_ok": null,
-    "latency": 92,
+    "latency": 599,
     "bitrate": null,
     "resolution": null
   },
-  "中国朝鲜语广播网": {
+  "听，这是π在唱歌": {
     "ok": null,
     "udp_ok": null,
-    "latency": 93,
+    "latency": 588,
     "bitrate": null,
     "resolution": null
   },
-  "中国维吾尔语广播网": {
+  "学习时刻-习近平活动报道集-芒果TV": {
     "ok": null,
     "udp_ok": null,
-    "latency": 93,
+    "latency": 139,
     "bitrate": null,
     "resolution": null
   },
   "未知": {
     "ok": null,
     "udp_ok": null,
-    "latency": 1198,
+    "latency": 1142,
+    "bitrate": null,
+    "resolution": null
+  },
+  "纪念抗战胜利80周年-芒果TV": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 150,
     "bitrate": null,
     "resolution": null
   }
