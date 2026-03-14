@@ -2,6 +2,9 @@ import os
 import requests
 from utils.logger import logger
 
+# 新增：统一入口（TXT + 网站抓取）
+from .public_lists import collect as collect_public_lists
+
 # 项目根目录（main.py 所在目录）
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SOURCES_DIR = os.path.join(BASE_DIR, "sources")
@@ -10,19 +13,24 @@ SOURCES_DIR = os.path.join(BASE_DIR, "sources")
 def collect():
     channels = []
 
-    if not os.path.exists(SOURCES_DIR):
+    logger.info("[universal_sources] 开始汇总所有来源")
+
+    # ① 保留你原来的 TXT/M3U/UDP 解析路径
+    if os.path.exists(SOURCES_DIR):
+        logger.info(f"[sources] 扫描目录: {SOURCES_DIR}")
+        for filename in os.listdir(SOURCES_DIR):
+            if filename.endswith(".txt"):
+                file_path = os.path.join(SOURCES_DIR, filename)
+                logger.info(f"[sources] 读取文件: {file_path}")
+                channels.extend(parse_file(file_path))
+    else:
         logger.warning(f"[sources] 目录不存在: {SOURCES_DIR}")
-        return channels
 
-    logger.info(f"[sources] 扫描目录: {SOURCES_DIR}")
+    # ② 新增：调用 public_lists（TXT + 网站抓取）
+    public_channels = collect_public_lists()
+    channels.extend(public_channels)
 
-    for filename in os.listdir(SOURCES_DIR):
-        if filename.endswith(".txt"):
-            file_path = os.path.join(SOURCES_DIR, filename)
-            logger.info(f"[sources] 读取文件: {file_path}")
-            channels.extend(parse_file(file_path))
-
-    logger.info(f"[sources] 共加载 {len(channels)} 条频道")
+    logger.info(f"[universal_sources] 汇总完成，共 {len(channels)} 条频道")
     return channels
 
 
