@@ -10,8 +10,9 @@ from datetime import datetime
 from utils.logger import logger
 from utils.stats import stats
 from utils.ua_manager import get_headers_for_url
-from utils.channel_name import guess_channel_name      # ⭐ 新频道名识别
-from utils.channel_group import guess_group            # ⭐ 新频道分组
+from utils.channel_name import guess_channel_name
+from utils.channel_group import guess_group
+from utils.stream_quality import detect_quality_from_m3u8
 
 # 路径保持不变
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -281,8 +282,13 @@ def collect_from_page(url: str, depth: int, visited: set, channels: list, root_u
                 stats.website_ads_blocked_total += 1
                 continue
 
-            name = guess_channel_name(url, html)      # ⭐ 新频道名识别
-            group = guess_group(name, url)            # ⭐ 新频道分组（基于名称+URL）
+            name = guess_channel_name(url, html)
+            group = guess_group(name, url)
+
+            # ⭐ 新增：流质量识别
+            quality_info = {}
+            if stream.endswith(".m3u8"):
+                quality_info = detect_quality_from_m3u8(stream)
 
             ch = {
                 "name": name,
@@ -290,7 +296,11 @@ def collect_from_page(url: str, depth: int, visited: set, channels: list, root_u
                 "url": stream,
                 "origin": "website",
                 "root_site": root_url,
+                "quality": quality_info.get("quality", "未知"),
+                "bandwidth": quality_info.get("bandwidth"),
+                "resolution": quality_info.get("resolution"),
             }
+
             channels.append(ch)
             detail["channels"].append({"name": name, "url": stream})
 
