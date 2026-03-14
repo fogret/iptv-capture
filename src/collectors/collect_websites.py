@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 
 from utils.logger import logger
 from utils.stats import stats
+from utils.ua_manager import get_headers_for_url   # ⭐ 接入智能 UA
 
 # 路径保持不变（你要求的）
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -23,9 +24,12 @@ def is_ad_url(url: str) -> bool:
     return any(k in url_lower for k in AD_KEYWORDS)
 
 
+# ================================
+# ⭐ 接入智能 UA 的网页抓取
+# ================================
 def fetch_html(url: str) -> str:
     try:
-        headers = {"User-Agent": "Mozilla/5.0"}
+        headers = get_headers_for_url(url, mode="play")  # ⭐ 自动 UA / Referer / Cookie / Host
         resp = requests.get(url, headers=headers, timeout=8)
         resp.raise_for_status()
         resp.encoding = resp.apparent_encoding
@@ -36,7 +40,7 @@ def fetch_html(url: str) -> str:
 
 
 # ================================
-# ⭐ 新版：全格式直播流提取器
+# ⭐ 全格式直播流提取器（完整版）
 # ================================
 def extract_streams(html: str, base_url: str) -> list:
     urls = set()
@@ -48,34 +52,76 @@ def extract_streams(html: str, base_url: str) -> list:
         if src:
             urls.add(urljoin(base_url, src))
 
-    # 2) 常见直播格式（m3u8 / flv / ts / mp4 / mpd / f4m / rtmp）
+    # 2) 常见直播格式
     patterns = [
-        r'https?://[^"\']+\.m3u8',
-        r'https?://[^"\']+\.flv',
-        r'https?://[^"\']+\.ts',
-        r'https?://[^"\']+\.mp4',
-        r'https?://[^"\']+\.mpd',
-        r'https?://[^"\']+\.f4m',
-        r'rtmp://[^"\']+',
+        r'https?://[^\s"\']+?\.m3u8[^\s"\']*',
+        r'https?://[^\s"\']+?\.flv[^\s"\']*',
+        r'https?://[^\s"\']+?\.ts[^\s"\']*',
+        r'https?://[^\s"\']+?\.mp4[^\s"\']*',
+        r'https?://[^\s"\']+?\.mpd[^\s"\']*',
+        r'https?://[^\s"\']+?\.f4m[^\s"\']*',
+        r'rtmp://[^\s"\']+',
+        r'https?://[^\s"\']+?live[^\s"\']*',
     ]
 
     for p in patterns:
-        matches = re.findall(p, html)
-        for m in matches:
+        for m in re.findall(p, html, flags=re.IGNORECASE):
             urls.add(urljoin(base_url, m))
 
-    # 3) JS/JSON 里的直播地址
+    # 3) JS 播放器配置（DPlayer / CKPlayer / xgplayer / video.js）
     js_patterns = [
-        r'["\'](https?://[^"\']+\.m3u8)["\']',
-        r'["\'](https?://[^"\']+\.flv)["\']',
-        r'["\'](https?://[^"\']+\.ts)["\']',
-        r'["\'](https?://[^"\']+\.mp4)["\']',
+        r'url\s*[:=]\s*["\']([^"\']+)',
+        r'src\s*[:=]\s*["\']([^"\']+)',
+        r'file\s*[:=]\s*["\']([^"\']+)',
+        r'playurl\s*[:=]\s*["\']([^"\']+)',
     ]
 
     for p in js_patterns:
-        matches = re.findall(p, html)
-        for m in matches:
-            urls.add(urljoin(base_url, m))
+        for m in re.findall(p, html, flags=re.IGNORECASE):
+            if m.startswith("http") or m.startswith("rtmp"):
+                urls.add(urljoin(base_url, m))
+
+    # 4) iframe 递归抓取
+    for iframe in soup.find_all("iframe"):
+        src = iframe.get("src")
+        if not src:
+            continue
+
+        iframe_url = urljoin(base_url, src)
+        sub_html = fetch_html(iframe_url)
+        if sub_html:
+            sub_streams = extract_streams(sub_html, iframe_url)
+            for s in sub_streams:
+                urls.add(s)
+
+    # 5) HLS 深度解析（子 m3u8 + KEY + TS）
+    m3u8_list = [u for u in urls if u.endswith(".m3u8")]
+
+    for m3u8_url in m3u8_list:
+        try:
+            text = fetch_html(m3u8_url)
+            if not text:
+                continue
+
+            for line in text.splitlines():
+                line = line.strip()
+
+                # 子 m3u8
+                if line.endswith(".m3u8") and not line.startswith("#"):
+                    urls.add(urljoin(m3u8_url, line))
+
+                # TS
+                if line.endswith(".ts"):
+                    urls.add(urljoin(m3u8_url, line))
+
+                # KEY
+                if line.startswith("#EXT-X-KEY"):
+                    m = re.search(r'URI="([^"]+)"', line)
+                    if m:
+                        urls.add(urljoin(m3u8_url, m.group(1)))
+
+        except:
+            pass
 
     return list(urls)
 
