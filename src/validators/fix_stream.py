@@ -16,6 +16,8 @@ DEFAULT_HEADERS = {
     "Accept": "*/*",
 }
 
+CCTV_KEYWORDS = ["CCTV", "央视", "综合", "卫视"]
+
 sem = asyncio.Semaphore(MAX_CONCURRENCY)
 
 async def fetch_text(session, url):
@@ -46,6 +48,18 @@ async def fix_hls(session, url):
 
     return url
 
+async def fallback(session, ch):
+    if "backup" not in ch:
+        return ch
+
+    for url in ch["backup"]:
+        text = await fetch_text(session, url)
+        if text:
+            ch["url"] = url
+            return ch
+
+    return ch
+
 async def fix_channel(session, ch):
     url = ch["url"]
 
@@ -53,6 +67,10 @@ async def fix_channel(session, ch):
         return ch
 
     ch["url"] = await fix_hls(session, url)
+
+    if any(k in ch["name"] for k in CCTV_KEYWORDS):
+        ch = await fallback(session, ch)
+
     return ch
 
 async def run_all(channels):
@@ -60,7 +78,7 @@ async def run_all(channels):
         tasks = [fix_channel(session, ch) for ch in channels]
         fixed = await asyncio.gather(*tasks)
 
-    logger.info("[fix_stream] 已自动修复 HLS/Headers")
+    logger.info("[fix_stream] 已自动修复 HLS/Headers + fallback")
     return fixed
 
 def run(channels):
