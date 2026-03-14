@@ -6,7 +6,7 @@ import json
 from utils.logger import logger
 
 MAX_CONCURRENCY = 200
-TIMEOUT = 5
+TIMEOUT = 2
 RETRY = 1
 
 CACHE_DIR = "data"
