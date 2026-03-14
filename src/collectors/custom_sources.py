@@ -2,17 +2,21 @@ import os
 import requests
 from utils.logger import logger
 
-def collect():
-    logger.info("[public_cn] Loading source entry list from sources/public_cn.txt")
+# 计算项目根目录（main.py 所在目录）
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+SOURCES_DIR = os.path.join(BASE_DIR, "sources")
+PUBLIC_CN_FILE = os.path.join(SOURCES_DIR, "public_cn.txt")
 
-    path = "sources/public_cn.txt"
-    if not os.path.exists(path):
+def collect():
+    logger.info(f"[public_cn] Loading source entry list from {PUBLIC_CN_FILE}")
+
+    if not os.path.exists(PUBLIC_CN_FILE):
         logger.warning("[public_cn] No public_cn.txt found, skip.")
         return []
 
     channels = []
 
-    with open(path, "r", encoding="utf-8") as f:
+    with open(PUBLIC_CN_FILE, "r", encoding="utf-8") as f:
         for line in f:
             url = line.strip()
             if not url:
@@ -30,11 +34,8 @@ def collect():
 
 
 def parse_source(text):
-    # 自动识别格式
     if "#EXTM3U" in text or "#EXTINF" in text:
         return parse_m3u(text)
-
-    # 未来可以扩展 JSON / API
     return []
 
 
