@@ -3,7 +3,7 @@ import aiohttp
 from utils.logger import logger
 
 MAX_CONCURRENCY = 100
-TIMEOUT = 5
+TIMEOUT = 2
 
 async def test_playable(session, url):
     try:
