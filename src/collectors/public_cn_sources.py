@@ -1,51 +1,44 @@
 import os
-import re
-import json
 import requests
 from utils.logger import logger
 
-def collect():
-    logger.info("[public_cn] Collecting public CN sources...")
+# 项目根目录
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+SOURCES_DIR = os.path.join(BASE_DIR, "sources")
+PUBLIC_CN_FILE = os.path.join(SOURCES_DIR, "public_cn.txt")
 
-    path = "sources/public_cn.txt"
-    if not os.path.exists(path):
-        logger.warning("[public_cn] No public_cn.txt found, skip.")
+def collect():
+    logger.info(f"[public_cn] 加载源列表: {PUBLIC_CN_FILE}")
+
+    if not os.path.exists(PUBLIC_CN_FILE):
+        logger.warning("[public_cn] public_cn.txt 不存在，跳过")
         return []
 
     channels = []
 
-    with open(path, "r", encoding="utf-8") as f:
+    with open(PUBLIC_CN_FILE, "r", encoding="utf-8") as f:
         for line in f:
             url = line.strip()
             if not url:
                 continue
 
-            logger.info(f"[public_cn] Fetching: {url}")
-            text = fetch(url)
-            if not text:
-                continue
+            logger.info(f"[public_cn] 获取: {url}")
+            try:
+                text = requests.get(url, timeout=10).text
+                channels.extend(parse_source(text))
+            except Exception as e:
+                logger.error(f"[public_cn] 获取失败: {e}")
 
-            if "#EXTM3U" in text or "#EXTINF" in text:
-                channels += parse_m3u(text)
-            elif text.strip().startswith("{") or text.strip().startswith("["):
-                channels += parse_json(text)
-            else:
-                logger.warning(f"[public_cn] Unknown format: {url}")
-
-    logger.info(f"[public_cn] Loaded {len(channels)} channels from public_cn")
+    logger.info(f"[public_cn] 共加载 {len(channels)} 条频道")
     return channels
 
 
-def fetch(url):
-    try:
-        return requests.get(url, timeout=8).text
-    except:
-        return ""
+def parse_source(text):
+    if "#EXTM3U" in text or "#EXTINF" in text:
+        return parse_m3u(text)
+    return []
 
 
-# -------------------------------
-# M3U 解析
-# -------------------------------
 def parse_m3u(text):
     result = []
     lines = text.splitlines()
@@ -60,7 +53,13 @@ def parse_m3u(text):
         if line.startswith("#EXTINF"):
             name = extract(line, "tvg-name") or extract(line, "group-title") or "未知频道"
             logo = extract(line, "tvg-logo")
-            group = extract(line, "group-title") or "未分组"
+
+            if "CCTV" in name.upper():
+                group = "央视"
+            elif "卫视" in name:
+                group = "卫视"
+            else:
+                group = "地方"
 
         elif line.startswith("http"):
             result.append({
@@ -69,29 +68,6 @@ def parse_m3u(text):
                 "logo": logo,
                 "group": group
             })
-
-    return result
-
-
-# -------------------------------
-# JSON 解析（支持 IPTV-API 格式）
-# -------------------------------
-def parse_json(text):
-    result = []
-    try:
-        data = json.loads(text)
-    except:
-        return result
-
-    if isinstance(data, list):
-        for item in data:
-            if "url" in item and "name" in item:
-                result.append({
-                    "name": item["name"],
-                    "url": item["url"],
-                    "logo": item.get("logo"),
-                    "group": item.get("group", "未分组")
-                })
 
     return result
 
