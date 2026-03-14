@@ -12,16 +12,8 @@ CACHE_DIR = "data"
 CACHE_FILE = os.path.join(CACHE_DIR, "http_cache.json")
 os.makedirs(CACHE_DIR, exist_ok=True)
 
-DEFAULT_HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/120.0 Safari/537.36"
-    ),
-    "Referer": "https://www.google.com/",
-    "Origin": "https://www.google.com",
-    "Accept": "*/*",
-}
+# 删除 UA / Referer / Origin / Accept，只保留空 headers
+DEFAULT_HEADERS = {}
 
 def load_cache():
     if os.path.exists(CACHE_FILE):
