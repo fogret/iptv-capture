@@ -1,0 +1,16 @@
+[
+  {
+    "name": "CCTV-5",
+    "score": 35,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "贵州公共",
+    "score": 55,
+    "alive": true,
+    "speed_ok": true,
+    "disabled": false
+  }
+]
