@@ -1,29 +1,24 @@
 import os
 
+# 计算项目根目录（main.py 所在目录）
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+PUBLIC_LISTS_DIR = os.path.join(BASE_DIR, "public_lists")
+
 def collect():
-    """
-    自动扫描 public_lists/ 目录下所有 .txt 文件
-    并逐行解析成频道列表
-    """
-    base = "public_lists"
     channels = []
 
-    if not os.path.exists(base):
+    if not os.path.exists(PUBLIC_LISTS_DIR):
         return channels
 
-    for filename in os.listdir(base):
+    for filename in os.listdir(PUBLIC_LISTS_DIR):
         if filename.endswith(".txt"):
-            file_path = os.path.join(base, filename)
+            file_path = os.path.join(PUBLIC_LISTS_DIR, filename)
             channels.extend(parse_file(file_path))
 
     return channels
 
 
 def parse_file(path):
-    """
-    解析单个 txt 文件
-    格式：频道名,播放地址
-    """
     result = []
 
     if not os.path.exists(path):
