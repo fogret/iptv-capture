@@ -1,14 +1,16 @@
 import os
 import re
+import json
+import base64
 import requests
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
 from utils.logger import logger
 from utils.stats import stats
-from utils.ua_manager import get_headers_for_url   # ⭐ 接入智能 UA
+from utils.ua_manager import get_headers_for_url   # ⭐ 智能 UA
 
-# 路径保持不变（你要求的）
+# 路径保持不变
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SOURCES_DIR = os.path.join(BASE_DIR, "sources")
 
@@ -25,58 +27,31 @@ def is_ad_url(url: str) -> bool:
 
 
 # ================================
-# ⭐ 接入智能 UA + 网页真实 UA/Referer/Cookie/Host 自动识别
+# ⭐ 智能 UA + 自动识别真实 UA/Referer/Cookie/Host
 # ================================
 def fetch_html(url: str) -> str:
     try:
-        # 第一次请求：智能 UA（ua_manager 自动判断）
         headers = get_headers_for_url(url, mode="play")
         resp = requests.get(url, headers=headers, timeout=8)
         resp.raise_for_status()
         resp.encoding = resp.apparent_encoding
         html = resp.text
 
-        # ================================
-        # ⭐ 从网页中自动提取真实 UA / Referer / Cookie / Host
-        # ================================
-        real_ua = None
-        real_referer = None
-        real_cookie = None
-        real_host = None
+        # 自动识别真实参数
+        real_ua = re.search(r'User-Agent["\']?\s*[:=]\s*["\']([^"\']+)', html)
+        real_referer = re.search(r'Referer["\']?\s*[:=]\s*["\']([^"\']+)', html)
+        real_cookie = re.search(r'Cookie["\']?\s*[:=]\s*["\']([^"\']+)', html)
+        real_host = re.search(r'Host["\']?\s*[:=]\s*["\']([^"\']+)', html)
 
-        # UA
-        m = re.search(r'User-Agent["\']?\s*[:=]\s*["\']([^"\']+)', html)
-        if m:
-            real_ua = m.group(1)
-
-        # Referer
-        m = re.search(r'Referer["\']?\s*[:=]\s*["\']([^"\']+)', html)
-        if m:
-            real_referer = m.group(1)
-
-        # Cookie
-        m = re.search(r'Cookie["\']?\s*[:=]\s*["\']([^"\']+)', html)
-        if m:
-            real_cookie = m.group(1)
-
-        # Host
-        m = re.search(r'Host["\']?\s*[:=]\s*["\']([^"\']+)', html)
-        if m:
-            real_host = m.group(1)
-
-        # 如果网页提供真实参数 → 再请求一次（模拟浏览器）
         if real_ua or real_referer or real_cookie or real_host:
             new_headers = {}
-
-            if real_ua:
-                new_headers["User-Agent"] = real_ua
-            if real_referer:
-                new_headers["Referer"] = real_referer
-            if real_cookie:
-                new_headers["Cookie"] = real_cookie
+            if real_ua: new_headers["User-Agent"] = real_ua.group(1)
+            if real_referer: new_headers["Referer"] = real_referer.group(1)
+            if real_cookie: new_headers["Cookie"] = real_cookie.group(1)
             if real_host:
-                new_headers["Host"] = real_host
-                new_headers["Origin"] = f"https://{real_host}"
+                host = real_host.group(1)
+                new_headers["Host"] = host
+                new_headers["Origin"] = f"https://{host}"
 
             try:
                 resp2 = requests.get(url, headers=new_headers, timeout=8)
@@ -94,7 +69,7 @@ def fetch_html(url: str) -> str:
 
 
 # ================================
-# ⭐ 全格式直播流提取器（完整版）
+# ⭐ 全格式直播流提取器（增强版）
 # ================================
 def extract_streams(html: str, base_url: str) -> list:
     urls = set()
@@ -111,7 +86,6 @@ def extract_streams(html: str, base_url: str) -> list:
         r'https?://[^\s"\']+?\.m3u8[^\s"\']*',
         r'https?://[^\s"\']+?\.flv[^\s"\']*',
         r'https?://[^\s"\']+?\.ts[^\s"\']*',
-        r'https?://[^\s"\']+?\.mp4[^\s"\']*',
         r'https?://[^\s"\']+?\.mpd[^\s"\']*',
         r'https?://[^\s"\']+?\.f4m[^\s"\']*',
         r'rtmp://[^\s"\']+',
@@ -122,7 +96,7 @@ def extract_streams(html: str, base_url: str) -> list:
         for m in re.findall(p, html, flags=re.IGNORECASE):
             urls.add(urljoin(base_url, m))
 
-    # 3) JS 播放器配置（DPlayer / CKPlayer / xgplayer / video.js）
+    # 3) JS 播放器配置
     js_patterns = [
         r'url\s*[:=]\s*["\']([^"\']+)',
         r'src\s*[:=]\s*["\']([^"\']+)',
@@ -135,20 +109,18 @@ def extract_streams(html: str, base_url: str) -> list:
             if m.startswith("http") or m.startswith("rtmp"):
                 urls.add(urljoin(base_url, m))
 
-    # 4) iframe 递归抓取
+    # 4) iframe 深度解析
     for iframe in soup.find_all("iframe"):
         src = iframe.get("src")
         if not src:
             continue
-
         iframe_url = urljoin(base_url, src)
         sub_html = fetch_html(iframe_url)
         if sub_html:
             sub_streams = extract_streams(sub_html, iframe_url)
-            for s in sub_streams:
-                urls.add(s)
+            urls.update(sub_streams)
 
-    # 5) HLS 深度解析（子 m3u8 + KEY + TS）
+    # 5) HLS 深度解析
     m3u8_list = [u for u in urls if u.endswith(".m3u8")]
 
     for m3u8_url in m3u8_list:
@@ -160,15 +132,12 @@ def extract_streams(html: str, base_url: str) -> list:
             for line in text.splitlines():
                 line = line.strip()
 
-                # 子 m3u8
                 if line.endswith(".m3u8") and not line.startswith("#"):
                     urls.add(urljoin(m3u8_url, line))
 
-                # TS
                 if line.endswith(".ts"):
                     urls.add(urljoin(m3u8_url, line))
 
-                # KEY
                 if line.startswith("#EXT-X-KEY"):
                     m = re.search(r'URI="([^"]+)"', line)
                     if m:
@@ -176,6 +145,89 @@ def extract_streams(html: str, base_url: str) -> list:
 
         except:
             pass
+
+    # ================================
+    # ⭐（新增）fetch / XHR 请求解析
+    # ================================
+    xhr_patterns = [
+        r'fetch\(["\']([^"\']+)["\']',
+        r'axios\.get\(["\']([^"\']+)["\']',
+        r'\$\.get\(["\']([^"\']+)["\']',
+        r'XMLHttpRequest\(["\']([^"\']+)["\']',
+    ]
+
+    for p in xhr_patterns:
+        for api in re.findall(p, html, flags=re.IGNORECASE):
+            api_url = urljoin(base_url, api)
+            try:
+                api_resp = requests.get(api_url, timeout=6)
+                if api_resp.ok:
+                    api_text = api_resp.text
+                    for m in re.findall(r'https?://[^\s"\']+?\.m3u8[^\s"\']*', api_text):
+                        urls.add(urljoin(api_url, m))
+            except:
+                pass
+
+    # ================================
+    # ⭐（新增）base64 解码
+    # ================================
+    for b64 in re.findall(r'["\']([A-Za-z0-9+/=]{20,})["\']', html):
+        try:
+            decoded = base64.b64decode(b64).decode("utf-8", "ignore")
+            if decoded.startswith("http"):
+                urls.add(decoded)
+        except:
+            pass
+
+    # ================================
+    # ⭐（新增）JSON 配置解析
+    # ================================
+    json_patterns = [
+        r'playerConfig\s*=\s*({.*?})',
+        r'video\s*=\s*({.*?})',
+    ]
+
+    for p in json_patterns:
+        for block in re.findall(p, html, flags=re.DOTALL):
+            try:
+                data = json.loads(block)
+                for key in ["url", "src", "file", "playurl"]:
+                    if key in data and isinstance(data[key], str):
+                        if data[key].startswith("http"):
+                            urls.add(urljoin(base_url, data[key]))
+            except:
+                pass
+
+    # ================================
+    # ⭐（新增）直播平台适配（斗鱼 / 虎牙 / B站）
+    # ================================
+    if "douyu.com" in base_url:
+        rid = re.findall(r'\d+', base_url)
+        if rid:
+            api = f"https://playweb.douyucdn.cn/lapi/live/getPlay/{rid[0]}"
+            try:
+                data = requests.get(api, timeout=6).json()
+                real = data["data"]["rtmp_url"] + "/" + data["data"]["rtmp_live"]
+                urls.add(real)
+            except:
+                pass
+
+    if "huya.com" in base_url:
+        for m in re.findall(r'"sStreamName":"([^"]+)"', html):
+            real = f"https://al.hls.huya.com/src/{m}.m3u8"
+            urls.add(real)
+
+    if "bilibili.com" in base_url:
+        for m in re.findall(r'"playurl":"([^"]+)"', html):
+            urls.add(m.replace("\\/", "/"))
+
+    # ================================
+    # ⭐（新增）过滤点播 mp4
+    # ================================
+    urls = {u for u in urls if not u.lower().endswith(".mp4")}
+
+    # ⭐ 过滤广告
+    urls = {u for u in urls if not is_ad_url(u)}
 
     return list(urls)
 
@@ -242,7 +294,6 @@ def collect_from_page(url: str, depth: int, visited: set, channels: list, root_u
     if depth > stats.website_max_depth_global:
         stats.website_max_depth_global = depth
 
-    # ⭐ 使用全格式提取器
     streams = extract_streams(html, url)
 
     if streams:
@@ -270,7 +321,6 @@ def collect_from_page(url: str, depth: int, visited: set, channels: list, root_u
 
         return
 
-    # 递归子页面
     links = extract_links(html, url)
     for link in links:
         logger.info(f"[websites] 递归进入子页面: {link}")
