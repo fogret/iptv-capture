@@ -6,16 +6,7 @@ SRC_DIR = os.path.join(BASE_DIR, "src")
 sys.path.append(SRC_DIR)
 
 from utils.logger import logger
-
-logger.info(f">>> 当前工作目录: {os.getcwd()}")
-logger.info(">>> 正在运行最新 main.py <<<")
-
-# Exporters
-from exporters.monitor_exporter import export_monitor_ui
-from exporters.api_exporter import export_channels, export_groups, export_status, export_search_api
-from exporters.web_exporter import export_web_data, export_web_pages
-from exporters.m3u_exporter import export_m3u
-from exporters.json_exporter import export_tvbox
+from utils.config_loader import load_config
 
 # Collectors
 from collectors.universal_sources import collect as collect_sources
@@ -46,87 +37,99 @@ from epg.epg_fetcher import fetch_epg
 from epg.epg_generator import generate_epg
 from epg.epg_mapper import epg_map
 
-# Config
-from utils.config_loader import load_config
+# Exporters
+from exporters.m3u_exporter import export_m3u
+from exporters.json_exporter import export_tvbox
+from exporters.txt_exporter import export_txt
+from exporters.web_exporter import export_web_data, export_web_pages
+from exporters.api_exporter import (
+    export_channels,
+    export_groups,
+    export_status,
+    export_search_api,
+)
+from exporters.monitor_exporter import export_monitor_ui
 
 
 def main():
+    logger.info(">>> IPTV Capture System Started <<<")
+
     cfg = load_config()
-    logger.info(f">>> config.json 内容: {cfg}")
+    logger.info(f"Loaded config: {cfg}")
 
-    # 1. Collect
+    # 1. Collect sources
     channels = collect_sources()
+    logger.info(f"Collected {len(channels)} channels")
 
-    # 2. Normalize
+    # 2. Normalize names
     channels = normalize(channels)
 
-    # 3. 自动识别
+    # 3. Auto-detect metadata
     channels = detect_quality(channels)
     channels = detect_type(channels)
     channels = detect_region(channels)
 
-    # 4. Validate
+    # 4. Validators
     channels = check_http(channels)
     channels = check_udp(channels)
     channels = speed_test(channels)
 
-    # 4.5 修复器（UA + HLS + fallback）
+    # 5. Fix streams (HLS 修复 + fallback)
     channels = fix_stream(channels)
 
-    # 4.6 温和播放过滤
+    # 6. Playable check (温和过滤)
     channels = check_playable(channels)
 
-    # 5. EPG mapping
+    # 7. EPG mapping
     channels = epg_map(channels)
 
-    # 6. Quality filter
-    cfg = load_config()
+    # 8. Quality filter
     channels = filter_quality(channels, cfg.get("quality_filter"))
 
-    # 7. Logo mapping
+    # 9. Logo mapping
     channels = map_logo(channels)
 
-    # 8. EPG generation
+    # 10. Fetch + generate EPG
     xml_data = fetch_epg()
     generate_epg(xml_data, channels)
 
-    # 9. Deduplicate
+    # 11. Deduplicate
     channels = dedup(channels)
 
-    # 10. Score
+    # 12. Score channels
     channels = score_channels(channels)
 
-    # 11. Monitor（只累积 fail_count）
+    # 13. Monitor (只累积 fail_count)
     channels = monitor_channels(channels)
 
-    # 12. Disable（连续 3 次失败才禁用）
+    # 14. Disable (连续 3 次失败才禁用)
     channels = disable_channels(channels)
 
-    # 13. Recover（状态恢复自动恢复）
+    # 15. Recover (状态恢复自动恢复)
     channels = recover_channels(channels)
 
-    # 14. Sort
+    # 16. Sort channels
     channels = sort_channels(channels)
 
-    # 15. Export
-    cfg = load_config()
+    # 17. Export M3U / JSON / TXT
     export_m3u(channels, cfg["export"]["m3u_path"])
     export_tvbox(channels, cfg["export"]["tvbox_json_path"])
+    export_txt(channels, cfg["export"]["txt_path"])
 
-    # 16. Web UI
+    # 18. Export Web UI
     export_web_data(channels)
     export_web_pages()
 
-    # 17. API
+    # 19. Export API
     export_channels(channels)
     export_groups(channels)
     export_status(channels)
     export_search_api()
 
-    # 18. Monitor UI
+    # 20. Export Monitor UI
     export_monitor_ui()
 
-    logger.info("=== IPTV Capture Done ===")
+    logger.info(">>> IPTV Capture Completed <<<")
 
 
 if __name__ == "__main__":
