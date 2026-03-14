@@ -88,7 +88,10 @@ def main():
     # 11. Deduplicate
     channels = dedup(channels)
 
-    # 12. Export
+    # 12. Sort
+    channels = sort_channels(channels)
+    
+    # 13. Export
     cfg = load_config()
     export_m3u(channels, cfg["export"]["m3u_path"])
     export_tvbox(channels, cfg["export"]["tvbox_json_path"])
