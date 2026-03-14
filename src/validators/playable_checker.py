@@ -8,21 +8,10 @@ TIMEOUT = 5
 async def test_playable(session, url):
     try:
         async with session.get(url, timeout=TIMEOUT) as resp:
-            text = await resp.text()
-
-            # HLS playlist 必须包含 #EXTINF
-            if "#EXTINF" in text:
-                return True
-
-            # TS 流必须能读到数据
-            data = await resp.content.read(1024)
-            if len(data) > 0:
-                return True
-
+            # 只要能访问成功就认为可播（温和过滤）
+            return resp.status < 500
     except:
         return False
-
-    return False
 
 
 async def run_all(channels):
