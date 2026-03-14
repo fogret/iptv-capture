@@ -1,8 +1,5 @@
----
-
-```python
 # exporters/readme_exporter.py
-# 最终完整版：新增频道 + 徽章 + 运行状态 + 彩色图表 + 统计信息（无订阅地址）
+# 最终完整版：新增频道 + 徽章 + 运行状态 + 彩色图表 + 统计信息（无订阅地址，无来源统计）
 
 import json
 import os
@@ -65,31 +62,26 @@ def export_readme(channels, stats, path="README.md"):
     )
 
     # -------------------------
-    # 3. 来源统计
-    # -------------------------
-    origins = Counter([c.get("origin", "unknown") for c in channels])
-
-    # -------------------------
-    # 4. UA 统计
+    # 3. UA 统计
     # -------------------------
     ua_need = sum(1 for c in channels if c.get("need_ua"))
     ua_no = total - ua_need
 
     # -------------------------
-    # 5. HLS 深度解析统计
+    # 4. HLS 深度解析统计
     # -------------------------
     hls_key = stats.get("hls_key_total", 0)
     hls_ts = stats.get("hls_ts_total", 0)
     hls_sub = stats.get("hls_sub_m3u8_total", 0)
 
     # -------------------------
-    # 6. 网站抓取统计
+    # 5. 网站抓取统计
     # -------------------------
     website_pages = stats.get("website_pages_total", 0)
     website_ads = stats.get("website_ads_blocked_total", 0)
 
     # -------------------------
-    # 7. README 内容（无订阅地址）
+    # 6. README 内容（无订阅地址，无来源统计）
     # -------------------------
     content = f"""# IPTV Live
 
