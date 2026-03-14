@@ -50,8 +50,8 @@ from exporters.api_exporter import (
 )
 from exporters.monitor_exporter import export_monitor_ui
 
-# ★ README 导出（正确路径）
-from src.exporters.readme_exporter import export_readme
+# ★ README 导出（最终正确路径）
+from exporters.readme_exporter import export_readme
 
 # Stats
 from utils.stats import stats
