@@ -1,6 +1,7 @@
 import os
+from utils.logger import logger
 
-# 计算项目根目录（main.py 所在目录）
+# 项目根目录（main.py 所在目录）
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 PUBLIC_LISTS_DIR = os.path.join(BASE_DIR, "public_lists")
 
@@ -8,6 +9,7 @@ def collect():
     channels = []
 
     if not os.path.exists(PUBLIC_LISTS_DIR):
+        logger.warning(f"[public_lists] 目录不存在: {PUBLIC_LISTS_DIR}")
         return channels
 
     for filename in os.listdir(PUBLIC_LISTS_DIR):
@@ -15,6 +17,7 @@ def collect():
             file_path = os.path.join(PUBLIC_LISTS_DIR, filename)
             channels.extend(parse_file(file_path))
 
+    logger.info(f"[public_lists] 加载 {len(channels)} 条频道")
     return channels
 
 
