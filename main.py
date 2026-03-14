@@ -10,6 +10,9 @@ from utils.logger import logger
 logger.info(f">>> 当前工作目录: {os.getcwd()}")
 logger.info(">>> 正在运行最新 main.py <<<")
 
+# ============================
+# Exporters（全部保留）
+# ============================
 from exporters.monitor_exporter import export_monitor_ui
 from exporters.api_exporter import export_channels, export_groups, export_status, export_search_api
 from exporters.web_exporter import export_web_data, export_web_pages
@@ -17,16 +20,21 @@ from exporters.tvbox_category_exporter import export_tvbox_categories
 from exporters.m3u_exporter import export_m3u
 from exporters.json_exporter import export_tvbox
 
+# ============================
+# Collectors（只保留万能采集器）
+# ============================
 from collectors.universal_sources import collect as collect_sources
-from collectors.udp_sources import collect as collect_udp
-from collectors.public_lists import collect as collect_public
-from collectors.custom_sources import collect as collect_custom
-from collectors.public_cn_sources import collect as collect_cn
 
+# ============================
+# Validators
+# ============================
 from validators.http_checker import check as check_http
 from validators.udp_checker import check as check_udp
 from validators.speed_tester import check as speed_test
 
+# ============================
+# Processors
+# ============================
 from processors.score_channels import run as score_channels
 from processors.monitor_channels import run as monitor_channels
 from processors.disable_channels import run as disable_channels
@@ -37,10 +45,16 @@ from processors.filter_quality import run as filter_quality
 from processors.logo_mapper import run as map_logo
 from processors.deduplicate import run as dedup
 
+# ============================
+# EPG
+# ============================
 from epg.epg_fetcher import fetch_epg
 from epg.epg_generator import generate_epg
 from epg.epg_mapper import epg_map
 
+# ============================
+# Config
+# ============================
 from utils.config_loader import load_config
 
 
@@ -48,12 +62,8 @@ def main():
     cfg = load_config()
     logger.info(f">>> config.json 内容: {cfg}")
     
-    # 1. Collect
-    channels = []
-    channels += collect_public()
-    channels += collect_custom()
-    channels += collect_cn()
-    channels += collect_udp()
+    # 1. Collect（只调用万能采集器）
+    channels = collect_sources()
 
     # 2. Normalize（含自动分组）
     channels = normalize(channels)
