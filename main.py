@@ -32,6 +32,7 @@ from validators.http_checker import check as check_http
 from validators.udp_checker import check as check_udp
 from validators.speed_tester import check as speed_test
 from validators.playable_checker import check as check_playable
+from validators.fix_stream import run as fix_stream
 
 # ============================
 # Processors
@@ -82,7 +83,10 @@ def main():
     channels = check_udp(channels)
     channels = speed_test(channels)
 
-    # 4.5 真实播放测试（只保留能真正播放的频道）
+    # 4.5 全能修复器：自动补 UA/Referer + 修复 HLS 主/子 m3u8
+    channels = fix_stream(channels)
+
+    # 4.6 温和播放过滤：只过滤明显坏源，尽量保留央视/卫视
     channels = check_playable(channels)
 
     # 5. EPG mapping
