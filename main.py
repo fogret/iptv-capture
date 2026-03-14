@@ -18,6 +18,7 @@ from exporters.tvbox_category_exporter import export_tvbox_categories
 from exporters.m3u_exporter import export_m3u
 from exporters.json_exporter import export_tvbox
 
+from collectors.udp_sources import collect as collect_udp
 from collectors.public_lists import collect as collect_public
 from collectors.custom_sources import collect as collect_custom
 
