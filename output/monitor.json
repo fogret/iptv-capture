@@ -1,0 +1,18 @@
+[
+  {
+    "name": "CCTV-1",
+    "url": "http://xxx/cctv1.m3u8",
+    "score": 98,
+    "latency": 180,
+    "alive": true,
+    "group": "央视"
+  },
+  {
+    "name": "贵州公共",
+    "url": "http://xxx/gzgg.m3u8",
+    "score": 55,
+    "latency": 600,
+    "alive": true,
+    "group": "地方"
+  }
+]
