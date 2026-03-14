@@ -9,7 +9,8 @@ from datetime import datetime
 
 from utils.logger import logger
 from utils.stats import stats
-from utils.ua_manager import get_headers_for_url   # ⭐ 智能 UA
+from utils.ua_manager import get_headers_for_url
+from utils.channel_name import guess_channel_name   # ⭐ 新频道名识别模块
 
 # 路径保持不变
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -148,9 +149,7 @@ def extract_streams(html: str, base_url: str) -> list:
         except:
             pass
 
-    # ================================
-    # ⭐（新增）fetch / XHR 请求解析
-    # ================================
+    # 6) fetch / XHR 请求解析
     xhr_patterns = [
         r'fetch\(["\']([^"\']+)["\']',
         r'axios\.get\(["\']([^"\']+)["\']',
@@ -170,9 +169,7 @@ def extract_streams(html: str, base_url: str) -> list:
             except:
                 pass
 
-    # ================================
-    # ⭐（新增）base64 解码
-    # ================================
+    # 7) base64 解码
     for b64 in re.findall(r'["\']([A-Za-z0-9+/=]{20,})["\']', html):
         try:
             decoded = base64.b64decode(b64).decode("utf-8", "ignore")
@@ -181,9 +178,7 @@ def extract_streams(html: str, base_url: str) -> list:
         except:
             pass
 
-    # ================================
-    # ⭐（新增）JSON 配置解析
-    # ================================
+    # 8) JSON 配置解析
     json_patterns = [
         r'playerConfig\s*=\s*({.*?})',
         r'video\s*=\s*({.*?})',
@@ -200,9 +195,7 @@ def extract_streams(html: str, base_url: str) -> list:
             except:
                 pass
 
-    # ================================
-    # ⭐（新增）直播平台适配（斗鱼 / 虎牙 / B站）
-    # ================================
+    # 9) 直播平台适配（斗鱼 / 虎牙 / B站）
     if "douyu.com" in base_url:
         rid = re.findall(r'\d+', base_url)
         if rid:
@@ -223,12 +216,10 @@ def extract_streams(html: str, base_url: str) -> list:
         for m in re.findall(r'"playurl":"([^"]+)"', html):
             urls.add(m.replace("\\/", "/"))
 
-    # ================================
-    # ⭐（新增）过滤点播 mp4
-    # ================================
+    # 10) 过滤点播 mp4
     urls = {u for u in urls if not u.lower().endswith(".mp4")}
 
-    # ⭐ 过滤广告
+    # 11) 过滤广告
     urls = {u for u in urls if not is_ad_url(u)}
 
     return list(urls)
@@ -249,20 +240,9 @@ def extract_links(html: str, base_url: str) -> list:
     return links
 
 
-def guess_channel_name(url: str, html: str) -> str:
-    soup = BeautifulSoup(html, "html.parser")
-    if soup.title and soup.title.string:
-        title = soup.title.string.strip()
-        if 0 < len(title) <= 20:
-            return title
-
-    m = re.search(r"(cctv\d+|hunantv|gzstv|channel\d+)", url.lower())
-    if m:
-        return m.group(1).upper()
-
-    return "未知频道"
-
-
+# ================================
+# ⭐ 频道分组（保持原逻辑）
+# ================================
 def guess_group(url: str) -> str:
     u = url.lower()
     if "cctv" in u:
@@ -274,6 +254,9 @@ def guess_group(url: str) -> str:
     return "其它"
 
 
+# ================================
+# ⭐ 递归抓取
+# ================================
 def collect_from_page(url: str, depth: int, visited: set, channels: list, root_url: str):
     if depth > MAX_DEPTH or len(visited) > MAX_PAGES or len(channels) > MAX_CHANNELS:
         return
@@ -308,7 +291,7 @@ def collect_from_page(url: str, depth: int, visited: set, channels: list, root_u
                 stats.website_ads_blocked_total += 1
                 continue
 
-            name = guess_channel_name(url, html)
+            name = guess_channel_name(url, html)   # ⭐ 使用新频道名识别
             group = guess_group(url)
 
             ch = {
@@ -434,7 +417,6 @@ def collect_websites():
 
     logger.info(f"[websites] 网站抓取共得到 {len(channels)} 条频道")
 
-    # ⭐ 自动生成分析报告
     analyze_websites()
 
     return channels
