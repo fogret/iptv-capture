@@ -5,6 +5,7 @@ import base64
 import requests
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
+from datetime import datetime
 
 from utils.logger import logger
 from utils.stats import stats
@@ -13,6 +14,7 @@ from utils.ua_manager import get_headers_for_url   # ⭐ 智能 UA
 # 路径保持不变
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SOURCES_DIR = os.path.join(BASE_DIR, "sources")
+OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 
 MAX_PAGES = 100
 MAX_DEPTH = 3
@@ -327,6 +329,75 @@ def collect_from_page(url: str, depth: int, visited: set, channels: list, root_u
         collect_from_page(link, depth + 1, visited, channels, root_url)
 
 
+# ================================
+# ⭐ 网站抓取分析器（JSON + Markdown + 终端输出）
+# ================================
+def analyze_websites():
+    if not os.path.exists(OUTPUT_DIR):
+        os.makedirs(OUTPUT_DIR)
+
+    analysis = {}
+
+    for site, detail in stats.website_detail.items():
+        entry = {
+            "pages": detail["pages"],
+            "max_depth": detail["max_depth"],
+            "streams_found": len(detail["channels"]),
+            "ads_blocked": len(detail["ads_blocked"]),
+            "stream_types": [],
+        }
+
+        types = set()
+        for ch in detail["channels"]:
+            url = ch["url"].lower()
+            if ".m3u8" in url:
+                types.add("m3u8")
+            elif ".flv" in url:
+                types.add("flv")
+            elif ".ts" in url:
+                types.add("ts")
+            elif "rtmp://" in url:
+                types.add("rtmp")
+        entry["stream_types"] = sorted(list(types))
+
+        analysis[site] = entry
+
+    # 保存 JSON
+    json_path = os.path.join(OUTPUT_DIR, "website_analysis.json")
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(analysis, f, ensure_ascii=False, indent=2)
+
+    # 保存 Markdown
+    md_path = os.path.join(OUTPUT_DIR, "website_analysis.md")
+    with open(md_path, "w", encoding="utf-8") as f:
+        f.write("# 网站抓取分析报告\n\n")
+        f.write(f"生成时间：{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+
+        for site, entry in analysis.items():
+            f.write(f"## {site}\n")
+            f.write(f"- 抓取页面数：{entry['pages']}\n")
+            f.write(f"- 最大深度：{entry['max_depth']}\n")
+            f.write(f"- 抓到直播流：{entry['streams_found']}\n")
+            f.write(f"- 屏蔽广告：{entry['ads_blocked']}\n")
+            f.write(f"- 流类型：{', '.join(entry['stream_types']) or '无'}\n\n")
+
+    # 终端实时输出
+    for site, entry in analysis.items():
+        logger.info(
+            f"\n[analysis] 网站: {site}\n"
+            f"  - 抓取页面数: {entry['pages']}\n"
+            f"  - 最大深度: {entry['max_depth']}\n"
+            f"  - 抓到直播流: {entry['streams_found']}\n"
+            f"  - 屏蔽广告: {entry['ads_blocked']}\n"
+            f"  - 流类型: {', '.join(entry['stream_types']) or '无'}\n"
+        )
+
+    return analysis
+
+
+# ================================
+# ⭐ 主入口
+# ================================
 def collect_websites():
     channels = []
 
@@ -362,4 +433,8 @@ def collect_websites():
                 collect_from_page(url, 1, visited, channels, root_url=url)
 
     logger.info(f"[websites] 网站抓取共得到 {len(channels)} 条频道")
+
+    # ⭐ 自动生成分析报告
+    analyze_websites()
+
     return channels
