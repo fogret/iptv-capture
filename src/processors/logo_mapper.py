@@ -1,20 +1,30 @@
 import json
 import os
 
-LOGO_FILE = os.path.join(os.path.dirname(__file__), "logo_map.json")
-
-def load_logo_map():
-    try:
-        with open(LOGO_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except Exception:
-        # 文件损坏或不存在时，使用空映射 + fallback
-        return {"_fallback": "https://live.fanmingming.com/tv/default.png"}
-
-LOGO_MAP = load_logo_map()
-
 def run(channels):
+    logo_map = load_logo_map()
+
     for ch in channels:
         name = ch.get("name", "")
-        ch["logo"] = LOGO_MAP.get(name, LOGO_MAP.get("_fallback"))
+        if name in logo_map:
+            ch["logo"] = logo_map[name]
+        else:
+            # fallback：央视/卫视自动匹配
+            if name.startswith("CCTV-"):
+                ch["logo"] = f"https://live.fanmingming.com/tv/{name}.png"
+            elif "卫视" in name:
+                ch["logo"] = f"https://live.fanmingming.com/tv/{name}.png"
+
     return channels
+
+
+def load_logo_map():
+    path = "sources/logos.json"
+    if not os.path.exists(path):
+        return {}
+
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except:
+        return {}
