@@ -1,8 +1,12 @@
 #EXTM3U
+#EXTINF:-1 group-title="央视",CCTV-1
+http://58.57.40.22:9901/tsfile/live/0001_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="央视",CCTV-2
 http://58.57.40.22:9901/tsfile/live/1001_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="央视",CCTV-3
 http://58.57.40.22:9901/tsfile/live/1002_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="央视",CCTV-4
+http://58.57.40.22:9901/tsfile/live/1003_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="央视",CCTV-5
 http://58.57.40.22:9901/tsfile/live/1005_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="央视",CCTV-6
@@ -19,6 +23,8 @@ http://58.57.40.22:9901/tsfile/live/1010_1.m3u8|User-Agent=Mozilla/5.0 (Windows 
 http://58.57.40.22:9901/tsfile/live/1011_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="央视",CCTV-12
 http://58.57.40.22:9901/tsfile/live/1012_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="央视",CCTV-13
+http://58.57.40.22:9901/tsfile/live/1013_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="央视",CCTV-14
 http://58.57.40.22:9901/tsfile/live/1014_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="央视",CCTV-15
@@ -27,6 +33,10 @@ http://58.57.40.22:9901/tsfile/live/1015_1.m3u8|User-Agent=Mozilla/5.0 (Windows 
 http://69.30.246.194/live/cctv16.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="央视",CCTV-17
 http://58.57.40.22:9901/tsfile/live/0019_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="卫视",三沙卫视
+https://srs.ssws.tv/video/sstv-10/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="卫视",东南卫视
+http://58.57.40.22:9901/tsfile/live/1037_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",东方卫视
 http://58.57.40.22:9901/tsfile/live/1030_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",东方卫视4K
@@ -41,8 +51,12 @@ http://120.76.248.139/live/bfgd/4200000110.m3u8|User-Agent=Mozilla/5.0 (Windows 
 http://120.76.248.139/live/bfgd/4200000122.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",北京卫视
 http://58.57.40.22:9901/tsfile/live/1032_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="卫视",北京卫视4K超
+http://183.215.134.239:19901/tsfile/live/0122_1.m3u8?key=txiptv&playlive=1&authid=0|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",厦门卫视
-https://epg.pw/stream/aa65dd411565991ace44f9e5934bd018fdd52122e052d471a363b6ee839e1079.ctv|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+http://183.11.239.36:808/hls/17/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="卫视",吉林卫视
+http://58.57.40.22:9901/tsfile/live/1050_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",四川卫视
 http://58.57.40.22:9901/tsfile/live/1046_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",四川卫视4K
@@ -51,34 +65,46 @@ http://39.152.103.17:8089/tsfile/live/1044_1.m3u8|User-Agent=Mozilla/5.0 (Window
 http://222.128.55.152:9080/live/dwq.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",天津卫视
 http://58.57.40.22:9901/tsfile/live/1034_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="卫视",宁夏卫视
+http://58.57.40.22:9901/tsfile/live/1054_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",安徽卫视
 http://58.57.40.22:9901/tsfile/live/1033_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",山东卫视
 http://120.76.248.139/live/bfgd/4200000099.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="卫视",山西卫视
+http://m3u8.channel.wsrtv.com.cn/cms/videos/nmip-media/channellive/channel7/playlist.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="卫视",广东卫视
+http://58.57.40.22:9901/tsfile/live/1039_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",广西卫视
 http://58.57.40.22:9901/tsfile/live/1049_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",延边卫视
-http://120.76.248.139/live/bfgd/4200000117.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+https://srs.iyb983.cn:443/video/CYS/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",新疆卫视
 http://58.57.40.22:9901/tsfile/live/1055_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",江苏卫视
 http://58.57.40.22:9901/tsfile/live/1031_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",江西卫视
 http://58.57.40.22:9901/tsfile/live/1043_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
-#EXTINF:-1 group-title="卫视",河南卫视
-http://58.57.40.22:9901/tsfile/live/1048_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="卫视",河北卫视
+http://58.57.40.22:9901/tsfile/live/1044_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="卫视",浙江卫视
+http://58.57.40.22:9901/tsfile/live/1029_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",海南卫视
 http://58.57.40.22:9901/tsfile/live/1000_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",海峡卫视
 http://8.138.7.223/tv/hxws.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",深圳卫视
 http://58.57.40.22:9901/tsfile/live/1036_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
-#EXTINF:-1 group-title="卫视",湖北卫视
-http://58.57.40.22:9901/tsfile/live/1038_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="卫视",湖南卫视
+https://txmov2.a.kwimgs.com/bs3/video-hls/5199687338554291078_hlsb.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",甘肃卫视
 http://58.57.40.22:9901/tsfile/live/1056_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",西藏卫视
 http://36.32.174.67:60080/newlive/live/hls/48/live.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="卫视",贵州卫视
+http://58.57.40.22:9901/tsfile/live/1042_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="卫视",辽宁卫视
+http://58.57.40.22:9901/tsfile/live/1035_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",重庆卫视
 http://36.32.174.67:60080/newlive/live/hls/34/live.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",陕西卫视
@@ -87,33 +113,47 @@ http://38.75.136.137:98/gslb/dsdqpub/snwshd.m3u8|User-Agent=Mozilla/5.0 (Windows
 http://58.57.40.22:9901/tsfile/live/1057_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="卫视",黑龙江卫视
 http://58.57.40.22:9901/tsfile/live/1040_1.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="地方",1993年春晚
+https://alimov2.a.kwimgs.com/upic/2023/01/13/22/BMjAyMzAxMTMyMjEwMDNfNDAzMDAxOTlfOTM1MTIzMzYwODJfMF8z_b_B647d10e431b4cc5e48e6c77347d69021.mp4|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="地方",2006年春晚
+https://alimov2.a.kwimgs.com/upic/2023/01/13/20/BMjAyMzAxMTMyMDA5MjJfNDAzMDAxOTlfOTM0OTkwNDQyNzlfMF8z_b_Bbc3703fc331dc994c50859c19aad28ff.mp4|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="地方",2018年春晚
+https://alimov2.a.kwimgs.com/upic/2023/01/06/16/BMjAyMzAxMDYxNjMxMTRfNDAzMDAxOTlfOTI4OTY2ODE2MTBfMF8z_b_B11a778e34390a21de42d407e94f45b91.mp4|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="地方",Auto
+https://dvrfl04.tulix.tv/teleup-carstv/mpegts|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="地方",CCTV
 http://38.75.136.137:98/gslb/dsdqpub/hjjc.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
-#EXTINF:-1 group-title="地方",Comedy
-https://dvrfl04.tulix.tv/teleup-comedytv/mpegts|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
-#EXTINF:-1 group-title="地方",Comedy;Kids
-https://amg00627-amg00627c40-rakuten-uk-5725.playouts.now.amagi.tv/ts-eu-w1-n2/playlist/amg00627-banijayfast-mrbeanpopupcc-rakutenuk/cb573b1a6570618784cd3778d1f74182807b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258af764cc59069da2978c9f4c2643a7a445c994f49eca156abf8e40944c56df7b94a55942e13e69f10cdd619a68781539b15d224f9149fc0f2e9832aaabe4098646598563c6b6010ac8e7087cc59f6e98e682d99625a3e7437c882e333caa1e43d2e72f7eddfb725de1ecb9b2c82614ddb4af81dc258020cdb8a621aeae02d99ff3bd90a2701a0751f00afcfabf63021b465faedcad57a7f98f11b428ea807d30f242299f1c715cb965bc6f66bb2bd671937d78205b5a9f2d2bffedd11dc12c3c9a2cc66025635504bc67cb28a61de1ed87a83c7076e091e13e3c90384cef276044f63cac052dd181ef9fc8e80d401728a431348e76ddc14543e9c7a3c3cd62cff9b2e65c67359d27b6ead2a40ea28cbb122f1a8ccf6466ae5aca06ccb2fbee544828c41c30b1b560db4fe2925356f75c2e16b0870348372edddceee601a428bd3c8edcb4737173374035adb0286ba163a6d4fdb4cd9609bd78e6698fb97cb4baaad40/160/426x240_411840/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="地方",Comedy;Series
-https://amg00353-lionsgatestudio-angermgmt-samsungau-o9jg9.amagi.tv/ts-eu-w1-n2/playlist/amg00353-lionsgatestudio-angermgmt-samsungau/cb573b1a6570618784cd3778d1f74182807b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258af764cc59069da2978c9f4c2643a7a445c994f49eda557a7ffe95e17c56df7b94a55942e13e69f10c1d148a688d6529c438774a4479dc0a3e9832aaabe4098646598563c6b6010ac8e7087cc59f6e98e682d99625a3e7437c882e333caa1e43d2e72f7eddfb725de1ecb9b2c82614ddb4af81dc258020cdb8a621aeae02d99ff3bd90a2701a0751f00afcfabf63021b465faedcad57a7f98f11b428ea807d30f242299f1c715cb965bc6f66bb2bd671937d78205b5a9f2d2bffedd11dc12c3c9a2cc66025635504bc67cb28a61de1ed87a83c7076e091e13e3c90384cef276044f63cac052dd181ef9fc8e80d401728a431348e76ddc14543e9c7a3c3cd62cff9b2e65c67359d27b6ead2a40ea28cbb122f1a8ccf6466ae5aca06ccb2fbee544828c41c30b1b560db4fe2925356f75c2e16b0870348372edddceee601a428bd3c8edcb47371733740355d2028686163a6d4f2d9937a4d11272858ba8af002cf670af/199/640x360_1057680/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+https://amg00353-lionsgatestudio-angermgmt-samsungau-o9jg9.amagi.tv/ts-eu-w1-n2/playlist/amg00353-lionsgatestudio-angermgmt-samsungau/cb57391c65736c8e84cb3b67cef24982807b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258af764cc59069da2978c9f4c2643a7a445c994f49e6a25ea6f8e75940c56df7b81f55942e13e69f4a9a8114a6d1d259cc178225a212cbc1a5e97721b8aea9b2529a804e6b6d113ff4b5779add58b29aa97d3888743b34663f848db28e83b81b253931d6f0d9ab6dbf32c38c37886336c16ff0846a99e819c23aa6ef0e8aa2a8da0034517d1bfe0355c2c681f0911632b16ffdadfbd37a7dd3917e1d1e9c3c8c737975f875ac657c7ee67153e9a794101ff976c5ca83a312c328d6c739bd28cfd5fd9b3c0d626c173da753a59f61de3ae7b1c9a4180c53574da196548bd3970e702a788f8e5adb0408f9f5bfc38e5e759a3b5b6de16e8f0f5e2cd4623835a50ce98a3069be2308ae3c29b40d66d70cafee6cbd8cf3d12b17f99ecb4bf46aaf920fd1fd0de02d1f5110bcff2910141e2d9ebe263e317fc257ed9c9fb2204753ba85b894aa6431093d18451fcbb3b702fca0f4694c468f035c231e7630990bd165da7a392326db11dea94939c5312823e2a8284e180bb2cda28a93d9da4ed7278b2f9c99b68ff405d2796a258d11bd19522b0fa2951e7ebf/88/640x360_1057680/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="地方",Culture;Documentary;Travel
+https://amg01314-amg01314c7-distrotv-us-10219.playouts.now.amagi.tv/ts-us-w2-n2/playlist/amg01314-cgtn-cgtnchinatravel-distrotvus/cb57391c65736c8e84cb3b67cef24982807b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258af764cc59069da2978c9f4c2643a7a445c994f49e6a60fabfce70816c56df7b81f55942e13e69f109f8749a6d2d20fcc458322f0459897a2e97721b8aea9b2529a804e6b6d113ff4b5779add58b29aa97d3888743b34663f848db28e83b81b253931d6f0d9ab6dbf32c38c37886336c16ff0846a99e819c23aa6ef0e8aa2a8da0034517d1bfe0355c2c681f0911632b16ffdadfbd37a7dd3917e1d1e9c3c8c737975f875ac657c7ee67153e9a794101ff976c5ca83a312c328d6c739bd28cfd5fd9b3c0d626c173da753a59f61de3ae7b1c9a4180c53574da196548bd3970e702a788f8e5adb0408f9f5bfc38e5e759a3b5b6de16e8f0f5e2cd4623835a50ce98a3069be2308ae3c29b40d66d70cafee6cbd8cf3d12b17f99ecb4bf46aaf920fd1fd0de02d1f5110bcff2910141e2d9ebe263e317fc257ed9c9fb2204753ba85b894aa6431093d18451fcbb3b702fca0f4694c468f035c231e7630990bd165da7a392326db11dea94939c5312823e2a8284e180bb2cda28a93d9da4ed62e87971d5887a2edcedb6b6bff7f82eed5dd730058e81f292157/148/1920x1080_4681598/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="地方",Culture;Entertainment
 http://iptvcasomsapi.jprdigital.in/x-media/C0400/master.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
-#EXTINF:-1 group-title="地方",Entertainment;Movies
-https://amg02159-amg02159c7-samsung-in-4001.playouts.now.amagi.tv/ts-eu-w1-n2/playlist/amg02159-kcglobal-kcm-samsungin/cb573b1a6570618784cd3778d1f74182807b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258af764cc59069da2978c9f4c2643a7a445c994f49edf65aa5fee45c42c56df7b94a55942e13e69f4ac1d149a6828509cd108e23f61295c7a4e9832aaabe4098646598563c6b6010ac8e7087cc59f6e98e682d99625a3e7437c882e333caa1e43d2e72f7eddfb725de1ecb9b2c82614ddb4af81dc258020cdb8a621aeae02d99ff3bd90a2701a0751f00afcfabf63021b465faedcad57a7f98f11b428ea807d30f242299f1c715cb965bc6f66bb2bd671937d78205b5a9f2d2bffedd11dc12c3c9a2cc66025635504bc67cb28a61de1ed87a83c7076e091e13e3c90384cef276044f63cac052dd181ef9fc8e80d401728a431348e76ddc14543e9c7a3c3cd62cff9b2e65c67359d27b6ead2a40ea28cbb122f1a8ccf6466ae5aca06ccb2fbee544828c41c30b1b560db4fe2925356f75c2e16b0870348372edddceee601a428bd3c8edcb473717337501546b8321fd2f23a6b249fb02420c44a915f9a7acc32b70f9/38/1920x1080_5129264/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="地方",Documentary;News
+https://amg01550-amg01550c6-samsung-in-4679.playouts.now.amagi.tv/ts-eu-w1-n2/playlist/amg01550-indiatvfast-indiatvakasamsung-samsungin/cb57391c65736c8e84cb3b67cef24982807b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258af764cc59069da2978c9f4c2643a7a445c994f49e6f459f2fbe80c16c56df7b81f55942e13e69f4b9b8714a687815996128176a3129b9ba2e97721b8aea9b2529a804e6b6d113ff4b5779add58b29aa97d3888743b34663f848db28e83b81b253931d6f0d9ab6dbf32c38c37886336c16ff0846a99e819c23aa6ef0e8aa2a8da0034517d1bfe0355c2c681f0911632b16ffdadfbd37a7dd3917e1d1e9c3c8c737975f875ac657c7ee67153e9a794101ff976c5ca83a312c328d6c739bd28cfd5fd9b3c0d626c173da753a59f61de3ae7b1c9a4180c53574da196548bd3970e702a788f8e5adb0408f9f5bfc38e5e759a3b5b6de16e8f0f5e2cd4623835a50ce98a3069be2308ae3c29b40d66d70cafee6cbd8cf3d12b17f99ecb4bf46aaf920fd1fd0de02d1f5110bcff2910141e2d9ebe263e317fc257ed9c9fb2204753ba85b894aa6431093d18451fcbb3b702fca0f4694c468f035c231e7630990bd165da7a392326db11dea94939c5312823e2a8284e180bb2cda28a93d9da4ed62e8a9d1d589ca2edcedb18c3a156d0bb5346881d5d9b562d22d6/192/1920x1080_13312635/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="地方",Entertainment;Music
 http://iptvcasomsapi.jprdigital.in/x-media/C0585/master.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="地方",Kids
 https://viamotionhsi.netplus.ch/live/eds/france4hd/browser-dash/france4hd.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
-#EXTINF:-1 group-title="地方",Music
-https://hdbox.chunklistv.com/live?stream=tvone|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
-#EXTINF:-1 group-title="地方",Religious
-https://hdbox.chunklistv.com/live?stream=3abn-nicaragua|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="地方",Relax
+https://amg01255-secomcofites-my-myzen-en-plex-dj4yp.amagi.tv/ts-us-e2-n1/playlist/amg01255-secomcofites-my-myzen-en-plex/cb57391c65736c8e84cb3b67cef24982807b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258af764cc59069da2978c9f4c2643a7a445c994f49e1a357a6ace45c17c56df7b81f55942e13e69f1398d248a6d38158cb45d376f515cc90a4e97721b8aea9b2529a804e6b6d113ff4b5779add58b29aa97d3888743b34663f848db28e83b81b253931d6f0d9ab6dbf32c38c37886336c16ff0846a99e819c23aa6ef0e8aa2a8da0034517d1bfe0355c2c681f0911632b16ffdadfbd37a7dd3917e1d1e9c3c8c737975f875ac657c7ee67153e9a794101ff976c5ca83a312c328d6c739bd28cfd5fd9b3c0d626c173da753a59f61de3ae7b1c9a4180c53574da196548bd3970e702a788f8e5adb0408f9f5bfc38e5e759a3b5b6de16e8f0f5e2cd4623835a50ce98a3069be2308ae3c29b40d66d70cafee6cbd8cf3d12b17f99ecb4bf46aaf920fd1fd0de02d1f5110bcff2910141e2d9ebe263e317fc257ed9c9fb2204753ba85b894aa6431093d18451fcbb3b702fca0f4694c468f035c231e7630990bd165da7a392326db11dea94939c5312823e2a8284e180bb2cda28a93d9da4ed72e812f9c84b68ff4058ea497763b8dee01dc37f30cf26b3a49/12/640x360_1020800/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="地方",Science
-https://amg00861-terninternation-inwonder-samsungau-1k63k.amagi.tv/ts-eu-w1-n2/playlist/amg00861-terninternation-inwonder-samsungau/cb573b1a6570618784cd3778d1f74182807b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258af764cc59069da2978c9f4c2643a7a445c994f49edf558a7f6b70f43c56df7b94a55942e13e69f4aced41fa684d20a9e17d37ff3409d95f3e9832aaabe4098646598563c6b6010ac8e7087cc59f6e98e682d99625a3e7437c882e333caa1e43d2e72f7eddfb725de1ecb9b2c82614ddb4af81dc258020cdb8a621aeae02d99ff3bd90a2701a0751f00afcfabf63021b465faedcad57a7f98f11b428ea807d30f242299f1c715cb965bc6f66bb2bd671937d78205b5a9f2d2bffedd11dc12c3c9a2cc66025635504bc67cb28a61de1ed87a83c7076e091e13e3c90384cef276044f63cac052dd181ef9fc8e80d401728a431348e76ddc14543e9c7a3c3cd62cff9b2e65c67359d27b6ead2a40ea28cbb122f1a8ccf6466ae5aca06ccb2fbee544828c41c30b1b560db4fe2925356f75c2e16b0870348372edddceee601a428bd3c8edcb47371733740358dc0286b5163a6d4f82413ae406e6355aaba1b4b02c30a29a/147/426x240_667680/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+https://amg00861-terninternation-inwonder-samsungau-1k63k.amagi.tv/ts-eu-w1-n2/playlist/amg00861-terninternation-inwonder-samsungau/cb57391c65736c8e84cb3b67cef24982807b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258af764cc59069da2978c9f4c2643a7a445c994f49e6f40df0f6b05a41c56df7b81f55942e13e69f4bce871da6d2850f9d438072f611cf96f5e97721b8aea9b2529a804e6b6d113ff4b5779add58b29aa97d3888743b34663f848db28e83b81b253931d6f0d9ab6dbf32c38c37886336c16ff0846a99e819c23aa6ef0e8aa2a8da0034517d1bfe0355c2c681f0911632b16ffdadfbd37a7dd3917e1d1e9c3c8c737975f875ac657c7ee67153e9a794101ff976c5ca83a312c328d6c739bd28cfd5fd9b3c0d626c173da753a59f61de3ae7b1c9a4180c53574da196548bd3970e702a788f8e5adb0408f9f5bfc38e5e759a3b5b6de16e8f0f5e2cd4623835a50ce98a3069be2308ae3c29b40d66d70cafee6cbd8cf3d12b17f99ecb4bf46aaf920fd1fd0de02d1f5110bcff2910141e2d9ebe263e317fc257ed9c9fb2204753ba85b894aa6431093d18451fcbb3b702fca0f4694c468f035c231e7630990bd165da7a392326db11dea94939c5312823e2a8284e180bb2cda28a93d9da4ed62e869b1d589ba2edcedb90785420c3f8b969110e74b7c890cc29/154/426x240_667680/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="地方",Undefined
-https://tkx.mp.lura.live/rest/v2/mcp/video/11135425.m3u8?anvack=pDKqMLyG9pVqMkSYRJHWu3XROjAlvR6z&eud=1iqQ+zazzEobWIhmmj6bA8STRJm4HceYQApO7QYBvy9BTps0KI7LuXGD4KK7RLtBTyO8KsbFw40vgX8hrw+xqw==|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
-#EXTINF:-1 group-title="地方",中华小当家
-https://live.iill.top/huya/11342413|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+https://amg00353-lionsgatestudio-wickedtunase-samsungse-w4kcr.amagi.tv/ts-eu-w1-n2/playlist/amg00353-lionsgatestudio-wickedtunase-samsungse/cb57391c65736c8e84cb3b67cef24982807b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258af764cc59069da2978c9f4c2643a7a445c994f49e0a056f6fab40842c56df7b81f55942e13e69f10c0d11ca683850a9b42867ef614c9c3f2e97721b8aea9b2529a804e6b6d113ff4b5779add58b29aa97d3888743b34663f848db28e83b81b253931d6f0d9ab6dbf32c38c37886336c16ff0846a99e819c23aa6ef0e8aa2a8da0034517d1bfe0355c2c681f0911632b16ffdadfbd37a7dd3917e1d1e9c3c8c737975f875ac657c7ee67153e9a794101ff976c5ca83a312c328d6c739bd28cfd5fd9b3c0d626c173da753a59f61de3ae7b1c9a4180c53574da196548bd3970e702a788f8e5adb0408f9f5bfc38e5e759a3b5b6de16e8f0f5e2cd4623835a50ce98a3069be2308ae3c29b40d66d70cafee6cbd8cf3d12b17f99ecb4bf46aaf920fd1fd0de02d1f5110bcff2910141e2d9ebe263e317fc257ed9c9fb2204753ba85b894aa6431093d18451fcbb3b702fca0f4694c468f035c231e7630990bd165da7a392326db11dea94939c5312823e2a8284e180bb2cda28a93d9da4ed62e839a1d58bca2edcedbeeb4eeddb0e45fe3d567dbd8f8ba0f29/105/640x360_1057680/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="地方",Weather
+https://amg00684-accuweather-accuweather-plex-jbd2s.amagi.tv/ts-us-w2-n1/playlist/amg00684-accuweather-accuweather-plex/cb57391c65736c8e84cb3b67cef24982807b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258af764cc59069da2978c9f4c2643a7a445c994f49e6a056a7ffe85f10c56df7b81f55942e13e69f13c9d31ea6838558ca428370a01398c6a6e97721b8aea9b2529a804e6b6d113ff4b5779add58b29aa97d3888743b34663f848db28e83b81b253931d6f0d9ab6dbf32c38c37886336c16ff0846a99e819c23aa6ef0e8aa2a8da0034517d1bfe0355c2c681f0911632b16ffdadfbd37a7dd3917e1d1e9c3c8c737975f875ac657c7ee67153e9a794101ff976c5ca83a312c328d6c739bd28cfd5fd9b3c0d626c173da753a59f61de3ae7b1c9a4180c53574da196548bd3970e702a788f8e5adb0408f9f5bfc38e5e759a3b5b6de16e8f0f5e2cd4623835a50ce98a3069be2308ae3c29b40d66d70cafee6cbd8cf3d12b17f99ecb4bf46aaf920fd1fd0de02d1f5110bcff2910141e2d9ebe263e317fc257ed9c9fb2204753ba85b894aa6431093d18451fcbb3b702fca0f4694c468f035c231e7630990bd165da7a392326db11dea94939c5312823e2a8284e180bb2cda28a93d9da4ed727862f9ce4b68ff4059526d42a9c3712d0a4535cc33e850b4a/85/426x240_511680/index.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="地方",倩女幽魂人间道
+http://jsmov2.a.yximgs.com/bs3/video-hls/5250634317044855747_hlsb.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="地方",倩女幽魂妖魔道
 http://jsmov2.a.yximgs.com/bs3/video-hls/5232901391302199073_hlsb.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="地方",倩女幽魂道道道
+http://jsmov2.a.yximgs.com/bs3/video-hls/5216294367991385255_hlsb.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="地方",北京科教
+http://player.cntv.cn/standard/live_HLSDRM20180606.swf?ChannelID=btv3&P2PChannelID=pd://cctv_p2p_hdbtv3|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="地方",北京青年
+http://player.cntv.cn/standard/live_HLSDRM20180919.swf?v=180.171.5.8.9.6.3.9&ChannelID=btv8&videoTVChannel=btv8&P2PChannelID=pd://cctv_p2p_hdbtv8&tai=btv8&VideoName=btv8&channelID=btv8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
+#EXTINF:-1 group-title="地方",天映经典
+http://pull-vivek.speedws.com/live/aaatyjd.flv|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
 #EXTINF:-1 group-title="地方",龙门飞甲
 http://jsmov2.a.yximgs.com/bs3/video-hls/5203346449046555193_hlsb.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36&Referer=https://www.google.com/
