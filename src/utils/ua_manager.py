@@ -1,32 +1,82 @@
 import re
 import json
 import os
+import aiohttp
+import asyncio
 
 UA_CACHE_FILE = "data/ua_cache.json"
 os.makedirs("data", exist_ok=True)
 
+# ===========================
+# 1) 默认 UA（国内环境）
+# ===========================
 DEFAULT_UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "
     "Chrome/120.0 Safari/537.36"
 )
 
-# 国内可访问、最通用 Referer
 DEFAULT_REFERER = "https://www.baidu.com/"
 
-# 需要 UA 的 CDN / 域名
-UA_DOMAINS = [
-    "39.134.",     # 央视
-    "223.110.",    # 电信
-    "183.207.",    # 上海移动
-]
+# ===========================
+# 2) 播放器 UA
+# ===========================
+PLAYER_UA = {
+    "tvbox": DEFAULT_UA,
+    "potplayer": "Lavf/58.45.100",
+    "vlc": "VLC/3.0.18",
+    "android": "Mozilla/5.0 (Linux; Android 10)",
+}
 
-# 需要 UA 的格式
-UA_FORMATS = [
+# ===========================
+# 3) CDN 规则（是否需要 UA）
+# ===========================
+CDN_RULES = {
+    "39.134.": True,   # 央视
+    "223.110.": True,  # 电信
+    "183.207.": True,  # 移动
+    "101.71.": False,  # 阿里 CDN
+    "112.50.": False,  # 腾讯 CDN
+}
+
+# ===========================
+# 4) Referer 规则（按域名）
+# ===========================
+REFERER_RULES = {
+    "cctv.cn": "https://www.cctv.cn/",
+    "cntv.cn": "https://www.cntv.cn/",
+    "mgtv.com": "https://www.mgtv.com/",
+    "iqiyi.com": "https://www.iqiyi.com/",
+    "youku.com": "https://www.youku.com/",
+    "iptv.gz.cn": "https://iptv.gz.cn/",
+}
+
+# ===========================
+# 5) Cookie 规则（按域名）
+# ===========================
+COOKIE_RULES = {
+    "iptv.gz.cn": "sessionid=123456;",
+}
+
+# ===========================
+# 6) Host 规则（按 CDN）
+# ===========================
+HOST_RULES = {
+    "39.134.": "live.cctv.com",
+    "223.110.": "live.telecom.com",
+}
+
+# ===========================
+# 7) 格式规则（需要 UA）
+# ===========================
+FORMAT_RULES = [
     ".flv",
     ".f4m",
 ]
 
+# ===========================
+# 8) 缓存
+# ===========================
 def load_cache():
     if os.path.exists(UA_CACHE_FILE):
         try:
@@ -40,44 +90,119 @@ def save_cache(cache):
 
 UA_CACHE = load_cache()
 
-
+# ===========================
+# 9) 判断是否需要 UA
+# ===========================
 def need_ua(url: str) -> bool:
     if url in UA_CACHE:
         return UA_CACHE[url]
 
     u = url.lower()
 
-    if any(u.endswith(ext) for ext in UA_FORMATS):
+    # 按格式
+    if any(u.endswith(ext) for ext in FORMAT_RULES):
         UA_CACHE[url] = True
         save_cache(UA_CACHE)
         return True
 
-    for d in UA_DOMAINS:
-        if d in url:
-            UA_CACHE[url] = True
+    # 按 CDN
+    for prefix, need in CDN_RULES.items():
+        if prefix in url:
+            UA_CACHE[url] = need
             save_cache(UA_CACHE)
-            return True
+            return need
 
     UA_CACHE[url] = False
     save_cache(UA_CACHE)
     return False
 
+# ===========================
+# 10) 获取 Referer
+# ===========================
+def get_referer(url: str) -> str:
+    for domain, ref in REFERER_RULES.items():
+        if domain in url:
+            return ref
+    return DEFAULT_REFERER
 
-def get_headers_for_url(url: str) -> dict:
-    if need_ua(url):
-        return {
-            "User-Agent": DEFAULT_UA,
-            "Referer": DEFAULT_REFERER,
-            "Accept": "*/*",
-        }
-    return {}
+# ===========================
+# 11) 获取 Cookie
+# ===========================
+def get_cookie(url: str) -> str:
+    for domain, ck in COOKIE_RULES.items():
+        if domain in url:
+            return ck
+    return ""
 
+# ===========================
+# 12) 获取 Host
+# ===========================
+def get_host(url: str) -> str:
+    for prefix, host in HOST_RULES.items():
+        if prefix in url:
+            return host
+    return ""
 
-def add_headers_if_needed(url: str) -> str:
+# ===========================
+# 13) 获取 headers（检测/测速用）
+# ===========================
+def get_headers_for_url(url: str, player="tvbox") -> dict:
+    if not need_ua(url):
+        return {}
+
+    ua = PLAYER_UA.get(player, DEFAULT_UA)
+    referer = get_referer(url)
+    cookie = get_cookie(url)
+    host = get_host(url)
+
+    headers = {
+        "User-Agent": ua,
+        "Referer": referer,
+        "Accept": "*/*",
+    }
+
+    if cookie:
+        headers["Cookie"] = cookie
+
+    if host:
+        headers["Host"] = host
+        headers["Origin"] = f"https://{host}"
+
+    return headers
+
+# ===========================
+# 14) 导出 URL（M3U / TVBox）
+# ===========================
+def add_headers_if_needed(url: str, player="tvbox") -> str:
     if not url.startswith("http"):
         return url
 
-    if need_ua(url):
-        return f"{url}|User-Agent={DEFAULT_UA}&Referer={DEFAULT_REFERER}"
+    if not need_ua(url):
+        return url
 
-    return url
+    ua = PLAYER_UA.get(player, DEFAULT_UA)
+    referer = get_referer(url)
+
+    return f"{url}|User-Agent={ua}&Referer={referer}"
+
+# ===========================
+# 15) fallback（失败 → 自动加 UA）
+# ===========================
+async def test_url(url):
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url, timeout=2) as resp:
+                return resp.status < 500
+    except:
+        return False
+
+async def fallback_ua(url):
+    ok = await test_url(url)
+    if ok:
+        UA_CACHE[url] = False
+        save_cache(UA_CACHE)
+        return False
+
+    UA_CACHE[url] = True
+    save_cache(UA_CACHE)
+    return True
