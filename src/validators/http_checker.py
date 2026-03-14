@@ -1,25 +1,44 @@
-
-import requests
-from typing import List, Dict
+import asyncio
+import aiohttp
 from utils.logger import logger
 
-def check(channels: List[Dict]) -> List[Dict]:
-    result = []
+MAX_CONCURRENCY = 200   # 并发数，可调 100–500
+TIMEOUT = 5             # 单个请求超时
+RETRY = 1               # 重试次数
 
-    for ch in channels:
-        url = ch["url"]
-        if not url.startswith("http"):
-            ch["ok"] = None
-            result.append(ch)
-            continue
+sem = asyncio.Semaphore(MAX_CONCURRENCY)
 
+
+async def fetch(session, url):
+    for _ in range(RETRY + 1):
         try:
-            resp = requests.get(url, timeout=3, stream=True)
-            ch["ok"] = resp.status_code == 200
+            async with sem:
+                async with session.get(url, timeout=TIMEOUT) as resp:
+                    return resp.status < 500
         except:
-            ch["ok"] = False
+            continue
+    return False
 
-        result.append(ch)
 
-    logger.info(f"[http_checker] Checked {len(channels)} channels")
-    return result
+async def check_all(channels):
+    async with aiohttp.ClientSession() as session:
+        tasks = []
+        for ch in channels:
+            if ch["url"].startswith("http"):
+                tasks.append(fetch(session, ch["url"]))
+            else:
+                tasks.append(asyncio.sleep(0, result=True))
+
+        results = await asyncio.gather(*tasks)
+
+    valid = []
+    for ch, ok in zip(channels, results):
+        if ok:
+            valid.append(ch)
+
+    logger.info(f"[http_checker] {len(channels)} → {len(valid)}")
+    return valid
+
+
+def check(channels):
+    return asyncio.run(check_all(channels))
