@@ -2,42 +2,56 @@
   "CCTV": {
     "ok": null,
     "udp_ok": null,
-    "latency": 87,
+    "latency": 60,
     "bitrate": null,
     "resolution": null
   },
   "央视频-有品质的视频社交媒体": {
     "ok": null,
     "udp_ok": null,
-    "latency": 274,
+    "latency": 251,
     "bitrate": null,
     "resolution": null
   },
   "未知": {
     "ok": null,
     "udp_ok": null,
-    "latency": 1166,
+    "latency": 1212,
+    "bitrate": null,
+    "resolution": null
+  },
+  "热点关注": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 575,
     "bitrate": null,
     "resolution": null
   },
   "荔枝网": {
     "ok": null,
     "udp_ok": null,
-    "latency": 306,
+    "latency": 241,
     "bitrate": null,
     "resolution": null
   },
   "贵州网络广播电视": {
     "ok": null,
     "udp_ok": null,
-    "latency": 1004,
+    "latency": 781,
     "bitrate": null,
     "resolution": null
   },
   "长江云-湖北网络广播电视台官方网站": {
     "ok": null,
     "udp_ok": null,
-    "latency": 1111,
+    "latency": 977,
+    "bitrate": null,
+    "resolution": null
+  },
+  "青岛网络广播电视": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": 440,
     "bitrate": null,
     "resolution": null
   }

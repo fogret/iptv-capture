@@ -19,7 +19,7 @@
   },
   {
     "name": "央视频-有品质的视频社交媒体",
-    "score": 50,
+    "score": 55,
     "alive": true,
     "speed_ok": true,
     "fail_count": 0,
@@ -27,8 +27,17 @@
     "protected": true
   },
   {
+    "name": "热点关注",
+    "score": 45,
+    "alive": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "disabled": false,
+    "protected": false
+  },
+  {
     "name": "荔枝网",
-    "score": 40,
+    "score": 45,
     "alive": true,
     "speed_ok": true,
     "fail_count": 0,
@@ -37,6 +46,15 @@
   },
   {
     "name": "长江云-湖北网络广播电视台官方网站",
+    "score": 40,
+    "alive": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "disabled": false,
+    "protected": false
+  },
+  {
+    "name": "青岛网络广播电视",
     "score": 40,
     "alive": true,
     "speed_ok": true,

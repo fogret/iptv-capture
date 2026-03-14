@@ -2,12 +2,16 @@
 #EXTINF:-1 group-title="地方",CCTV
 https://tv.cctv.com/common/pc_nav/index.js
 #EXTINF:-1 group-title="地方",央视频-有品质的视频社交媒体
-https://s.yangshipin.cn/CCTVVideo/cctvh5-openapi/cctvh5-openapi.min.js?ver=24722
+https://sapi.yangshipin.cn/assets/2022/ysp_account/yspLogin.min.js?ver=240723
 #EXTINF:-1 group-title="地方",未知
-https://www.hntv.tv/wt/page/1/48
+https://www.zhibo8.cc/
+#EXTINF:-1 group-title="地方",热点关注
+https://www.hntv.tv/yc/page/1/48
 #EXTINF:-1 group-title="地方",荔枝网
-https://m.jstv.com/common/lz.pmd.min.js
+https://m.jstv.com/common/index.js
 #EXTINF:-1 group-title="地方",贵州网络广播电视
-https://www.gzstv.com/\u002F\u002Fmovement.gzstv.com\u002Fswp\u002Fcolumn\u002Fdetail?id=1974
+https://media.gzstv.com/images/2026/03/09/487a403d859a49eda91f4b1fb9113f48.jpg
 #EXTINF:-1 group-title="地方",长江云-湖北网络广播电视台官方网站
 https://res.cjyun.org/t/site/10008/1e4162f81029a8a503d73704a7950403/assets//zwfw/images/zwfw.png
+#EXTINF:-1 group-title="地方",青岛网络广播电视
+http://www.qtv.com.cn/live/tv/index.shtml

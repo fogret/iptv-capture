@@ -1,0 +1,156 @@
+{
+  "https://tv.cctv.com/live/": {
+    "pages": 1,
+    "max_depth": 1,
+    "streams_found": 3,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.yangshipin.cn/": {
+    "pages": 1,
+    "max_depth": 1,
+    "streams_found": 5,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.hntv.tv/": {
+    "pages": 1,
+    "max_depth": 1,
+    "streams_found": 25,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.brtv.com.cn/": {
+    "pages": 1,
+    "max_depth": 1,
+    "streams_found": 1,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.jstv.com/": {
+    "pages": 1,
+    "max_depth": 1,
+    "streams_found": 6,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.zjstv.com/": {
+    "pages": 0,
+    "max_depth": 0,
+    "streams_found": 0,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.gdtv.cn/tv": {
+    "pages": 1,
+    "max_depth": 1,
+    "streams_found": 6,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.sctv.com/": {
+    "pages": 1,
+    "max_depth": 1,
+    "streams_found": 16,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.hbtv.com.cn/": {
+    "pages": 1,
+    "max_depth": 1,
+    "streams_found": 55,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.qtv.com.cn/": {
+    "pages": 1,
+    "max_depth": 1,
+    "streams_found": 39,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.gzstv.com/": {
+    "pages": 1,
+    "max_depth": 1,
+    "streams_found": 93,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.xinhuanet.com/": {
+    "pages": 0,
+    "max_depth": 0,
+    "streams_found": 0,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.people.com.cn/": {
+    "pages": 0,
+    "max_depth": 0,
+    "streams_found": 0,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.cetv.cn/": {
+    "pages": 0,
+    "max_depth": 0,
+    "streams_found": 0,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.eduyun.cn/": {
+    "pages": 0,
+    "max_depth": 0,
+    "streams_found": 0,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.douyu.com/g_yule": {
+    "pages": 0,
+    "max_depth": 0,
+    "streams_found": 0,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.huya.com/g/2168": {
+    "pages": 0,
+    "max_depth": 0,
+    "streams_found": 0,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://live.bilibili.com/p/eden/area-tags": {
+    "pages": 0,
+    "max_depth": 0,
+    "streams_found": 0,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.kanzhibo.cc/": {
+    "pages": 0,
+    "max_depth": 0,
+    "streams_found": 0,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.zhibo8.cc/": {
+    "pages": 0,
+    "max_depth": 0,
+    "streams_found": 0,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://www.6.cn/": {
+    "pages": 0,
+    "max_depth": 0,
+    "streams_found": 0,
+    "ads_blocked": 0,
+    "stream_types": []
+  },
+  "https://live.zbds.top/tv/": {
+    "pages": 0,
+    "max_depth": 0,
+    "streams_found": 0,
+    "ads_blocked": 0,
+    "stream_types": []
+  }
+}
