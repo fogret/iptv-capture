@@ -1,3 +1,6 @@
+---
+
+```python
 # exporters/readme_exporter.py
 # 最终完整版：新增频道 + 徽章 + 运行状态 + 彩色图表 + 统计信息（无订阅地址）
 
