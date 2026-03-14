@@ -26,24 +26,27 @@ from exporters.json_exporter import export_tvbox
 from collectors.universal_sources import collect as collect_sources
 
 # ============================
-# Validators
+# Validators（异步增强版）
 # ============================
 from validators.http_checker import check as check_http
 from validators.udp_checker import check as check_udp
 from validators.speed_tester import check as speed_test
 
 # ============================
-# Processors
+# Processors（增强版）
 # ============================
+from processors.normalize_name import run as normalize
+from processors.quality_detector import run as detect_quality
+from processors.type_detector import run as detect_type
+from processors.region_detector import run as detect_region
+from processors.deduplicate import run as dedup
+from processors.filter_quality import run as filter_quality
+from processors.logo_mapper import run as map_logo
 from processors.score_channels import run as score_channels
 from processors.monitor_channels import run as monitor_channels
 from processors.disable_channels import run as disable_channels
 from processors.recover_channels import run as recover_channels
 from processors.sort_channels import run as sort_channels
-from processors.normalize_name import run as normalize
-from processors.filter_quality import run as filter_quality
-from processors.logo_mapper import run as map_logo
-from processors.deduplicate import run as dedup
 
 # ============================
 # EPG
@@ -65,65 +68,67 @@ def main():
     # 1. Collect（只调用万能采集器）
     channels = collect_sources()
 
-    # 2. Normalize（含自动分组）
+    # 2. Normalize（名称规范化 + 自动分组）
     channels = normalize(channels)
 
-    # 3. Validate
+    # 3. 自动识别清晰度 / 类型 / 地区
+    channels = detect_quality(channels)
+    channels = detect_type(channels)
+    channels = detect_region(channels)
+
+    # 4. Validate（异步 HTTP + UDP + 异步测速）
     channels = check_http(channels)
     channels = check_udp(channels)
     channels = speed_test(channels)
 
-    # 4. EPG mapping
+    # 5. EPG mapping
     channels = epg_map(channels)
 
-    # 5. Quality filter
+    # 6. Quality filter
     cfg = load_config()
     channels = filter_quality(channels, cfg.get("quality_filter"))
 
-    # 6. Logo mapping
+    # 7. Logo mapping
     channels = map_logo(channels)
 
-    # 7. EPG generation
+    # 8. EPG generation
     xml_data = fetch_epg()
     generate_epg(xml_data, channels)
 
-    # 8. TVBox categories（按 group 自动分组）
-    export_tvbox_categories(channels)
+    # 9. Deduplicate（智能去重）
+    channels = dedup(channels)
 
-    # 9. Web UI
+    # 10. Score
+    channels = score_channels(channels)
+
+    # 11. Monitor channels (评分下降报警 + 自动禁用)
+    channels = monitor_channels(channels)
+
+    # 12. Disable channels（自动禁用）
+    channels = disable_channels(channels)
+    
+    # 13. Recover channels（自动恢复）
+    channels = recover_channels(channels)
+    
+    # 14. Sort
+    channels = sort_channels(channels)
+    
+    # 15. Export（M3U / TVBox）
+    cfg = load_config()
+    export_m3u(channels, cfg["export"]["m3u_path"])
+    export_tvbox(channels, cfg["export"]["tvbox_json_path"])
+
+    # 16. Web UI
     export_web_data(channels)
     export_web_pages()
 
-    # 10. API
+    # 17. API
     export_channels(channels)
     export_groups(channels)
     export_status(channels)
     export_search_api()
 
-    # 11. Deduplicate
-    channels = dedup(channels)
-
-    # 12. Score
-    channels = score_channels(channels)
-
-    # 13. Monitor channels (评分下降报警 + 自动禁用)
-    channels = monitor_channels(channels)
-
-    # 14. Disable channels（自动禁用）
-    channels = disable_channels(channels)
-    
-    # 15. Recover channels（自动恢复）
-    channels = recover_channels(channels)
-    
-    # 16. Sort
-    channels = sort_channels(channels)
-    
-    # 17. Export
-    cfg = load_config()
-    export_m3u(channels, cfg["export"]["m3u_path"])
-    export_tvbox(channels, cfg["export"]["tvbox_json_path"])
-
-    # 18. Monitor
+    # 18. Monitor UI
     export_monitor_ui()
 
     logger.info("=== IPTV Capture Done ===")
