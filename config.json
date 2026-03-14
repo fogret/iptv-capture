@@ -4,7 +4,8 @@
 
   "export": {
     "m3u_path": "output/channels.m3u",
-    "tvbox_json_path": "output/tvbox.json"
+    "tvbox_json_path": "output/tvbox.json",
+    "txt_path": "output/channels.txt"
   },
 
   "epg": {
