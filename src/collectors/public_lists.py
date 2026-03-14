@@ -1,11 +1,9 @@
-# src/collectors/public_lists.py
-
 import os
 from utils.logger import logger
 
 from .collect_websites import collect_websites
 
-
+# 统一路径（与 universal_sources 完全一致）
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SOURCES_DIR = os.path.join(BASE_DIR, "sources")
 
@@ -23,7 +21,7 @@ def collect():
             file_path = os.path.join(SOURCES_DIR, filename)
             channels.extend(parse_file(file_path))
 
-    # ② 网站抓取（sources 里的 URL 会被 collect_websites 再扫一遍）
+    # ② 网站抓取
     website_channels = collect_websites()
     channels.extend(website_channels)
 
