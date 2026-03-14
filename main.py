@@ -1,5 +1,3 @@
-# main.py
-
 import os
 import sys
 
@@ -9,7 +7,6 @@ sys.path.append(SRC_DIR)
 
 from utils.logger import logger
 from utils.config_loader import load_config
-from utils.stats import stats  # ★ 新增
 
 # Collectors
 from collectors.universal_sources import collect as collect_sources
@@ -54,36 +51,15 @@ from exporters.api_exporter import (
 from exporters.monitor_exporter import export_monitor_ui
 
 
-def write_run_report(lines):
-    path = os.path.join(BASE_DIR, "run_report.txt")
-    with open(path, "w", encoding="utf-8") as f:
-        f.write("\n".join(lines))
-
-
 def main():
     logger.info(">>> IPTV Capture System Started <<<")
 
     cfg = load_config()
     logger.info(f"Loaded config: {cfg}")
 
-    report = []
-    report.append("========== IPTV-CAPTURE 运行报告 ==========")
-
     # 1. Collect sources
     channels = collect_sources()
     logger.info(f"Collected {len(channels)} channels")
-    stats.total_collected = len(channels)
-
-    # 按 origin 粗略统计来源
-    origin_counts = {}
-    for ch in channels:
-        origin = ch.get("origin", "unknown")
-        origin_counts[origin] = origin_counts.get(origin, 0) + 1
-
-    report.append("采集阶段：")
-    for origin, cnt in origin_counts.items():
-        report.append(f"  {origin}: {cnt} 条")
-    report.append(f"  合计采集: {len(channels)} 条")
 
     # 2. Normalize names
     channels = normalize(channels)
@@ -98,14 +74,11 @@ def main():
     channels = check_udp(channels)
     channels = speed_test(channels)
 
-    # 5. Fix streams
+    # 5. Fix streams (HLS 修复 + fallback)
     channels = fix_stream(channels)
 
-    # 6. Playable check
+    # 6. Playable check (温和过滤)
     channels = check_playable(channels)
-    report.append("")
-    report.append("验证阶段：")
-    report.append(f"  可播放: {len(channels)} 条")
 
     # 7. EPG mapping
     channels = epg_map(channels)
@@ -126,13 +99,13 @@ def main():
     # 12. Score channels
     channels = score_channels(channels)
 
-    # 13. Monitor
+    # 13. Monitor (只累积 fail_count)
     channels = monitor_channels(channels)
 
-    # 14. Disable
+    # 14. Disable (连续 3 次失败才禁用)
     channels = disable_channels(channels)
 
-    # 15. Recover
+    # 15. Recover (状态恢复自动恢复)
     channels = recover_channels(channels)
 
     # 16. Sort channels
@@ -155,36 +128,6 @@ def main():
 
     # 20. Export Monitor UI
     export_monitor_ui()
-
-    report.append("")
-    report.append("导出阶段：")
-    report.append(f"  最终导出频道数: {len(channels)} 条")
-
-    # ========= 网站抓取明细（按频道数量排序） =========
-    report.append("")
-    report.append("========== 网站抓取明细（按频道数量排序） ==========")
-
-    sorted_sites = sorted(
-        stats.website_detail.items(),
-        key=lambda x: len(x[1]["channels"]),
-        reverse=True,
-    )
-
-    for site, detail in sorted_sites:
-        report.append(f"来源网站: {site}")
-        report.append(f"  抓取页面: {detail['pages']}")
-        report.append(f"  最大递归深度: {detail['max_depth']}")
-        report.append(f"  抓取频道 ({len(detail['channels'])} 条):")
-        for ch in detail["channels"]:
-            report.append(f"    - {ch['name']}: {ch['url']}")
-        report.append(f"  屏蔽广告源 ({len(detail['ads_blocked'])} 条):")
-        for ad in detail["ads_blocked"]:
-            report.append(f"    - {ad}")
-        report.append("")
-
-    report.append("========== 运行结束 ==========")
-
-    write_run_report(report)
 
     logger.info(">>> IPTV Capture Completed <<<")
 
