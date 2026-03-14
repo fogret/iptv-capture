@@ -1,5 +1,3 @@
-# src/collectors/collect_websites.py
-
 import os
 import re
 import requests
@@ -8,6 +6,10 @@ from bs4 import BeautifulSoup
 
 from utils.logger import logger
 from utils.stats import stats
+
+# 统一路径（与 universal_sources 完全一致）
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+SOURCES_DIR = os.path.join(BASE_DIR, "sources")
 
 MAX_PAGES = 100
 MAX_DEPTH = 3
@@ -37,17 +39,14 @@ def extract_m3u8(html: str) -> list:
     urls = set()
     soup = BeautifulSoup(html, "html.parser")
 
-    # <video src="...m3u8">
     for video in soup.find_all("video"):
         src = video.get("src")
         if src and src.endswith(".m3u8"):
             urls.add(src)
 
-    # "https://...m3u8"
     matches = re.findall(r'["\'](https?://[^"\']+\.m3u8)["\']', html)
     urls.update(matches)
 
-    # 兜底再扫一遍
     matches = re.findall(r'(https?://[^"\']+\.m3u8)', html)
     urls.update(matches)
 
@@ -108,7 +107,6 @@ def collect_from_page(url: str, depth: int, visited: set, channels: list, root_u
     if not html:
         return
 
-    # 全局 + 网站级页面统计
     stats.website_pages_total += 1
     detail = stats.website_detail[root_url]
     detail["pages"] += 1
@@ -144,7 +142,6 @@ def collect_from_page(url: str, depth: int, visited: set, channels: list, root_u
 
         return
 
-    # 没有 m3u8 → 递归模式
     links = extract_links(html, url)
     for link in links:
         logger.info(f"[websites] 递归进入子页面: {link}")
@@ -152,21 +149,17 @@ def collect_from_page(url: str, depth: int, visited: set, channels: list, root_u
 
 
 def collect_websites():
-    """
-    从 sources/ 下所有 txt 中读取“网站入口 URL”，对每个 URL 做递归抓取。
-    """
-    base_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "sources")
     channels = []
 
-    if not os.path.exists(base_dir):
-        logger.warning(f"[websites] sources 目录不存在: {base_dir}")
+    if not os.path.exists(SOURCES_DIR):
+        logger.warning(f"[websites] sources 目录不存在: {SOURCES_DIR}")
         return channels
 
-    for file in os.listdir(base_dir):
+    for file in os.listdir(SOURCES_DIR):
         if not file.endswith(".txt"):
             continue
 
-        path = os.path.join(base_dir, file)
+        path = os.path.join(SOURCES_DIR, file)
         if os.path.getsize(path) == 0:
             continue
 
@@ -178,7 +171,6 @@ def collect_websites():
                 if not url.startswith("http"):
                     continue
 
-                # 为每个入口网站初始化明细统计
                 if url not in stats.website_detail:
                     stats.website_detail[url] = {
                         "pages": 0,
