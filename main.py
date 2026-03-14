@@ -28,6 +28,7 @@ from validators.speed_tester import check as speed_test
 
 from processors.score_channels import run as score_channels
 from processors.monitor_channels import run as monitor_channels
+from processors.disable_channels import run as disable_channels
 from processors.recover_channels import run as recover_channels
 from processors.sort_channels import run as sort_channels
 from processors.normalize_name import run as normalize
@@ -94,21 +95,24 @@ def main():
     # 12. Score
     channels = score_channels(channels)
 
-    # 13. Recover channels（自动恢复）
+    # 13. Monitor channels (评分下降报警 + 自动禁用)
+    channels = monitor_channels(channels)
+
+    # 14. Disable channels（自动禁用）
+    channels = disable_channels(channels)
+    
+    # 15. Recover channels（自动恢复）
     channels = recover_channels(channels)
     
-    # 14. Monitor channels (评分下降报警 + 自动禁用)
-    channels = monitor_channels(channels)
-    
-    # 15. Sort
+    # 16. Sort
     channels = sort_channels(channels)
     
-    # 16. Export
+    # 17. Export
     cfg = load_config()
     export_m3u(channels, cfg["export"]["m3u_path"])
     export_tvbox(channels, cfg["export"]["tvbox_json_path"])
 
-    # 17. Monitor
+    # 18. Monitor
     export_monitor_ui()
 
     logger.info("=== IPTV Capture Done ===")
