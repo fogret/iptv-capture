@@ -4,13 +4,15 @@ from utils.logger import logger
 
 def run(channels):
     """
-    自动恢复系统：
-    1. 检查被禁用频道是否恢复
-    2. 评分达到恢复阈值 → 自动重新启用
-    3. 输出恢复报告 recover.json
+    改进版自动恢复系统：
+    - 不再只看评分
+    - 评分恢复 + alive=True + speed_ok=True → 自动恢复
+    - fail_count 自动清零
+    - 央视/卫视优先恢复
     """
 
-    RECOVER_THRESHOLD = 70  # 恢复阈值（可写入 config.json）
+    RECOVER_SCORE = 60
+    PROTECT_KEYWORDS = ["CCTV", "央视", "卫视"]
 
     recovered = []
     report = []
@@ -19,28 +21,46 @@ def run(channels):
         name = ch.get("name", "")
         score = ch.get("score", 0)
         disabled = ch.get("disabled", False)
+        alive = ch.get("alive", True)
+        speed_ok = ch.get("speed_ok", True)
+        fail_count = ch.get("fail_count", 0)
 
-        # 记录监控信息
+        is_protected = any(k in name for k in PROTECT_KEYWORDS)
+
         report.append({
             "name": name,
             "score": score,
-            "disabled": disabled
+            "alive": alive,
+            "speed_ok": speed_ok,
+            "fail_count": fail_count,
+            "disabled": disabled,
+            "protected": is_protected
         })
 
-        # 1. 如果频道被禁用，但评分恢复到阈值以上 → 自动恢复
-        if disabled and score >= RECOVER_THRESHOLD:
-            ch["disabled"] = False
-            recovered.append(f"[RECOVER] {name} 已自动恢复（score={score}）")
-            logger.info(f"[RECOVER] {name} 已自动恢复（score={score}）")
+        # 条件：被禁用 + 状态恢复正常
+        if disabled:
+            # 央视/卫视优先恢复
+            if is_protected and alive:
+                ch["disabled"] = False
+                ch["fail_count"] = 0
+                recovered.append(f"[RECOVER] {name}（央视/卫视优先恢复）")
+                logger.info(f"[RECOVER] {name}（央视/卫视优先恢复）")
+                continue
 
-    # 2. 输出恢复报告
+            # 普通频道恢复条件
+            if score >= RECOVER_SCORE and alive and speed_ok:
+                ch["disabled"] = False
+                ch["fail_count"] = 0
+                recovered.append(f"[RECOVER] {name}（score={score}）")
+                logger.info(f"[RECOVER] {name}（score={score}）")
+
+    # 输出恢复报告
     os.makedirs("output", exist_ok=True)
     with open("output/recover.json", "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
 
-    # 3. 输出恢复日志
     if recovered:
-        logger.info("=== 频道恢复列表 ===")
+        logger.info("=== 自动恢复频道列表 ===")
         for r in recovered:
             logger.info(r)
 
