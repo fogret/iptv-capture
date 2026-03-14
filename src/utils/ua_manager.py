@@ -75,7 +75,21 @@ FORMAT_RULES = [
 ]
 
 # ===========================
-# 8) 缓存
+# 8) EPG UA 规则
+# ===========================
+EPG_RULES = {
+    "epg.51zmt.top": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "epg.pw": "Mozilla/5.0 (Linux; Android 10)",
+    "xmltv.se": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
+}
+
+# ===========================
+# 9) 截图 UA
+# ===========================
+SCREENSHOT_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+# ===========================
+# 10) 缓存
 # ===========================
 def load_cache():
     if os.path.exists(UA_CACHE_FILE):
@@ -91,7 +105,7 @@ def save_cache(cache):
 UA_CACHE = load_cache()
 
 # ===========================
-# 9) 判断是否需要 UA
+# 11) 判断是否需要 UA
 # ===========================
 def need_ua(url: str) -> bool:
     if url in UA_CACHE:
@@ -117,7 +131,16 @@ def need_ua(url: str) -> bool:
     return False
 
 # ===========================
-# 10) 获取 Referer
+# 12) 自动识别网页中的真实 UA
+# ===========================
+def extract_real_ua(html: str):
+    m = re.search(r'User-Agent["\']?\s*[:=]\s*["\']([^"\']+)', html)
+    if m:
+        return m.group(1)
+    return None
+
+# ===========================
+# 13) 获取 Referer
 # ===========================
 def get_referer(url: str) -> str:
     for domain, ref in REFERER_RULES.items():
@@ -126,7 +149,7 @@ def get_referer(url: str) -> str:
     return DEFAULT_REFERER
 
 # ===========================
-# 11) 获取 Cookie
+# 14) 获取 Cookie
 # ===========================
 def get_cookie(url: str) -> str:
     for domain, ck in COOKIE_RULES.items():
@@ -135,7 +158,7 @@ def get_cookie(url: str) -> str:
     return ""
 
 # ===========================
-# 12) 获取 Host
+# 15) 获取 Host
 # ===========================
 def get_host(url: str) -> str:
     for prefix, host in HOST_RULES.items():
@@ -144,9 +167,20 @@ def get_host(url: str) -> str:
     return ""
 
 # ===========================
-# 13) 获取 headers（检测/测速用）
+# 16) 获取 headers（检测/测速/截图/EPG）
 # ===========================
-def get_headers_for_url(url: str, player="tvbox") -> dict:
+def get_headers_for_url(url: str, mode="play", player="tvbox") -> dict:
+    # EPG 模式
+    if mode == "epg":
+        for domain, ua in EPG_RULES.items():
+            if domain in url:
+                return {"User-Agent": ua}
+
+    # 截图模式
+    if mode == "screenshot":
+        return {"User-Agent": SCREENSHOT_UA}
+
+    # 播放/检测模式
     if not need_ua(url):
         return {}
 
@@ -171,7 +205,7 @@ def get_headers_for_url(url: str, player="tvbox") -> dict:
     return headers
 
 # ===========================
-# 14) 导出 URL（M3U / TVBox）
+# 17) 导出 URL（M3U / TVBox）
 # ===========================
 def add_headers_if_needed(url: str, player="tvbox") -> str:
     if not url.startswith("http"):
@@ -186,7 +220,7 @@ def add_headers_if_needed(url: str, player="tvbox") -> str:
     return f"{url}|User-Agent={ua}&Referer={referer}"
 
 # ===========================
-# 15) fallback（失败 → 自动加 UA）
+# 18) fallback（失败 → 自动加 UA）
 # ===========================
 async def test_url(url):
     try:
