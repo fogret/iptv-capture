@@ -1,7 +1,7 @@
 [
   {
     "name": "未知",
-    "score": 40,
+    "score": 45,
     "alive": true,
     "speed_ok": true,
     "fail_count": 0,
@@ -9,34 +9,7 @@
     "protected": false
   },
   {
-    "name": "学习时刻-习近平活动报道集-芒果TV",
-    "score": 40,
-    "alive": true,
-    "speed_ok": true,
-    "fail_count": 0,
-    "disabled": false,
-    "protected": false
-  },
-  {
-    "name": "纪念抗战胜利80周年-芒果TV",
-    "score": 40,
-    "alive": true,
-    "speed_ok": true,
-    "fail_count": 0,
-    "disabled": false,
-    "protected": false
-  },
-  {
-    "name": "听，这是π在唱歌",
-    "score": 40,
-    "alive": true,
-    "speed_ok": true,
-    "fail_count": 0,
-    "disabled": false,
-    "protected": false
-  },
-  {
-    "name": "GZSTV",
+    "name": "芒果TV-天生青春",
     "score": 40,
     "alive": true,
     "speed_ok": true,
