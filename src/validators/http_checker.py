@@ -1,12 +1,33 @@
 import asyncio
 import aiohttp
+import hashlib
+import os
+import json
 from utils.logger import logger
 
-MAX_CONCURRENCY = 200   # 并发数，可调 100–500
-TIMEOUT = 5             # 单个请求超时
-RETRY = 1               # 重试次数
+MAX_CONCURRENCY = 200
+TIMEOUT = 5
+RETRY = 1
+CACHE_FILE = "data/http_cache.json"
 
 sem = asyncio.Semaphore(MAX_CONCURRENCY)
+
+
+def load_cache():
+    if os.path.exists(CACHE_FILE):
+        try:
+            return json.load(open(CACHE_FILE, "r", encoding="utf-8"))
+        except:
+            return {}
+    return {}
+
+
+def save_cache(cache):
+    json.dump(cache, open(CACHE_FILE, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+
+
+def url_hash(url):
+    return hashlib.md5(url.encode()).hexdigest()
 
 
 async def fetch(session, url):
@@ -21,21 +42,37 @@ async def fetch(session, url):
 
 
 async def check_all(channels):
+    cache = load_cache()
     async with aiohttp.ClientSession() as session:
         tasks = []
+        urls = []
+
         for ch in channels:
-            if ch["url"].startswith("http"):
-                tasks.append(fetch(session, ch["url"]))
-            else:
+            url = ch["url"]
+            if not url.startswith("http"):
                 tasks.append(asyncio.sleep(0, result=True))
+                urls.append(url)
+                continue
+
+            h = url_hash(url)
+            if h in cache:
+                tasks.append(asyncio.sleep(0, result=cache[h]))
+                urls.append(url)
+                continue
+
+            tasks.append(fetch(session, url))
+            urls.append(url)
 
         results = await asyncio.gather(*tasks)
 
     valid = []
     for ch, ok in zip(channels, results):
+        h = url_hash(ch["url"])
+        cache[h] = ok
         if ok:
             valid.append(ch)
 
+    save_cache(cache)
     logger.info(f"[http_checker] {len(channels)} → {len(valid)}")
     return valid
 
