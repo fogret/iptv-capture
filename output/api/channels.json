@@ -1,36 +1,36 @@
 [
   {
     "name": "未知",
-    "url": "https://www.gzstv.com",
+    "url": "https://www.hunantv.com",
     "group": "地方",
     "quality": "SD",
     "type": "其他",
     "region": "未知地区",
     "udp_ok": null,
-    "latency": 1073,
-    "speed": 2675,
-    "speed_ok": false,
+    "latency": 1283,
+    "speed": 50000,
+    "speed_ok": true,
     "epg_id": "未知",
-    "score": 11,
-    "fail_count": 4,
-    "disabled": true
+    "score": 45,
+    "fail_count": 0,
+    "disabled": false
   },
   {
     "name": "芒果TV-天生青春",
     "group": "地方",
-    "url": "https://www.hunantv.com/\\u002F\\u002Fwww.mgtv.com\\u002Fb\\u002F520377\\u002F18216017.html",
+    "url": "https://1vimg.hitv.com/100/2507/0315/3430/XDrtHkZx/442348372160991232.jpg",
     "origin": "website",
     "root_site": "https://www.hunantv.com",
     "quality": "4K",
     "type": "其他",
     "region": "未知地区",
     "udp_ok": null,
-    "latency": 1461,
-    "speed": 50000,
+    "latency": 192,
+    "speed": 16384,
     "speed_ok": true,
     "epg_id": "芒果TV-天生青春",
-    "score": 40,
-    "fail_count": 0,
+    "score": 35,
+    "fail_count": 2,
     "disabled": false
   }
 ]
