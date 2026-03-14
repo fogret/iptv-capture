@@ -26,6 +26,7 @@ from validators.http_checker import check as check_http
 from validators.udp_checker import check as check_udp
 from validators.speed_tester import check as speed_test
 
+from processors.score_channels import run as score_channels
 from processors.sort_channels import run as sort_channels
 from processors.normalize_name import run as normalize
 from processors.filter_quality import run as filter_quality
