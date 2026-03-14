@@ -131,43 +131,69 @@ def need_ua(url: str) -> bool:
     return False
 
 # ===========================
-# 12) 自动识别网页中的真实 UA
+# 12) 自动识别网页中的真实 UA / Referer / Cookie / Host
 # ===========================
 def extract_real_ua(html: str):
     m = re.search(r'User-Agent["\']?\s*[:=]\s*["\']([^"\']+)', html)
-    if m:
-        return m.group(1)
-    return None
+    return m.group(1) if m else None
+
+def extract_real_referer(html: str):
+    m = re.search(r'Referer["\']?\s*[:=]\s*["\']([^"\']+)', html)
+    return m.group(1) if m else None
+
+def extract_real_cookie(html: str):
+    m = re.search(r'Cookie["\']?\s*[:=]\s*["\']([^"\']+)', html)
+    return m.group(1) if m else None
+
+def extract_real_host(html: str):
+    m = re.search(r'Host["\']?\s*[:=]\s*["\']([^"\']+)', html)
+    return m.group(1) if m else None
 
 # ===========================
-# 13) 获取 Referer
+# 13) 解析 m3u8（KEY / TS / 多码率）
 # ===========================
-def get_referer(url: str) -> str:
-    for domain, ref in REFERER_RULES.items():
-        if domain in url:
-            return ref
-    return DEFAULT_REFERER
+async def fetch_text(url):
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url, timeout=2) as resp:
+                return await resp.text()
+    except:
+        return None
+
+async def parse_m3u8(url):
+    text = await fetch_text(url)
+    if not text:
+        return None
+
+    result = {
+        "keys": [],
+        "ts": [],
+        "subs": [],
+    }
+
+    lines = text.splitlines()
+
+    for line in lines:
+        line = line.strip()
+
+        # KEY
+        if line.startswith("#EXT-X-KEY"):
+            m = re.search(r'URI="([^"]+)"', line)
+            if m:
+                result["keys"].append(m.group(1))
+
+        # TS
+        if line.endswith(".ts"):
+            result["ts"].append(line)
+
+        # 多码率子 m3u8
+        if line.endswith(".m3u8") and not line.startswith("#"):
+            result["subs"].append(line)
+
+    return result
 
 # ===========================
-# 14) 获取 Cookie
-# ===========================
-def get_cookie(url: str) -> str:
-    for domain, ck in COOKIE_RULES.items():
-        if domain in url:
-            return ck
-    return ""
-
-# ===========================
-# 15) 获取 Host
-# ===========================
-def get_host(url: str) -> str:
-    for prefix, host in HOST_RULES.items():
-        if prefix in url:
-            return host
-    return ""
-
-# ===========================
-# 16) 获取 headers（检测/测速/截图/EPG）
+# 14) 获取 headers（检测/测速/截图/EPG）
 # ===========================
 def get_headers_for_url(url: str, mode="play", player="tvbox") -> dict:
     # EPG 模式
@@ -205,7 +231,34 @@ def get_headers_for_url(url: str, mode="play", player="tvbox") -> dict:
     return headers
 
 # ===========================
-# 17) 导出 URL（M3U / TVBox）
+# 15) 获取 Referer
+# ===========================
+def get_referer(url: str) -> str:
+    for domain, ref in REFERER_RULES.items():
+        if domain in url:
+            return ref
+    return DEFAULT_REFERER
+
+# ===========================
+# 16) 获取 Cookie
+# ===========================
+def get_cookie(url: str) -> str:
+    for domain, ck in COOKIE_RULES.items():
+        if domain in url:
+            return ck
+    return ""
+
+# ===========================
+# 17) 获取 Host
+# ===========================
+def get_host(url: str) -> str:
+    for prefix, host in HOST_RULES.items():
+        if prefix in url:
+            return host
+    return ""
+
+# ===========================
+# 18) 导出 URL（M3U / TVBox）
 # ===========================
 def add_headers_if_needed(url: str, player="tvbox") -> str:
     if not url.startswith("http"):
@@ -220,7 +273,7 @@ def add_headers_if_needed(url: str, player="tvbox") -> str:
     return f"{url}|User-Agent={ua}&Referer={referer}"
 
 # ===========================
-# 18) fallback（失败 → 自动加 UA）
+# 19) fallback（失败 → 自动加 UA）
 # ===========================
 async def test_url(url):
     try:
