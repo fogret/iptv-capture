@@ -1,16 +1,9 @@
 import os
 import json
 
-DEFAULT_UA = (
-    "User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
-)
-DEFAULT_REFERER = "Referer=https://www.google.com/"
-
 def add_headers(url):
-    if not url.startswith("http"):
-        return url
-    return f"{url}|{DEFAULT_UA}&{DEFAULT_REFERER}"
+    # 删除 UA 和 Referer，只返回原始 URL
+    return url
 
 def export_tvbox(channels, output_path):
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
