@@ -1,66 +1,38 @@
-import subprocess
-import re
-import time
+import asyncio
+import aiohttp
 from utils.logger import logger
 
-FFPROBE_CMD = [
-    "ffprobe",
-    "-v", "error",
-    "-select_streams", "v:0",
-    "-show_entries", "stream=width,height,bit_rate",
-    "-of", "default=noprint_wrappers=1:nokey=1"
-]
+MAX_CONCURRENCY = 100
+TIMEOUT = 5
+TEST_SIZE = 1024 * 50  # 50KB 测速
 
-def test_latency(url: str) -> float:
-    start = time.time()
+
+async def test_speed(session, url):
     try:
-        subprocess.check_output(
-            ["ffprobe", "-v", "error", "-read_intervals", "%+1", "-i", url],
-            stderr=subprocess.STDOUT,
-            timeout=3
-        )
-        return round((time.time() - start) * 1000, 2)
+        async with session.get(url, timeout=TIMEOUT) as resp:
+            data = await resp.content.read(TEST_SIZE)
+            return len(data)
     except:
-        return None
+        return 0
 
-def test_stream_info(url: str):
-    try:
-        cmd = FFPROBE_CMD + ["-i", url]
-        output = subprocess.check_output(cmd, stderr=subprocess.STDOUT, timeout=5).decode()
 
-        lines = output.strip().split("\n")
-        if len(lines) < 3:
-            return None, None
+async def run_all(channels):
+    async with aiohttp.ClientSession() as session:
+        tasks = []
+        for ch in channels:
+            if ch["url"].startswith("http"):
+                tasks.append(test_speed(session, ch["url"]))
+            else:
+                tasks.append(asyncio.sleep(0, result=0))
 
-        width = int(lines[0])
-        height = int(lines[1])
-        bitrate = int(lines[2]) if lines[2].isdigit() else None
+        speeds = await asyncio.gather(*tasks)
 
-        return (width, height), bitrate
-    except:
-        return None, None
+    for ch, sp in zip(channels, speeds):
+        ch["speed"] = sp
+
+    logger.info("[speed_tester] 完成测速")
+    return channels
+
 
 def check(channels):
-    logger.info("[speed_tester] Start speed testing...")
-
-    for ch in channels:
-        url = ch["url"]
-
-        # 只测试 HTTP/HTTPS/UDP
-        if not (url.startswith("http") or url.startswith("udp")):
-            ch["latency"] = None
-            ch["resolution"] = None
-            ch["bitrate"] = None
-            continue
-
-        # 延迟
-        latency = test_latency(url)
-        ch["latency"] = latency
-
-        # 分辨率 + 码率
-        resolution, bitrate = test_stream_info(url)
-        ch["resolution"] = resolution
-        ch["bitrate"] = bitrate
-
-    logger.info("[speed_tester] Done.")
-    return channels
+    return asyncio.run(run_all(channels))
