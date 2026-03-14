@@ -17,7 +17,7 @@ DEFAULT_HEADERS = {
 }
 
 MAX_CONCURRENCY = 50
-TIMEOUT = 5
+TIMEOUT = 2
 sem = asyncio.Semaphore(MAX_CONCURRENCY)
 
 
