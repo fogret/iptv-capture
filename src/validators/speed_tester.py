@@ -4,7 +4,7 @@ from utils.logger import logger
 
 MAX_CONCURRENCY = 100
 TIMEOUT = 5
-TEST_SIZE = 1024 * 50  # 50KB 测速
+TEST_SIZE = 1024 * 50  # 50KB
 
 
 async def test_speed(session, url):
