@@ -49,7 +49,7 @@ def main():
     channels += collect_cn()
     channels += collect_udp()
 
-    # 2. Normalize (含分类)
+    # 2. Normalize（含自动分组）
     channels = normalize(channels)
 
     # 3. Validate
@@ -71,7 +71,7 @@ def main():
     xml_data = fetch_epg()
     generate_epg(xml_data, channels)
 
-    # 8. TVBox categories
+    # 8. TVBox categories（按 group 自动分组）
     export_tvbox_categories(channels)
 
     # 9. Web UI
