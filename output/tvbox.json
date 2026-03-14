@@ -6,7 +6,7 @@
   },
   {
     "name": "央视频-有品质的视频社交媒体",
-    "url": "https://sapi.yangshipin.cn/assets/2022/ysp_account/yspLogin.min.js?ver=240723",
+    "url": "https://s.yangshipin.cn/CCTVVideo/cctvh5-openapi/cctvh5-openapi.min.js?ver=24722",
     "group": "地方"
   },
   {
@@ -16,22 +16,17 @@
   },
   {
     "name": "热点关注",
-    "url": "https://www.hntv.tv/yc/page/1/48",
-    "group": "地方"
-  },
-  {
-    "name": "荔枝网",
-    "url": "https://m.jstv.com/common/index.js",
+    "url": "https://www.hntv.tv/wt/page/1/48",
     "group": "地方"
   },
   {
     "name": "贵州网络广播电视",
-    "url": "https://media.gzstv.com/images/2026/03/09/487a403d859a49eda91f4b1fb9113f48.jpg",
+    "url": "https://mstatic.gzstv.com/media/streams/images/2026/03/07/cd2c814c71a441e6883d1cfb4b563557.jpg",
     "group": "地方"
   },
   {
     "name": "长江云-湖北网络广播电视台官方网站",
-    "url": "https://res.cjyun.org/t/site/10008/1e4162f81029a8a503d73704a7950403/assets//zwfw/images/zwfw.png",
+    "url": "https://m-api.cjyun.org/assets/v2/js/vue.js",
     "group": "地方"
   },
   {
