@@ -50,8 +50,10 @@ from exporters.api_exporter import (
 )
 from exporters.monitor_exporter import export_monitor_ui
 
-# ★ 新增：README 导出（不影响原逻辑）
-from exporters.readme_exporter import export_readme
+# ★ README 导出（正确路径）
+from src.exporters.readme_exporter import export_readme
+
+# Stats
 from utils.stats import stats
 
 
@@ -133,7 +135,7 @@ def main():
     # 20. Export Monitor UI
     export_monitor_ui()
 
-    # 21. Export README（新增，不影响原逻辑）
+    # ★ 21. Export README（新增，不影响原逻辑）
     export_readme(channels, stats)
 
     logger.info(">>> IPTV Capture Completed <<<")
