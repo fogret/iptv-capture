@@ -37,6 +37,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # ★ 必须提交 README.md，否则仓库首页不会更新
+          git add README.md
+
+          # ★ 提交 output 目录（你的频道缓存、统计文件等）
           git add output/* || true
+          git add output/channels_prev.json || true
+
           git commit -m "Auto update IPTV" || echo "No changes"
           git push
