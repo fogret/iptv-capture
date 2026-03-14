@@ -89,15 +89,18 @@ def main():
     # 11. Deduplicate
     channels = dedup(channels)
 
-    # 12. Sort
+    # 12. Score
+    channels = score_channels(channels)
+    
+    # 13. Sort
     channels = sort_channels(channels)
     
-    # 13. Export
+    # 14. Export
     cfg = load_config()
     export_m3u(channels, cfg["export"]["m3u_path"])
     export_tvbox(channels, cfg["export"]["tvbox_json_path"])
 
-    # 13. Monitor
+    # 15. Monitor
     export_monitor_ui()
 
     logger.info("=== IPTV Capture Done ===")
