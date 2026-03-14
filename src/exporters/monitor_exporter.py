@@ -1,118 +1,60 @@
+import json
 import os
-from utils.logger import logger
 
 def export_monitor_ui():
-    os.makedirs("output/monitor", exist_ok=True)
+    os.makedirs("output", exist_ok=True)
 
-    # index.html
+    with open("output/monitor.json", "r", encoding="utf-8") as f:
+        data = json.load(f)
+
     html = """
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>IPTV Monitor Dashboard</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<style>
-body { font-family: Arial; background: #f5f5f5; padding: 20px; }
-.card { background: #fff; padding: 15px; margin: 10px 0; border-radius: 8px; }
-.table { width: 100%; border-collapse: collapse; }
-.table th, .table td { padding: 8px; border-bottom: 1px solid #ddd; }
-.status-ok { color: green; font-weight: bold; }
-.status-bad { color: red; font-weight: bold; }
-</style>
-</head>
-<body>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>IPTV 频道监控</title>
+        <style>
+            body { font-family: Arial; }
+            table { border-collapse: collapse; width: 100%; }
+            th, td { border: 1px solid #ccc; padding: 8px; }
+            th { background: #eee; }
+            .bad { background: #ffdddd; }
+            .warn { background: #fff0cc; }
+            .good { background: #ddffdd; }
+        </style>
+    </head>
+    <body>
+        <h2>IPTV 频道监控</h2>
+        <table>
+            <tr>
+                <th>频道</th>
+                <th>分组</th>
+                <th>评分</th>
+                <th>延迟(ms)</th>
+                <th>可用性</th>
+                <th>URL</th>
+            </tr>
+    """
 
-<h1>IPTV 频道监控面板</h1>
+    for ch in data:
+        score = ch["score"]
+        cls = "good" if score >= 80 else "warn" if score >= 60 else "bad"
 
-<div class="card">
-  <h2>状态总览</h2>
-  <div id="summary">加载中...</div>
-</div>
+        html += f"""
+        <tr class="{cls}">
+            <td>{ch['name']}</td>
+            <td>{ch['group']}</td>
+            <td>{ch['score']}</td>
+            <td>{ch['latency']}</td>
+            <td>{"✔" if ch['alive'] else "✘"}</td>
+            <td>{ch['url']}</td>
+        </tr>
+        """
 
-<div class="card">
-  <h2>延迟图表</h2>
-  <canvas id="latencyChart"></canvas>
-</div>
+    html += """
+        </table>
+    </body>
+    </html>
+    """
 
-<div class="card">
-  <h2>码率图表</h2>
-  <canvas id="bitrateChart"></canvas>
-</div>
-
-<div class="card">
-  <h2>频道状态表</h2>
-  <table class="table" id="statusTable"></table>
-</div>
-
-<script>
-async function loadData() {
-  const status = await (await fetch("../api/status.json")).json();
-  const channels = await (await fetch("../api/channels.json")).json();
-
-  // Summary
-  let okCount = 0;
-  let badCount = 0;
-  for (let name in status) {
-    if (status[name].ok || status[name].udp_ok) okCount++;
-    else badCount++;
-  }
-  document.getElementById("summary").innerHTML =
-    "可用频道: " + okCount + " / 不可用频道: " + badCount;
-
-  // Status Table
-  let table = "<tr><th>频道</th><th>状态</th><th>延迟(ms)</th><th>码率</th><th>分辨率</th></tr>";
-  for (let name in status) {
-    let s = status[name];
-    let st = (s.ok || s.udp_ok) ? "<span class='status-ok'>可用</span>" : "<span class='status-bad'>不可用</span>";
-    table += `<tr>
-      <td>${name}</td>
-      <td>${st}</td>
-      <td>${s.latency || "-"}</td>
-      <td>${s.bitrate || "-"}</td>
-      <td>${s.resolution || "-"}</td>
-    </tr>`;
-  }
-  document.getElementById("statusTable").innerHTML = table;
-
-  // Charts
-  const labels = Object.keys(status);
-  const latencyData = labels.map(n => status[n].latency || 0);
-  const bitrateData = labels.map(n => status[n].bitrate || 0);
-
-  new Chart(document.getElementById("latencyChart"), {
-    type: "bar",
-    data: {
-      labels: labels,
-      datasets: [{
-        label: "延迟 (ms)",
-        data: latencyData,
-        backgroundColor: "rgba(54, 162, 235, 0.6)"
-      }]
-    }
-  });
-
-  new Chart(document.getElementById("bitrateChart"), {
-    type: "bar",
-    data: {
-      labels: labels,
-      datasets: [{
-        label: "码率 (bps)",
-        data: bitrateData,
-        backgroundColor: "rgba(255, 99, 132, 0.6)"
-      }]
-    }
-  });
-}
-
-loadData();
-</script>
-
-</body>
-</html>
-"""
-
-    with open("output/monitor/index.html", "w", encoding="utf-8") as f:
+    with open("output/monitor.html", "w", encoding="utf-8") as f:
         f.write(html)
-
-    logger.info("[monitor_exporter] Monitor UI generated.")
