@@ -5,18 +5,16 @@ from utils.logger import logger
 def run(channels):
     """
     改进版自动监控系统：
-    - 不再直接禁用频道
-    - 评分下降 → 增加 fail_count
-    - alive=False → 增加 fail_count
-    - speed_ok=False → 增加 fail_count
-    - fail_count 达到阈值后由 disable_channels 处理
+    - 不直接禁用频道（禁用由 disable_channels 统一处理）
+    - 评分下降、alive=False、speed_ok=False、延迟过高 → 增加 fail_count
+    - fail_count 达到阈值后由 disable_channels 禁用
     - 输出监控报告 monitor.json
     """
 
-    ALERT_THRESHOLD = 60
-    FAIL_SCORE_THRESHOLD = 40
-    FAIL_LATENCY_THRESHOLD = 3000  # ms
-    FAIL_LIMIT = 3
+    ALERT_THRESHOLD = 60            # 评分低于 60 → 报警
+    FAIL_SCORE_THRESHOLD = 40       # 评分低于 40 → 增加 fail_count
+    FAIL_LATENCY_THRESHOLD = 3000   # 延迟 > 3000ms → 增加 fail_count
+    FAIL_LIMIT = 3                  # 连续 3 次失败 → 禁用（由 disable_channels 执行）
 
     report = []
     alerts = []
