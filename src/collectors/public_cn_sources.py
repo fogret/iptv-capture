@@ -2,35 +2,41 @@ import os
 import requests
 from utils.logger import logger
 
-# 项目根目录
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SOURCES_DIR = os.path.join(BASE_DIR, "sources")
-PUBLIC_CN_FILE = os.path.join(SOURCES_DIR, "public_cn.txt")
 
 def collect():
-    logger.info(f"[public_cn] 加载源列表: {PUBLIC_CN_FILE}")
-
-    if not os.path.exists(PUBLIC_CN_FILE):
-        logger.warning("[public_cn] public_cn.txt 不存在，跳过")
-        return []
-
     channels = []
 
-    with open(PUBLIC_CN_FILE, "r", encoding="utf-8") as f:
+    if not os.path.exists(SOURCES_DIR):
+        logger.warning(f"[public_cn] 目录不存在: {SOURCES_DIR}")
+        return channels
+
+    for filename in os.listdir(SOURCES_DIR):
+        if filename.endswith(".txt"):
+            file_path = os.path.join(SOURCES_DIR, filename)
+            channels.extend(load_from_file(file_path))
+
+    logger.info(f"[public_cn] 共加载 {len(channels)} 条频道")
+    return channels
+
+
+def load_from_file(path):
+    result = []
+
+    with open(path, "r", encoding="utf-8") as f:
         for line in f:
             url = line.strip()
             if not url:
                 continue
 
-            logger.info(f"[public_cn] 获取: {url}")
             try:
                 text = requests.get(url, timeout=10).text
-                channels.extend(parse_source(text))
+                result.extend(parse_source(text))
             except Exception as e:
                 logger.error(f"[public_cn] 获取失败: {e}")
 
-    logger.info(f"[public_cn] 共加载 {len(channels)} 条频道")
-    return channels
+    return result
 
 
 def parse_source(text):
