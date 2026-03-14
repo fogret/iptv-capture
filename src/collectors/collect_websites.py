@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 from utils.logger import logger
 from utils.stats import stats
 
-# 统一路径（与 universal_sources 完全一致）
+# 路径保持不变（你要求的）
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SOURCES_DIR = os.path.join(BASE_DIR, "sources")
 
@@ -35,20 +35,47 @@ def fetch_html(url: str) -> str:
         return ""
 
 
-def extract_m3u8(html: str) -> list:
+# ================================
+# ⭐ 新版：全格式直播流提取器
+# ================================
+def extract_streams(html: str, base_url: str) -> list:
     urls = set()
     soup = BeautifulSoup(html, "html.parser")
 
+    # 1) video 标签
     for video in soup.find_all("video"):
         src = video.get("src")
-        if src and src.endswith(".m3u8"):
-            urls.add(src)
+        if src:
+            urls.add(urljoin(base_url, src))
 
-    matches = re.findall(r'["\'](https?://[^"\']+\.m3u8)["\']', html)
-    urls.update(matches)
+    # 2) 常见直播格式（m3u8 / flv / ts / mp4 / mpd / f4m / rtmp）
+    patterns = [
+        r'https?://[^"\']+\.m3u8',
+        r'https?://[^"\']+\.flv',
+        r'https?://[^"\']+\.ts',
+        r'https?://[^"\']+\.mp4',
+        r'https?://[^"\']+\.mpd',
+        r'https?://[^"\']+\.f4m',
+        r'rtmp://[^"\']+',
+    ]
 
-    matches = re.findall(r'(https?://[^"\']+\.m3u8)', html)
-    urls.update(matches)
+    for p in patterns:
+        matches = re.findall(p, html)
+        for m in matches:
+            urls.add(urljoin(base_url, m))
+
+    # 3) JS/JSON 里的直播地址
+    js_patterns = [
+        r'["\'](https?://[^"\']+\.m3u8)["\']',
+        r'["\'](https?://[^"\']+\.flv)["\']',
+        r'["\'](https?://[^"\']+\.ts)["\']',
+        r'["\'](https?://[^"\']+\.mp4)["\']',
+    ]
+
+    for p in js_patterns:
+        matches = re.findall(p, html)
+        for m in matches:
+            urls.add(urljoin(base_url, m))
 
     return list(urls)
 
@@ -115,15 +142,16 @@ def collect_from_page(url: str, depth: int, visited: set, channels: list, root_u
     if depth > stats.website_max_depth_global:
         stats.website_max_depth_global = depth
 
-    m3u8_list = extract_m3u8(html)
+    # ⭐ 使用全格式提取器
+    streams = extract_streams(html, url)
 
-    if m3u8_list:
-        logger.info(f"[websites] 页面 {url} 发现 {len(m3u8_list)} 个 m3u8")
+    if streams:
+        logger.info(f"[websites] 页面 {url} 发现 {len(streams)} 个直播流")
 
-        for m3u8 in m3u8_list:
-            if is_ad_url(m3u8):
-                logger.warning(f"[websites] 屏蔽广告源: {m3u8}")
-                detail["ads_blocked"].append(m3u8)
+        for stream in streams:
+            if is_ad_url(stream):
+                logger.warning(f"[websites] 屏蔽广告源: {stream}")
+                detail["ads_blocked"].append(stream)
                 stats.website_ads_blocked_total += 1
                 continue
 
@@ -133,15 +161,16 @@ def collect_from_page(url: str, depth: int, visited: set, channels: list, root_u
             ch = {
                 "name": name,
                 "group": group,
-                "url": m3u8,
+                "url": stream,
                 "origin": "website",
                 "root_site": root_url,
             }
             channels.append(ch)
-            detail["channels"].append({"name": name, "url": m3u8})
+            detail["channels"].append({"name": name, "url": stream})
 
         return
 
+    # 递归子页面
     links = extract_links(html, url)
     for link in links:
         logger.info(f"[websites] 递归进入子页面: {link}")
