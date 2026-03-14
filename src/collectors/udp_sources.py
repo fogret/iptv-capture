@@ -1,71 +1,29 @@
 import os
-import re
 from utils.logger import logger
 
-def collect():
-    """
-    从 sources/udp*.txt 读取组播源入口
-    自动识别 udpxy / udp://
-    自动生成频道对象
-    """
-    logger.info("[udp] Collecting UDP / multicast sources...")
+# 项目根目录
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+SOURCES_DIR = os.path.join(BASE_DIR, "sources")
+UDP_FILE = os.path.join(SOURCES_DIR, "udp.txt")
 
-    base = "sources"
+def collect():
     channels = []
 
-    if not os.path.exists(base):
+    if not os.path.exists(UDP_FILE):
+        logger.warning(f"[udp_sources] 文件不存在: {UDP_FILE}")
         return channels
 
-    # 处理所有 udp*.txt 文件
-    for filename in os.listdir(base):
-        if filename.startswith("udp") and filename.endswith(".txt"):
-            path = os.path.join(base, filename)
-            channels += parse_udp_file(path)
-
-    logger.info(f"[udp] Loaded {len(channels)} UDP channels")
-    return channels
-
-
-def parse_udp_file(path):
-    result = []
-
-    with open(path, "r", encoding="utf-8") as f:
+    with open(UDP_FILE, "r", encoding="utf-8") as f:
         for line in f:
             url = line.strip()
             if not url:
                 continue
 
-            # udpxy 格式：http://router:4022/udp/239.1.1.1:8000
-            if url.startswith("http://") and "/udp/" in url:
-                name = extract_multicast_name(url)
-                result.append({
-                    "name": name,
-                    "url": url,
-                    "group": "组播"
-                })
-                continue
+            channels.append({
+                "name": "组播频道",
+                "url": url,
+                "group": "组播"
+            })
 
-            # 原生 udp://@239.1.1.1:8000
-            if url.startswith("udp://"):
-                name = extract_multicast_name(url)
-                result.append({
-                    "name": name,
-                    "url": url,
-                    "group": "组播"
-                })
-                continue
-
-    return result
-
-
-def extract_multicast_name(url):
-    """
-    从 URL 中提取组播地址作为频道名
-    """
-    match = re.search(r"(\d+\.\d+\.\d+\.\d+):(\d+)", url)
-    if match:
-        ip = match.group(1)
-        port = match.group(2)
-        return f"组播 {ip}:{port}"
-
-    return "组播频道"
+    logger.info(f"[udp_sources] 加载 {len(channels)} 条组播频道")
+    return channels
