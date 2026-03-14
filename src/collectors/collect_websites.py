@@ -1,64 +1,60 @@
+# src/collectors/collect_websites.py
+
 import os
 import re
 import requests
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
-# 安全限制
+from utils.logger import logger
+from utils.stats import stats
+
 MAX_PAGES = 100
 MAX_DEPTH = 3
 MAX_CHANNELS = 200
 
-# 广告关键词
 AD_KEYWORDS = ["ad", "ads", "advert", "banner", "promo", "doubleclick", "googleads"]
 
 
 def is_ad_url(url: str) -> bool:
-    """判断 URL 是否为广告"""
     url_lower = url.lower()
     return any(k in url_lower for k in AD_KEYWORDS)
 
 
 def fetch_html(url: str) -> str:
-    """抓取网页 HTML"""
     try:
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
-        }
+        headers = {"User-Agent": "Mozilla/5.0"}
         resp = requests.get(url, headers=headers, timeout=8)
         resp.raise_for_status()
         resp.encoding = resp.apparent_encoding
         return resp.text
-    except:
+    except Exception as e:
+        logger.warning(f"[websites] 抓取失败: {url} ({e})")
         return ""
 
 
 def extract_m3u8(html: str) -> list:
-    """从 HTML 中提取所有 m3u8"""
     urls = set()
-
-    # 1. video 标签
     soup = BeautifulSoup(html, "html.parser")
+
+    # <video src="...m3u8">
     for video in soup.find_all("video"):
         src = video.get("src")
         if src and src.endswith(".m3u8"):
             urls.add(src)
 
-    # 2. hls.js 初始化
+    # "https://...m3u8"
     matches = re.findall(r'["\'](https?://[^"\']+\.m3u8)["\']', html)
-    for m in matches:
-        urls.add(m)
+    urls.update(matches)
 
-    # 3. JS 变量
+    # 兜底再扫一遍
     matches = re.findall(r'(https?://[^"\']+\.m3u8)', html)
-    for m in matches:
-        urls.add(m)
+    urls.update(matches)
 
     return list(urls)
 
 
 def extract_links(html: str, base_url: str) -> list:
-    """提取页面中的所有链接（用于递归）"""
     soup = BeautifulSoup(html, "html.parser")
     links = []
 
@@ -74,26 +70,20 @@ def extract_links(html: str, base_url: str) -> list:
 
 
 def guess_channel_name(url: str, html: str) -> str:
-    """自动识别频道名"""
     soup = BeautifulSoup(html, "html.parser")
-
-    # 1. 网页标题
     if soup.title and soup.title.string:
         title = soup.title.string.strip()
-        if len(title) <= 20:
+        if 0 < len(title) <= 20:
             return title
 
-    # 2. 从 URL 推断
     m = re.search(r"(cctv\d+|hunantv|gzstv|channel\d+)", url.lower())
     if m:
         return m.group(1).upper()
 
-    # 3. 默认
     return "未知频道"
 
 
 def guess_group(url: str) -> str:
-    """自动识别分组"""
     u = url.lower()
     if "cctv" in u:
         return "央视"
@@ -104,8 +94,7 @@ def guess_group(url: str) -> str:
     return "其它"
 
 
-def collect_from_page(url: str, depth: int, visited: set, channels: list):
-    """递归抓取页面"""
+def collect_from_page(url: str, depth: int, visited: set, channels: list, root_url: str):
     if depth > MAX_DEPTH or len(visited) > MAX_PAGES or len(channels) > MAX_CHANNELS:
         return
 
@@ -113,40 +102,65 @@ def collect_from_page(url: str, depth: int, visited: set, channels: list):
         return
     visited.add(url)
 
+    logger.info(f"[websites] 抓取页面: {url} (深度 {depth})")
+
     html = fetch_html(url)
     if not html:
         return
 
-    # 解析 m3u8
+    # 全局 + 网站级页面统计
+    stats.website_pages_total += 1
+    detail = stats.website_detail[root_url]
+    detail["pages"] += 1
+    if depth > detail["max_depth"]:
+        detail["max_depth"] = depth
+    if depth > stats.website_max_depth_global:
+        stats.website_max_depth_global = depth
+
     m3u8_list = extract_m3u8(html)
 
-    # 单页模式 / 多频道模式
     if m3u8_list:
+        logger.info(f"[websites] 页面 {url} 发现 {len(m3u8_list)} 个 m3u8")
+
         for m3u8 in m3u8_list:
             if is_ad_url(m3u8):
+                logger.warning(f"[websites] 屏蔽广告源: {m3u8}")
+                detail["ads_blocked"].append(m3u8)
+                stats.website_ads_blocked_total += 1
                 continue
 
             name = guess_channel_name(url, html)
             group = guess_group(url)
 
-            channels.append({
+            ch = {
                 "name": name,
                 "group": group,
                 "url": m3u8,
-                "origin": "website"
-            })
+                "origin": "website",
+                "root_site": root_url,
+            }
+            channels.append(ch)
+            detail["channels"].append({"name": name, "url": m3u8})
+
         return
 
-    # 递归模式：没有 m3u8 → 继续找子页面
+    # 没有 m3u8 → 递归模式
     links = extract_links(html, url)
     for link in links:
-        collect_from_page(link, depth + 1, visited, channels)
+        logger.info(f"[websites] 递归进入子页面: {link}")
+        collect_from_page(link, depth + 1, visited, channels, root_url)
 
 
 def collect_websites():
-    """主入口：扫描 sources/ 下所有 txt 并抓取网站"""
+    """
+    从 sources/ 下所有 txt 中读取“网站入口 URL”，对每个 URL 做递归抓取。
+    """
     base_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "sources")
     channels = []
+
+    if not os.path.exists(base_dir):
+        logger.warning(f"[websites] sources 目录不存在: {base_dir}")
+        return channels
 
     for file in os.listdir(base_dir):
         if not file.endswith(".txt"):
@@ -164,7 +178,17 @@ def collect_websites():
                 if not url.startswith("http"):
                     continue
 
-                visited = set()
-                collect_from_page(url, 1, visited, channels)
+                # 为每个入口网站初始化明细统计
+                if url not in stats.website_detail:
+                    stats.website_detail[url] = {
+                        "pages": 0,
+                        "max_depth": 0,
+                        "channels": [],
+                        "ads_blocked": [],
+                    }
 
+                visited = set()
+                collect_from_page(url, 1, visited, channels, root_url=url)
+
+    logger.info(f"[websites] 网站抓取共得到 {len(channels)} 条频道")
     return channels
