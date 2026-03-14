@@ -3,7 +3,7 @@ import aiohttp
 from utils.logger import logger
 
 MAX_CONCURRENCY = 100
-TIMEOUT = 5
+TIMEOUT = 2
 TEST_SIZE = 1024 * 50  # 50KB
 
 
