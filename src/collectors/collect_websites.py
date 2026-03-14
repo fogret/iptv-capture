@@ -25,15 +25,69 @@ def is_ad_url(url: str) -> bool:
 
 
 # ================================
-# ⭐ 接入智能 UA 的网页抓取
+# ⭐ 接入智能 UA + 网页真实 UA/Referer/Cookie/Host 自动识别
 # ================================
 def fetch_html(url: str) -> str:
     try:
-        headers = get_headers_for_url(url, mode="play")  # ⭐ 自动 UA / Referer / Cookie / Host
+        # 第一次请求：智能 UA（ua_manager 自动判断）
+        headers = get_headers_for_url(url, mode="play")
         resp = requests.get(url, headers=headers, timeout=8)
         resp.raise_for_status()
         resp.encoding = resp.apparent_encoding
-        return resp.text
+        html = resp.text
+
+        # ================================
+        # ⭐ 从网页中自动提取真实 UA / Referer / Cookie / Host
+        # ================================
+        real_ua = None
+        real_referer = None
+        real_cookie = None
+        real_host = None
+
+        # UA
+        m = re.search(r'User-Agent["\']?\s*[:=]\s*["\']([^"\']+)', html)
+        if m:
+            real_ua = m.group(1)
+
+        # Referer
+        m = re.search(r'Referer["\']?\s*[:=]\s*["\']([^"\']+)', html)
+        if m:
+            real_referer = m.group(1)
+
+        # Cookie
+        m = re.search(r'Cookie["\']?\s*[:=]\s*["\']([^"\']+)', html)
+        if m:
+            real_cookie = m.group(1)
+
+        # Host
+        m = re.search(r'Host["\']?\s*[:=]\s*["\']([^"\']+)', html)
+        if m:
+            real_host = m.group(1)
+
+        # 如果网页提供真实参数 → 再请求一次（模拟浏览器）
+        if real_ua or real_referer or real_cookie or real_host:
+            new_headers = {}
+
+            if real_ua:
+                new_headers["User-Agent"] = real_ua
+            if real_referer:
+                new_headers["Referer"] = real_referer
+            if real_cookie:
+                new_headers["Cookie"] = real_cookie
+            if real_host:
+                new_headers["Host"] = real_host
+                new_headers["Origin"] = f"https://{real_host}"
+
+            try:
+                resp2 = requests.get(url, headers=new_headers, timeout=8)
+                resp2.raise_for_status()
+                resp2.encoding = resp2.apparent_encoding
+                return resp2.text
+            except:
+                pass
+
+        return html
+
     except Exception as e:
         logger.warning(f"[websites] 抓取失败: {url} ({e})")
         return ""
