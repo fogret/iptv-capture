@@ -1,19 +1,19 @@
 [
   {
     "name": "未知",
-    "url": "https://www.gzstv.com",
+    "url": "https://www.hunantv.com",
     "group": "地方",
     "quality": "SD",
     "type": "其他",
     "region": "未知地区",
     "udp_ok": null,
-    "latency": 1020,
-    "speed": 2675,
-    "speed_ok": false,
+    "latency": 1170,
+    "speed": 50000,
+    "speed_ok": true,
     "epg_id": "未知",
-    "score": 11,
-    "fail_count": 4,
-    "disabled": true
+    "score": 45,
+    "fail_count": 0,
+    "disabled": false
   },
   {
     "name": "芒果TV-天生青春",
@@ -25,7 +25,7 @@
     "type": "其他",
     "region": "未知地区",
     "udp_ok": null,
-    "latency": 1427,
+    "latency": 890,
     "speed": 50000,
     "speed_ok": true,
     "epg_id": "芒果TV-天生青春",

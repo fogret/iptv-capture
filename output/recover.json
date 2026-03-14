@@ -1,11 +1,11 @@
 [
   {
     "name": "未知",
-    "score": 11,
+    "score": 45,
     "alive": true,
-    "speed_ok": false,
-    "fail_count": 4,
-    "disabled": true,
+    "speed_ok": true,
+    "fail_count": 0,
+    "disabled": false,
     "protected": false
   },
   {
