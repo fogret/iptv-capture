@@ -48,6 +48,7 @@ def main():
     channels = []
     channels += collect_public()
     channels += collect_custom()
+    channels += collect_udp()     # ← 必须加上
 
     # 2. Normalize
     channels = normalize(channels)
