@@ -1,19 +1,19 @@
 [
   {
     "name": "未知",
-    "url": "https://www.hunantv.com",
-    "score": 45,
-    "latency": 1111,
+    "url": "https://www.gzstv.com",
+    "score": 11,
+    "latency": 1020,
     "alive": true,
-    "speed_ok": true,
+    "speed_ok": false,
     "fail_count": 0,
     "group": "地方"
   },
   {
     "name": "芒果TV-天生青春",
-    "url": "https://1vimg.hitv.com/100/2507/0315/3430/XDrtHkZx/442348372160991232.jpg",
-    "score": 35,
-    "latency": 180,
+    "url": "https://www.hunantv.com/\\u002F\\u002Fwww.mgtv.com\\u002Fb\\u002F520377\\u002F18216017.html",
+    "score": 40,
+    "latency": 1427,
     "alive": true,
     "speed_ok": true,
     "fail_count": 0,

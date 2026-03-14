@@ -1,19 +1,19 @@
 [
   {
     "name": "未知",
-    "score": 45,
+    "score": 11,
     "alive": true,
-    "speed_ok": true,
-    "fail_count": 0,
-    "disabled": false,
+    "speed_ok": false,
+    "fail_count": 4,
+    "disabled": true,
     "protected": false
   },
   {
     "name": "芒果TV-天生青春",
-    "score": 35,
+    "score": 40,
     "alive": true,
     "speed_ok": true,
-    "fail_count": 2,
+    "fail_count": 0,
     "disabled": false,
     "protected": false
   }

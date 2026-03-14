@@ -2,14 +2,14 @@
   "未知": {
     "ok": null,
     "udp_ok": null,
-    "latency": 1111,
+    "latency": 1020,
     "bitrate": null,
     "resolution": null
   },
   "芒果TV-天生青春": {
     "ok": null,
     "udp_ok": null,
-    "latency": 180,
+    "latency": 1427,
     "bitrate": null,
     "resolution": null
   }
