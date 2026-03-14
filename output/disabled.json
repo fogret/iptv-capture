@@ -10,10 +10,10 @@
   },
   {
     "name": "芒果TV-天生青春",
-    "score": 40,
+    "score": 35,
     "alive": true,
     "speed_ok": true,
-    "fail_count": 0,
+    "fail_count": 2,
     "protected": false,
     "disabled": false
   }

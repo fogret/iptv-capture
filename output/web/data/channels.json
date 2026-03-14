@@ -7,7 +7,7 @@
     "type": "其他",
     "region": "未知地区",
     "udp_ok": null,
-    "latency": 1135,
+    "latency": 1111,
     "speed": 50000,
     "speed_ok": true,
     "epg_id": "未知",
@@ -18,19 +18,19 @@
   {
     "name": "芒果TV-天生青春",
     "group": "地方",
-    "url": "https://www.hunantv.com/\\u002F\\u002F1vimg.hitv.com\\u002F100\\u002F2507\\u002F0315\\u002F3430\\u002FXDrtHkZx\\u002F442348372160991232.jpg",
+    "url": "https://1vimg.hitv.com/100/2507/0315/3430/XDrtHkZx/442348372160991232.jpg",
     "origin": "website",
     "root_site": "https://www.hunantv.com",
     "quality": "4K",
     "type": "其他",
     "region": "未知地区",
     "udp_ok": null,
-    "latency": 822,
-    "speed": 50000,
+    "latency": 180,
+    "speed": 16384,
     "speed_ok": true,
     "epg_id": "芒果TV-天生青春",
-    "score": 40,
-    "fail_count": 0,
+    "score": 35,
+    "fail_count": 2,
     "disabled": false
   }
 ]
