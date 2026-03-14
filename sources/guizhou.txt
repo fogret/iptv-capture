@@ -1,6 +1,1 @@
-https://live.zbds.top/tv/iptv4.m3u
-https://iptv-org.github.io/iptv/index.m3u
-https://iptv-org.github.io/iptv/countries/cn.m3u
-https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/China.m3u
-https://raw.githubusercontent.com/YanG-1989/m3u/main/TV.m3u
-https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u
+
