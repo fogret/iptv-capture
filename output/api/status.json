@@ -2,35 +2,35 @@
   "GZSTV": {
     "ok": null,
     "udp_ok": null,
-    "latency": 599,
+    "latency": 805,
     "bitrate": null,
     "resolution": null
   },
   "听，这是π在唱歌": {
     "ok": null,
     "udp_ok": null,
-    "latency": 588,
+    "latency": 801,
     "bitrate": null,
     "resolution": null
   },
   "学习时刻-习近平活动报道集-芒果TV": {
     "ok": null,
     "udp_ok": null,
-    "latency": 139,
+    "latency": 156,
     "bitrate": null,
     "resolution": null
   },
   "未知": {
     "ok": null,
     "udp_ok": null,
-    "latency": 1142,
+    "latency": 58,
     "bitrate": null,
     "resolution": null
   },
   "纪念抗战胜利80周年-芒果TV": {
     "ok": null,
     "udp_ok": null,
-    "latency": 150,
+    "latency": 156,
     "bitrate": null,
     "resolution": null
   }
