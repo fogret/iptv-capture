@@ -10,7 +10,8 @@ from datetime import datetime
 from utils.logger import logger
 from utils.stats import stats
 from utils.ua_manager import get_headers_for_url
-from utils.channel_name import guess_channel_name   # ⭐ 新频道名识别模块
+from utils.channel_name import guess_channel_name      # ⭐ 新频道名识别
+from utils.channel_group import guess_group            # ⭐ 新频道分组
 
 # 路径保持不变
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -48,9 +49,12 @@ def fetch_html(url: str) -> str:
 
         if real_ua or real_referer or real_cookie or real_host:
             new_headers = {}
-            if real_ua: new_headers["User-Agent"] = real_ua.group(1)
-            if real_referer: new_headers["Referer"] = real_referer.group(1)
-            if real_cookie: new_headers["Cookie"] = real_cookie.group(1)
+            if real_ua:
+                new_headers["User-Agent"] = real_ua.group(1)
+            if real_referer:
+                new_headers["Referer"] = real_referer.group(1)
+            if real_cookie:
+                new_headers["Cookie"] = real_cookie.group(1)
             if real_host:
                 host = real_host.group(1)
                 new_headers["Host"] = host
@@ -241,20 +245,6 @@ def extract_links(html: str, base_url: str) -> list:
 
 
 # ================================
-# ⭐ 频道分组（保持原逻辑）
-# ================================
-def guess_group(url: str) -> str:
-    u = url.lower()
-    if "cctv" in u:
-        return "央视"
-    if "tv" in u and "cctv" not in u:
-        return "卫视"
-    if "st" in u or "media" in u or "news" in u:
-        return "地方台"
-    return "其它"
-
-
-# ================================
 # ⭐ 递归抓取
 # ================================
 def collect_from_page(url: str, depth: int, visited: set, channels: list, root_url: str):
@@ -291,8 +281,8 @@ def collect_from_page(url: str, depth: int, visited: set, channels: list, root_u
                 stats.website_ads_blocked_total += 1
                 continue
 
-            name = guess_channel_name(url, html)   # ⭐ 使用新频道名识别
-            group = guess_group(url)
+            name = guess_channel_name(url, html)      # ⭐ 新频道名识别
+            group = guess_group(name, url)            # ⭐ 新频道分组（基于名称+URL）
 
             ch = {
                 "name": name,
