@@ -8,9 +8,12 @@ from utils.logger import logger
 MAX_CONCURRENCY = 200
 TIMEOUT = 5
 RETRY = 1
-CACHE_FILE = "data/http_cache.json"
 
-sem = asyncio.Semaphore(MAX_CONCURRENCY)
+CACHE_DIR = "data"
+CACHE_FILE = os.path.join(CACHE_DIR, "http_cache.json")
+
+# 自动创建 data/ 目录
+os.makedirs(CACHE_DIR, exist_ok=True)
 
 
 def load_cache():
@@ -30,6 +33,9 @@ def url_hash(url):
     return hashlib.md5(url.encode()).hexdigest()
 
 
+sem = asyncio.Semaphore(MAX_CONCURRENCY)
+
+
 async def fetch(session, url):
     for _ in range(RETRY + 1):
         try:
@@ -43,12 +49,14 @@ async def fetch(session, url):
 
 async def check_all(channels):
     cache = load_cache()
+
     async with aiohttp.ClientSession() as session:
         tasks = []
         urls = []
 
         for ch in channels:
             url = ch["url"]
+
             if not url.startswith("http"):
                 tasks.append(asyncio.sleep(0, result=True))
                 urls.append(url)
