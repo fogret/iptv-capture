@@ -126,6 +126,55 @@
     "disabled": true
   },
   {
+    "name": "CGTN",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "CGTN俄语",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "CGTN法语",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "CGTN纪录",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "CGTN西语",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "CGTN阿语",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "中国交通",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
     "name": "兵器科技",
     "score": 6,
     "alive": false,
@@ -133,14 +182,14 @@
     "disabled": true
   },
   {
-    "name": "电视指南",
+    "name": "熊猫直播",
     "score": 6,
     "alive": false,
     "speed_ok": false,
     "disabled": true
   },
   {
-    "name": "直播中国",
+    "name": "电视指南",
     "score": 6,
     "alive": false,
     "speed_ok": false,
@@ -162,6 +211,13 @@
   },
   {
     "name": "高尔夫网球",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "支持作者",
     "score": 6,
     "alive": false,
     "speed_ok": false,
@@ -210,6 +266,13 @@
     "disabled": true
   },
   {
+    "name": "广东卫视",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
     "name": "广西卫视",
     "score": 6,
     "alive": false,
@@ -225,6 +288,13 @@
   },
   {
     "name": "海南卫视",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "海峡卫视",
     "score": 6,
     "alive": false,
     "speed_ok": false,
@@ -350,6 +420,13 @@
     "disabled": true
   },
   {
+    "name": "四川卫视",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
     "name": "天津卫视",
     "score": 6,
     "alive": false,
@@ -365,6 +442,13 @@
   },
   {
     "name": "新疆卫视",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "延边卫视",
     "score": 6,
     "alive": false,
     "speed_ok": false,
@@ -455,13 +539,6 @@
     "disabled": true
   },
   {
-    "name": "无线星河",
-    "score": 6,
-    "alive": false,
-    "speed_ok": false,
-    "disabled": true
-  },
-  {
     "name": "靖天戏剧",
     "score": 6,
     "alive": false,
@@ -470,6 +547,13 @@
   },
   {
     "name": "靖天映画",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "龙华电影",
     "score": 6,
     "alive": false,
     "speed_ok": false,
@@ -490,8 +574,15 @@
     "disabled": true
   },
   {
-    "name": "东阳影视生活",
-    "score": 16,
+    "name": "人在囧途",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "人在囧途之港囧",
+    "score": 6,
     "alive": false,
     "speed_ok": false,
     "disabled": true
@@ -518,29 +609,29 @@
     "disabled": true
   },
   {
-    "name": "上虞文化影院",
-    "score": 16,
-    "alive": false,
-    "speed_ok": false,
-    "disabled": true
-  },
-  {
-    "name": "奎屯哈萨克语",
+    "name": "广东民生",
     "score": 6,
     "alive": false,
     "speed_ok": false,
     "disabled": true
   },
   {
-    "name": "平湖新闻综合",
-    "score": 11,
+    "name": "松潘新闻综合",
+    "score": 6,
     "alive": false,
     "speed_ok": false,
     "disabled": true
   },
   {
-    "name": "Entertainment",
-    "score": 21,
+    "name": "衡阳新闻综合",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "奎屯汉语",
+    "score": 6,
     "alive": false,
     "speed_ok": false,
     "disabled": true
@@ -553,6 +644,20 @@
     "disabled": true
   },
   {
+    "name": "News",
+    "score": 16,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "Documentary",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
     "name": "Religious",
     "score": 6,
     "alive": false,
@@ -560,77 +665,28 @@
     "disabled": true
   },
   {
-    "name": "General;Religious",
-    "score": 6,
-    "alive": false,
-    "speed_ok": false,
-    "disabled": true
-  },
-  {
-    "name": "Series",
-    "score": 6,
-    "alive": false,
-    "speed_ok": false,
-    "disabled": true
-  },
-  {
-    "name": "Classic;Series",
-    "score": 6,
-    "alive": false,
-    "speed_ok": false,
-    "disabled": true
-  },
-  {
     "name": "Undefined",
+    "score": 16,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "Entertainment",
     "score": 6,
     "alive": false,
     "speed_ok": false,
     "disabled": true
   },
   {
-    "name": "News",
+    "name": "Kids",
     "score": 6,
     "alive": false,
     "speed_ok": false,
     "disabled": true
   },
   {
-    "name": "Culture",
-    "score": 6,
-    "alive": false,
-    "speed_ok": false,
-    "disabled": true
-  },
-  {
-    "name": "Animation",
-    "score": 6,
-    "alive": false,
-    "speed_ok": false,
-    "disabled": true
-  },
-  {
-    "name": "Travel",
-    "score": 6,
-    "alive": false,
-    "speed_ok": false,
-    "disabled": true
-  },
-  {
-    "name": "Education",
-    "score": 6,
-    "alive": false,
-    "speed_ok": false,
-    "disabled": true
-  },
-  {
-    "name": "Music",
-    "score": 6,
-    "alive": false,
-    "speed_ok": false,
-    "disabled": true
-  },
-  {
-    "name": "Comedy",
+    "name": "Lifestyle",
     "score": 6,
     "alive": false,
     "speed_ok": false,
@@ -644,21 +700,84 @@
     "disabled": true
   },
   {
+    "name": "Travel",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
     "name": "Movies",
+    "score": 21,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "Animation;Kids",
     "score": 6,
     "alive": false,
     "speed_ok": false,
     "disabled": true
   },
   {
-    "name": "Culture;Lifestyle",
+    "name": "Legislative",
     "score": 6,
     "alive": false,
     "speed_ok": false,
     "disabled": true
   },
   {
-    "name": "Culture;Education",
+    "name": "Music",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "Outdoor",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "Education",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "Movies;Series",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "Culture;Religious",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "Animation",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "Culture",
+    "score": 6,
+    "alive": false,
+    "speed_ok": false,
+    "disabled": true
+  },
+  {
+    "name": "Music;Religious",
     "score": 6,
     "alive": false,
     "speed_ok": false,

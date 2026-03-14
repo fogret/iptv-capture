@@ -202,6 +202,13 @@
     "bitrate": null,
     "resolution": null
   },
+  "四川卫视": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
   "四川卫视4K": {
     "ok": null,
     "udp_ok": null,
@@ -244,7 +251,21 @@
     "bitrate": null,
     "resolution": null
   },
+  "广东卫视": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
   "广西卫视": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
+  "延边卫视": {
     "ok": null,
     "udp_ok": null,
     "latency": null,
@@ -294,6 +315,13 @@
     "resolution": null
   },
   "海南卫视": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
+  "海峡卫视": {
     "ok": null,
     "udp_ok": null,
     "latency": null,
@@ -384,7 +412,49 @@
     "bitrate": null,
     "resolution": null
   },
+  "Animation;Kids": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
   "CCTV": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
+  "CGTN": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
+  "CGTN俄语": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
+  "CGTN法语": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
+  "CGTN西语": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
+  "CGTN阿语": {
     "ok": null,
     "udp_ok": null,
     "latency": null,
@@ -398,20 +468,6 @@
     "bitrate": null,
     "resolution": null
   },
-  "Classic;Series": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": null,
-    "bitrate": null,
-    "resolution": null
-  },
-  "Comedy": {
-    "ok": null,
-    "udp_ok": null,
-    "latency": null,
-    "bitrate": null,
-    "resolution": null
-  },
   "Culture": {
     "ok": null,
     "udp_ok": null,
@@ -419,14 +475,14 @@
     "bitrate": null,
     "resolution": null
   },
-  "Culture;Education": {
+  "Culture;Religious": {
     "ok": null,
     "udp_ok": null,
     "latency": null,
     "bitrate": null,
     "resolution": null
   },
-  "Culture;Lifestyle": {
+  "Documentary": {
     "ok": null,
     "udp_ok": null,
     "latency": null,
@@ -454,7 +510,21 @@
     "bitrate": null,
     "resolution": null
   },
-  "General;Religious": {
+  "Kids": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Legislative": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Lifestyle": {
     "ok": null,
     "udp_ok": null,
     "latency": null,
@@ -468,7 +538,21 @@
     "bitrate": null,
     "resolution": null
   },
+  "Movies;Series": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
   "Music": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
+  "Music;Religious": {
     "ok": null,
     "udp_ok": null,
     "latency": null,
@@ -482,14 +566,14 @@
     "bitrate": null,
     "resolution": null
   },
-  "Religious": {
+  "Outdoor": {
     "ok": null,
     "udp_ok": null,
     "latency": null,
     "bitrate": null,
     "resolution": null
   },
-  "Series": {
+  "Religious": {
     "ok": null,
     "udp_ok": null,
     "latency": null,
@@ -510,14 +594,21 @@
     "bitrate": null,
     "resolution": null
   },
-  "上虞文化影院": {
+  "中国交通": {
+    "ok": null,
+    "udp_ok": true,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
+  "人在囧途": {
     "ok": null,
     "udp_ok": null,
     "latency": null,
     "bitrate": null,
     "resolution": null
   },
-  "东阳影视生活": {
+  "人在囧途之港囧": {
     "ok": null,
     "udp_ok": null,
     "latency": null,
@@ -552,7 +643,7 @@
     "bitrate": null,
     "resolution": null
   },
-  "奎屯哈萨克语": {
+  "奎屯汉语": {
     "ok": null,
     "udp_ok": null,
     "latency": null,
@@ -566,14 +657,28 @@
     "bitrate": null,
     "resolution": null
   },
-  "平湖新闻综合": {
+  "广东民生": {
     "ok": null,
     "udp_ok": null,
     "latency": null,
     "bitrate": null,
     "resolution": null
   },
-  "无线星河": {
+  "支持作者": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
+  "松潘新闻综合": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
+  "熊猫直播": {
     "ok": null,
     "udp_ok": null,
     "latency": null,
@@ -587,14 +692,14 @@
     "bitrate": null,
     "resolution": null
   },
-  "直播中国": {
+  "苏州4K": {
     "ok": null,
     "udp_ok": null,
     "latency": null,
     "bitrate": null,
     "resolution": null
   },
-  "苏州4K": {
+  "衡阳新闻综合": {
     "ok": null,
     "udp_ok": null,
     "latency": null,
@@ -658,6 +763,20 @@
     "resolution": null
   },
   "CHC电影": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
+  "龙华电影": {
+    "ok": null,
+    "udp_ok": null,
+    "latency": null,
+    "bitrate": null,
+    "resolution": null
+  },
+  "CGTN纪录": {
     "ok": null,
     "udp_ok": null,
     "latency": null,

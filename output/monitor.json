@@ -144,6 +144,62 @@
     "group": "地方"
   },
   {
+    "name": "CGTN",
+    "url": "https://english-livetx.cgtn.com/hls/yypdyyctzb_hd.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
+    "name": "CGTN俄语",
+    "url": "https://russian-livews.cgtn.com/hls/LSvexABhNipibK5KRuUkvHZ7220802LSTeze9o8tdFXMHsb1VosgoT220802cd/playlist.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
+    "name": "CGTN法语",
+    "url": "https://francais-livews.cgtn.com/hls/LSvev95OuFZtKLc6CeKEFYXj220802LSTeV6PO0Ut9r71Uq3k5goCA220802cd/playlist.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
+    "name": "CGTN纪录",
+    "url": "https://english-livetx.cgtn.com/hls/yypdjlctzb_hd.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "纪录片"
+  },
+  {
+    "name": "CGTN西语",
+    "url": "https://espanol-liveali.cgtn.com/hls/LSveOGBaBw41Ea7ukkVAUdKQ220802LSTexu6xAuFH8VZNBLE1ZNEa220802cd/playlist.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
+    "name": "CGTN阿语",
+    "url": "https://arabic-liveali.cgtn.com/hls/LSveq57bErWLinBnxosqjisZ220802LSTefTAS9zc9mpU08y3np9TH220802cd/playlist.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
+    "name": "中国交通",
+    "url": "http://drive.mxmy.net:8888239.3.1.188:8001",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
     "name": "兵器科技",
     "url": "http://38.75.136.137:98/gslb/dsdqpub/gfjs.m3u8",
     "score": 6,
@@ -152,16 +208,16 @@
     "group": "地方"
   },
   {
-    "name": "电视指南",
-    "url": "http://38.75.136.137:98/gslb/dsdqpub/dszn.m3u8",
+    "name": "熊猫直播",
+    "url": "https://gcwbndali.v.myalicdn.com/gcwbnd/ipanda1000_2//gcwbnd/ipanda1000_2md.m3u8",
     "score": 6,
     "latency": 9999,
     "alive": false,
     "group": "地方"
   },
   {
-    "name": "直播中国",
-    "url": "https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8?contentid=2820180516001",
+    "name": "电视指南",
+    "url": "http://38.75.136.137:98/gslb/dsdqpub/dszn.m3u8",
     "score": 6,
     "latency": 9999,
     "alive": false,
@@ -192,6 +248,14 @@
     "group": "地方"
   },
   {
+    "name": "支持作者",
+    "url": "https://vd3.bdstatic.com/mda-rkaittm5s06vzzyq/sc/cae_h264/1762869883709304452/mda-rkaittm5s06vzzyq.mp4",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
     "name": "安徽卫视",
     "url": "http://58.57.40.22:9901/tsfile/live/1033_1.m3u8",
     "score": 6,
@@ -201,7 +265,7 @@
   },
   {
     "name": "北京卫视",
-    "url": "http://23.237.228.134/live3/beijing.m3u8",
+    "url": "http://58.57.40.22:9901/tsfile/live/1032_1.m3u8",
     "score": 6,
     "latency": 9999,
     "alive": false,
@@ -240,6 +304,14 @@
     "group": "卫视"
   },
   {
+    "name": "广东卫视",
+    "url": "http://58.57.40.22:9901/tsfile/live/1039_1.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "卫视"
+  },
+  {
     "name": "广西卫视",
     "url": "http://58.57.40.22:9901/tsfile/live/1049_1.m3u8",
     "score": 6,
@@ -258,6 +330,14 @@
   {
     "name": "海南卫视",
     "url": "http://58.57.40.22:9901/tsfile/live/1000_1.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "卫视"
+  },
+  {
+    "name": "海峡卫视",
+    "url": "http://8.138.7.223/tv/hxws.m3u8",
     "score": 6,
     "latency": 9999,
     "alive": false,
@@ -289,7 +369,7 @@
   },
   {
     "name": "湖南卫视",
-    "url": "https://txmov2.a.kwimgs.com/bs3/video-hls/5199687338554291078_hlsb.m3u8",
+    "url": "http://58.57.40.22:9901/tsfile/live/1028_1.m3u8",
     "score": 6,
     "latency": 9999,
     "alive": false,
@@ -400,6 +480,14 @@
     "group": "卫视"
   },
   {
+    "name": "四川卫视",
+    "url": "http://58.57.40.22:9901/tsfile/live/1046_1.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "卫视"
+  },
+  {
     "name": "天津卫视",
     "url": "http://58.57.40.22:9901/tsfile/live/1034_1.m3u8",
     "score": 6,
@@ -418,6 +506,14 @@
   {
     "name": "新疆卫视",
     "url": "http://58.57.40.22:9901/tsfile/live/1055_1.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "卫视"
+  },
+  {
+    "name": "延边卫视",
+    "url": "http://120.76.248.139/live/bfgd/4200000117.m3u8",
     "score": 6,
     "latency": 9999,
     "alive": false,
@@ -520,14 +616,6 @@
     "group": "地方"
   },
   {
-    "name": "无线星河",
-    "url": "https://cdn6.101.qzz.io/163189/tvbxh",
-    "score": 6,
-    "latency": 9999,
-    "alive": false,
-    "group": "地方"
-  },
-  {
     "name": "靖天戏剧",
     "url": "http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir&id=4gtv-4gtv058",
     "score": 6,
@@ -542,6 +630,14 @@
     "latency": 9999,
     "alive": false,
     "group": "地方"
+  },
+  {
+    "name": "龙华电影",
+    "url": "https://cdn8.163189.xyz/live/lhdy/stream.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "电影"
   },
   {
     "name": "AMC电影",
@@ -560,9 +656,17 @@
     "group": "电影"
   },
   {
-    "name": "东阳影视生活",
-    "url": "http://l.cztvcloud.com/channels/lantian/SXdongyang1/720p.m3u8",
-    "score": 16,
+    "name": "人在囧途",
+    "url": "https://vip.ffzy-play.com/20221018/1953_2d6ba500/index.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
+    "name": "人在囧途之港囧",
+    "url": "https://vip.ffzy-play7.com/20230112/11082_fde1a94d/index.m3u8",
+    "score": 6,
     "latency": 9999,
     "alive": false,
     "group": "地方"
@@ -592,72 +696,64 @@
     "group": "地方"
   },
   {
-    "name": "上虞文化影院",
-    "url": "http://l.cztvcloud.com/channels/lantian/SXshangyu2/720p.m3u8",
-    "score": 16,
-    "latency": 9999,
-    "alive": false,
-    "group": "地方"
-  },
-  {
-    "name": "奎屯哈萨克语",
-    "url": "http://218.84.12.186:8002/hls/main/playlist.m3u8?zxinjd",
+    "name": "广东民生",
+    "url": "http://183.11.239.36:808/hls/18/index.m3u8",
     "score": 6,
     "latency": 9999,
     "alive": false,
     "group": "地方"
   },
   {
-    "name": "平湖新闻综合",
-    "url": "http://play-sh13.quklive.com/live/1690167908295069.m3u8?auth_key=2027466211-f190eec410c24473825cbe1d8541e545-0-f21db57ae1b534802c1cf7be86cc3aef",
-    "score": 11,
+    "name": "松潘新闻综合",
+    "url": "http://live.spccmc.com:90/live/spxwzh.m3u8",
+    "score": 6,
     "latency": 9999,
     "alive": false,
     "group": "地方"
   },
   {
-    "name": "Entertainment",
-    "url": "https://stream.eldo.lu/data/live/tele/eldotv/1080p.m3u8",
-    "score": 21,
+    "name": "衡阳新闻综合",
+    "url": "https://liveplay-srs.voc.com.cn/hls/tv/183_554704.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
+    "name": "奎屯汉语",
+    "url": "http://218.84.12.186:8001/hls/main/playlist.m3u8?zxinjd",
+    "score": 6,
     "latency": 9999,
     "alive": false,
     "group": "地方"
   },
   {
     "name": "General",
-    "url": "https://re1.siar.us/madutv/hd720/playlist.m3u8",
+    "url": "https://playplusgoya-lh.akamaihd.net/i/pp_gna@377833/index_720_av-p.m3u8",
     "score": 16,
     "latency": 9999,
     "alive": false,
     "group": "地方"
   },
   {
+    "name": "News",
+    "url": "http://190.104.226.30/Live/870787012c00961adaf9b2304d704b57/tn_720.m3u8",
+    "score": 16,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
+    "name": "Documentary",
+    "url": "https://amg01821-lovetv-amg01821c8-xumo-us-3443.playouts.now.amagi.tv/360p/index.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
     "name": "Religious",
-    "url": "https://live.nixsat.com/play/rtm/index.m3u8",
-    "score": 6,
-    "latency": 9999,
-    "alive": false,
-    "group": "地方"
-  },
-  {
-    "name": "General;Religious",
-    "url": "http://66.242.170.53/hls/live/temp/index.m3u8",
-    "score": 6,
-    "latency": 9999,
-    "alive": false,
-    "group": "地方"
-  },
-  {
-    "name": "Series",
-    "url": "https://avaserieshls.wns.live/hls/stream.m3u8",
-    "score": 6,
-    "latency": 9999,
-    "alive": false,
-    "group": "地方"
-  },
-  {
-    "name": "Classic;Series",
-    "url": "https://awtv.nuvemplay.live/hls/stream.m3u8",
+    "url": "https://hls.keshishhamid.live/hls/stream.m3u8",
     "score": 6,
     "latency": 9999,
     "alive": false,
@@ -665,63 +761,31 @@
   },
   {
     "name": "Undefined",
-    "url": "http://37c18028.akadatel.com/iptv/T6XNCP6L7LLKPD/1088/mpegts",
+    "url": "http://190.104.226.30/Live/870787012c00961adaf9b2304d704b57/telefe_720.m3u8",
+    "score": 16,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
+    "name": "Entertainment",
+    "url": "https://sbs6classic.prd1.talpatvcdn.nl/v1/master/8ada1ed2ae3b9c3db6fc5e604cfa78fc7d2d745e/sbs6classic_ssai/fea54560ba684701a2143f33a9cf4489/index.m3u8",
     "score": 6,
     "latency": 9999,
     "alive": false,
     "group": "地方"
   },
   {
-    "name": "News",
-    "url": "https://live.palitranews.ge/hls/palitratv/index.m3u8",
+    "name": "Kids",
+    "url": "https://ryanandfriends-samsungau.amagi.tv/360p-vtt/index.m3u8",
     "score": 6,
     "latency": 9999,
     "alive": false,
     "group": "地方"
   },
   {
-    "name": "Culture",
-    "url": "http://live.greektv.ca/hls1/greektv.m3u8",
-    "score": 6,
-    "latency": 9999,
-    "alive": false,
-    "group": "地方"
-  },
-  {
-    "name": "Animation",
-    "url": "https://stream.ichibantv.com:3764/hybrid/play.m3u8",
-    "score": 6,
-    "latency": 9999,
-    "alive": false,
-    "group": "地方"
-  },
-  {
-    "name": "Travel",
-    "url": "https://go2thls.wns.live/hls/stream.m3u8",
-    "score": 6,
-    "latency": 9999,
-    "alive": false,
-    "group": "地方"
-  },
-  {
-    "name": "Education",
-    "url": "http://49.156.33.114:5080/live/streams/elearning.playlist.m3u8",
-    "score": 6,
-    "latency": 9999,
-    "alive": false,
-    "group": "地方"
-  },
-  {
-    "name": "Music",
-    "url": "https://kino-1.catcast.tv/content/37745/index.m3u8",
-    "score": 6,
-    "latency": 9999,
-    "alive": false,
-    "group": "地方"
-  },
-  {
-    "name": "Comedy",
-    "url": "https://comedyhls.persiana.live/hls/stream.m3u8",
+    "name": "Lifestyle",
+    "url": "https://99d8b4b6.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X1JldnJ5X0hMUw/../../../manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X1JldnJ5X0hMUw/4c1ad5b8-b09d-4916-b94e-0d80c84a15a0/0.m3u8",
     "score": 6,
     "latency": 9999,
     "alive": false,
@@ -729,31 +793,103 @@
   },
   {
     "name": "Sports",
-    "url": "https://proshls.wns.live/hls/stream.m3u8",
+    "url": "https://mainstreammedia-worldoffreesportsintl-rakuten.amagi.tv/240p-cc/index.m3u8",
     "score": 6,
     "latency": 9999,
     "alive": false,
     "group": "体育"
   },
   {
+    "name": "Travel",
+    "url": "https://streamunoapp.com:3086/live/telemileniolive.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
     "name": "Movies",
-    "url": "https://korhls.persiana.live/hls/stream.m3u8",
+    "url": "https://amg02784-amg02784c1-distrotv-us-3394.playouts.now.amagi.tv/ts-us-w2-n1/playlist/amg02784-nollyafricafast-nollyafricahd-distrotvus/cb573e1e6573638f84cd3f78d1f74382807b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258af764cc59069da2978c9f4c2643a7a445c994f49e7a70da3f6e70c46c56df7b71c55942e13e69f139dd714a68781529845d37fa3419b9af3e9832aaabe4098646598563c6b6010ac8e7087cc59f6e98e682d99625a3e7437c882e333caa1e43d2e72f7eddfb725de1ecb9b2c82614ddb4af81dc258020cdb8a621aeae02d99ff3bd90a2701a0751f00afcfabf63021b465faedcad57a7f98f11b428ea807d30f242299f1c715cb965bc6f66bb2bd671937d78205b5a9f2d2bffedd11dc12c3c9a2cc66025635504bc67cb28a61de1ed87a83c7076e091e13e3c90384cef276044f63cac052dd181ef9fc8e80d401728a431348e76ddc14543e9c7a3c3cd62cff9b2e65c67359d27b6ead2a40ea28cbb122f1a8ccf6466ae5aca06ccb2fbee544828c41c30b1b560db4fe2925356f75c2e16b0870348372edddceee601a428bd3c8edcb47371733740358d802868e353d6d4f6840c85d5a36ecb98bacdd8019cf4b89/143/1920x1080_4894400/index.m3u8",
+    "score": 21,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
+    "name": "Animation;Kids",
+    "url": "https://foxkidstv.be:3369/stream/play.m3u8",
     "score": 6,
     "latency": 9999,
     "alive": false,
     "group": "地方"
   },
   {
-    "name": "Culture;Lifestyle",
-    "url": "https://live.salira.tv/p/3870/hybrid/play.m3u8",
+    "name": "Legislative",
+    "url": "https://dumatv.iptv2022.com/tracks-v1a1/mono.m3u8",
     "score": 6,
     "latency": 9999,
     "alive": false,
     "group": "地方"
   },
   {
-    "name": "Culture;Education",
-    "url": "https://sitetv.brasilstream.com.br/hls/sitetv/index.m3u8?token=",
+    "name": "Music",
+    "url": "http://live.stranafm.cdnvideo.ru/stranafm/stranafm_hd.sdp/playlist.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
+    "name": "Outdoor",
+    "url": "https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4Kp2160.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
+    "name": "Education",
+    "url": "https://stratus.stream.cespi.unlp.edu.ar/hls/tvunlp.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
+    "name": "Movies;Series",
+    "url": "http://181.188.216.5:18000/play/a0pm/index.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
+    "name": "Culture;Religious",
+    "url": "https://zkpywrbgdbeg-hls-live.mariatvcdn.it/teleradiopace2/254c9b5c52a73a94ef0f6169cbd05dc2.sdp/chunks.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
+    "name": "Animation",
+    "url": "https://amg01796-amg01796c19-rakuten-gb-7486.playouts.now.amagi.tv/ts-eu-w1-n2/playlist/amg01796-fastmediafast-yugioh2en-rakutengb/cb573e1e6573638f84cd3f78d1f74382807b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258af764cc59069da2978c9f4c2643a7a445c994f49e1a257a2aab35513c56df7b71c55942e13e69f4bced619a6d58152cb468025a3119b90a2e9832aaabe4098646598563c6b6010ac8e7087cc59f6e98e682d99625a3e7437c882e333caa1e43d2e72f7eddfb725de1ecb9b2c82614ddb4af81dc258020cdb8a621aeae02d99ff3bd90a2701a0751f00afcfabf63021b465faedcad57a7f98f11b428ea807d30f242299f1c715cb965bc6f66bb2bd671937d78205b5a9f2d2bffedd11dc12c3c9a2cc66025635504bc67cb28a61de1ed87a83c7076e091e13e3c90384cef276044f63cac052dd181ef9fc8e80d401728a431348e76ddc14543e9c7a3c3cd62cff9b2e65c67359d27b6ead2a40ea28cbb122f1a8ccf6466ae5aca06ccb2fbee544828c41c30b1b560db4fe2925356f75c2e16b0870348372edddceee601a428bd3c8edcb4737173374035ad90286db353d6d4f6906eed77293a0afb38a11f4008e8f56/162/426x240_511680/index.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
+    "name": "Culture",
+    "url": "https://edge52.dc.beltelecom.by/ngtrk/_definst_/smil:belarus3.smil/chunklist_w473953568_b5160000_sleng.m3u8",
+    "score": 6,
+    "latency": 9999,
+    "alive": false,
+    "group": "地方"
+  },
+  {
+    "name": "Music;Religious",
+    "url": "https://hls-tvsoyuz.cdnvideo.ru/tvsoyuz2/muzsoyuz.6fw0-58xp-acts-esy0/playlist.m3u8",
     "score": 6,
     "latency": 9999,
     "alive": false,
